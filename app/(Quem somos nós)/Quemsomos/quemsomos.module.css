@@ -1,0 +1,114 @@
+.content{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto 20%;
+
+    font-family: gordita;
+}
+
+.title1{
+    line-height: 35px;
+
+}
+
+.card{
+    width: 100px;
+    height: 90px;
+}
+
+.title2{
+    line-height: 20px;
+    font-size: 20px;
+    margin: 10px auto;
+    color: var(--cor-2);
+    font-weight: 500;
+    
+}
+
+.carinhas1{
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 30px;
+}
+
+.carinhas2{
+    display: flex;
+    align-items: center;
+    position: relative;
+    right: 20px;
+
+    gap: 15px;
+}
+
+.carinhas3{
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 30px;
+}
+
+.carinhas4{
+    display: flex;
+    align-items: center;
+    position: relative;
+    right: 30px;
+
+    gap: 20px;
+
+}
+
+
+
+.img{
+      
+    width: 35px;
+    height: 35px;
+
+    rotate: ;
+}
+
+.subtitle1{
+    
+    color: var(--cor-2);
+}
+
+.subtitle2{
+    
+    color: var(--cor-2);
+}
+
+.subtitlefooter{
+    font-size: 10px;
+    margin: 30px auto ;
+}
+
+.valores{
+    color: var(--cor-2);
+}
+
+@media screen and  (min-width: 430px){
+
+    .content {
+        
+        width: 350px;
+        margin: auto;
+        
+    }
+    
+}
+
+@media screen and  (min-width: 1080px){
+
+    .content {
+        
+        width: 450px;
+        margin: auto;
+        
+    }
+    
+}
+

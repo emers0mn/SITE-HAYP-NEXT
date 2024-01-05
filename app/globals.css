@@ -1,0 +1,684 @@
+/* Frontend by cMuServices - dcohen.net */
+
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Friz Quadrata TT";
+    src: local("Friz Quadrata TT"), local("Friz Quadrata TT"), url("../public/assets/fonts/friz.ttf");
+    font-weight: "regular";
+}
+
+@font-face {
+    font-family: 'Gordita';
+    src: url('../public/assets/fonts/Gordita-BlackItalic.woff2') format('woff2'),
+        url('../public/assets/fonts/Gordita-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    src: url('../public/assets/fonts/Gordita-BoldItalic.woff2') format('woff2'),
+        url('../public/assets/fonts/Gordita-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    src: url('../public/assets/fonts/Gordita-Black.woff2') format('woff2'),
+        url('../public/assets/fonts/Gordita-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    src: url('../public/assets/fonts/Gordita-RegularItalic.woff2') format('woff2'),
+        url('../public/assets/fonts/Gordita-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    src: url('../public/assets/fonts/Gordita-Regular.woff2') format('woff2'),
+        url('../public/assets/fonts/Gordita-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gordita-Light';
+    src: url('../public/assets/fonts/Gordita-Light.woff2') format('woff2'),
+        url('../public/assets/fonts/Gordita-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    src: url('../public/assets/fonts/Gordita-Medium.woff2') format('woff2'),
+        url('../public/assets/fonts/Gordita-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    src: url('../public/assets/fonts/Gordita-ThinItalic.woff2') format('woff2'),
+        url('../public/assets/fonts/Gordita-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    src: url('../public/assets/fonts/Gordita-Thin.woff2') format('woff2'),
+        url('../public/assets/fonts/Gordita-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    src: url('../public/assets/fonts/Gordita-LightItalic.woff2') format('woff2'),
+        url('../public/assets/fonts/Gordita-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    src: url('../public/assets/fonts/Gordita-MediumItalic.woff2') format('woff2'),
+        url('../public/assets/fonts/Gordita-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gordita Ultra';
+    src: url('../public/assets/fonts/Gordita-Ultra.woff2') format('woff2'),
+        url('../public/assets/fonts/Gordita-Ultra.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gordita-Bold';
+    src: url('../public/assets/fonts/Gordita-Bold.woff2') format('woff2'),
+        url('../public/assets/fonts/Gordita-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gordita Ultra';
+    src: url('../public/assets/fonts/Gordita-UltraItalic.woff2') format('woff2'),
+        url('../public/assets/fonts/Gordita-UltraItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+* {
+    --cor-1: #008D1E;
+    --cor-2: #4AD62B;
+    --cor-3: #333333;
+    
+  }
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: "Gordita-Bold", "Open Sans", sans-serif;
+    background: #0a0a0a;
+    color: #fff;
+}
+
+.content .container div:not(.intro) {
+    font-family: 'Gordita-Light';
+}
+
+.custom-font {
+    font-family: "Gordita-Bold", "Open Sans", sans-serif;
+}
+
+.custom-button {
+    display: block;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    background: #3ea438;
+    width: 30%;
+    padding: .5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+iframe,
+video,
+img {
+    max-width: 100%;
+}
+
+a {
+    transition: 0.5s all ease;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+header {
+    z-index: 90;
+    width: 100%;
+    transition: 0.2s all ease;
+    background: rgb(0, 0, 0);
+    padding: 1rem;
+}
+
+header .container .row .fa {
+    font-size: 2.5em;
+}
+
+header:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    right: 0;
+    margin-left: 0;
+    left: 0;
+    margin-right: 0;
+    width: 100%;
+    height: 10px;
+    border-bottom: 2px solid #0b0b0b;
+    color: #000;
+}
+
+.content {
+    margin-top: 1rem;
+}
+
+.content .container .intro {
+    display: block;
+
+}
+
+.content .container .intro img {
+    width: 131px;
+    height: 113px;
+    object-fit: cover;
+    max-width: 131px;
+    max-height: 113px;
+}
+
+.content .container .intro span {
+    display: block;
+    margin-top: 0.8rem;
+    font-size: 1em;
+    color: white;
+    font-weight: bold;
+}
+
+.content .container .menu {
+    padding: 1rem;
+    border-top: 1px solid #141414;
+    border-bottom: 1px solid #141414;
+}
+
+.content .container .menu .row .item {
+    transition: 0.2s all ease;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.content .container .menu .row .item:hover,
+.social-icons ul li:hover {
+    transform: scale(1.1);
+}
+
+.content .container .menu .row .item .circle {
+    display: block;
+    width: 65px;
+    height: 65px;
+    background: rgb(2, 151, 37);
+    background: linear-gradient(90deg, rgba(2, 151, 37, 1) 0%, rgba(2, 197, 56, 1) 49%);
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 50%;
+    color: #eeffef;
+    font-size: 2.1em;
+    border: 1px solid #035b1a;
+}
+
+.content .container .menu .row .item .circle img {
+    max-width: 60px;
+}
+
+.content .container .menu .row .item span {
+    display: block;
+    text-align: center;
+    margin: 15px 0 15px 0;
+    color: white;
+    font-weight: 600;
+}
+
+.footer .social-icons {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.social-icons ul li {
+    display: inline-flex;
+    transition: 0.2s all ease;
+    margin: 5px;
+    border: 3px solid rgba(2, 151, 37, 1);
+    border-radius: 50%;
+    width: 45px;
+
+}
+
+.social-icons ul li .fa {
+    color: white;
+}
+
+.content .container .packages {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.slick-list {
+    overflow: visible !important;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 1rem 0;
+
+    list-style-type: none;
+}
+
+.slick-dots li {
+    margin: 0 0.25rem;
+}
+
+.slick-dots button {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    padding: 0;
+
+    border: none;
+    border-radius: 100%;
+    background-color: orange;
+
+    text-indent: -9999px;
+}
+
+.slick-dots li.slick-active button {
+    background-color: #07b93b;
+}
+
+.slick-dots button {
+    width: 0.5rem;
+    height: 0.5rem;
+    background: #efefef;
+}
+
+/*Começo do Clube de desconto */
+
+.content .container .packages .package-list .button:hover,
+.green-button:hover {
+    transform: scale(1.1);
+}
+
+.content .container .about .about-item {
+    position: relative;
+    text-align: left;
+    padding: 0.5rem;
+    color: white;
+    height: auto;
+    min-height: 170px;
+}
+
+.content .container .about .about-item:nth-child(1):before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url("../public/assets/images/card.png") no-repeat top right;
+    width: 150px;
+    height: 150px;
+    background-size: 150px;
+}
+
+.content .container .about .about-item:nth-child(1):after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2rem;
+    right: 1.5rem;
+    background: url(../public/assets/images/arrow-left.png) no-repeat bottom right;
+    width: 80px;
+    height: 80px;
+    background-size: 70px;
+}
+
+.content .container .about .about-item:nth-child(1) .col-8 {
+    padding-top: 0.5rem;
+}
+
+.content .container .about .about-item:nth-child(2):after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -1rem;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: 5.5rem;
+    background: url(../public/assets/images/arrow-right.png) no-repeat top right;
+    width: 80px;
+    height: 40px;
+    background-size: 70px;
+}
+
+.content .container .about .about-item:nth-child(3):after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin-top: 1.5rem;
+    margin-left: auto;
+    margin-right: 4rem;
+    background: url(../public/assets/images/arrow-bottom-left.png) no-repeat bottom right;
+    width: 50px;
+    height: 80px;
+    background-size: 40px;
+}
+
+.content .container .about .about-item:nth-child(3) {
+    max-width: 100%;
+}
+
+.content .container .about .about-item:not(:nth-child(3)) {
+    margin-bottom: 1rem;
+}
+
+.content .container .about .about-item .company-icons {
+    position: relative;
+    padding: 0;
+    top: -9rem;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: -1.2rem;
+    display: block;
+    background: url(../public/assets/images/icons.png) no-repeat top center;
+    text-align: center;
+    width: 140px;
+    height: 200px;
+    background-size: 125px;
+}
+
+.content .container .smiley {
+    position: relative;
+}
+
+.content .container .smiley:after {
+    content: '';
+    position: absolute;
+    top: -1.5rem;
+    right: -1.5rem;
+    width: 65px;
+    height: 65px;
+    background: url(../public/assets/images/smiley-happy.png) no-repeat top center;
+    background-size: 65px;
+    text-align: center;
+    display: block;
+}
+
+.content .container .smiley.sad:after {
+    top: -1.2rem;
+    right: 2.5rem;
+    background: url(../public/assets/images/smiley-sad.png) no-repeat top center;
+    background-size: 65px;
+}
+
+.content .container .google-intro {
+    text-align: left;
+    display: block;
+    color: #efefef;
+}
+
+.content .container .google-intro img {
+    max-width: 45%;
+}
+
+.content .container .review .row .review-title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.content .container .review .row .review-title span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.content .container .review .row .review-circle {
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    display: block;
+    text-align: right;
+}
+
+.content .container .review .row .review-circle img {
+    border-radius: 50%;
+    display: block;
+    text-align: right;
+}
+
+.content .container .review .review-text {
+    font-size: 12px;
+    color: #838383;
+    font-style: italic;
+}
+
+.content .container .credit-title:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 8.5%;
+    right: 0;
+    background: url('../public/assets/images/card-small.png') no-repeat top right;
+    width: 90px;
+    height: 90px;
+}
+
+/*.content .container .about .about-item .company-icons .icon img {
+    max-width: 70%;
+    object-fit: cover;
+}*/
+
+.green {
+    color: #07b93b;
+}
+
+.dark-green {
+    color: #099c35;
+}
+
+.red {
+    color: #ff0000;
+}
+
+.modal {
+    color: black;
+}
+
+.formStatus .modal-content {
+    background: transparent;
+}
+
+.formStatus .modal-dialog {
+    top: 25%;
+    color: white;
+    text-align: center;
+}
+
+.status-icon .fa {
+    position: relative;
+    top: -5px;
+}
+
+.status-icon {
+    font-size: 5em;
+    width: 35%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    border: 3px solid #07b93b;
+    border-radius: 50%;
+}
+
+.status-icon.red {
+    border-color: #ff0000;
+}
+
+.form-control.green {
+    background: rgb(0, 0, 0, 0.5);
+    color: white !important;
+    border: 2px solid #2cc04a;
+    border-radius: 10px;
+}
+
+
+/* Bootstrap-changess */
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #faf8f8;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+}
+
+.modal-content {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 0.3rem;
+    outline: 0;
+    background-color: black;
+    /* border-block-color: green; */
+}
+
+.modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+    color: #099c35;
+}
+
+.swal2-html-container {
+    z-index: 1;
+    justify-content: center;
+    margin: 0 !important;
+    padding: 0;
+    overflow: auto;
+    color: inherit;
+    font-size: 1.125em;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+/* unvisited link */
+a:link {
+    color: #ffffff;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: #fff;
+}
+
+/* mouse over link */
+a:hover {
+    color: #11df48;
+}
+
+/* selected link */
+a:active {
+    color: #11df48;
+}
+
+.content .container .packages .package-list {
+    margin: 5px 0 0 0;
+    background: #fff;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px #333;
+    padding: ;
+}
+
+.title {
+    color: #099c35;
+    font-size: 15px;
+}
+
+.center {
+    text-align: center;
+}
+
+.icon-info {
+    margin: 10px;
+}
+
+.center {
+    margin: auto;
+    width: 100%;
+}
