@@ -1,5 +1,5 @@
 .container{
-  margin: auto 1px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -23,16 +23,15 @@
 
 .logo{
   width: 150px;
+  background-color: #0000007d;
 }
 
 .title{
-  margin: 5px;
-  padding: 0;
-  font-size: 1.1rem;
+  margin: 2.5px;
+  padding: 2.5px;
+  font-size: 1rem;
   font-weight: 400;
 }
-
-
 
 /*Começo do grid*/
 
@@ -42,8 +41,8 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
 
-  gap: 45px;
-  align-items: center;
+  gap: 44px;
+  align-items: flex-start;
 
   padding: 0px 25px 25px 25px;
 }

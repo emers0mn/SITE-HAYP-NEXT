@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import Api from "/service/Api";
 import Swal from "sweetalert2";
-import withReactContent from 'sweetalert2-react-content'
+import withReactContent from 'sweetalert2-react-content';
 
 const HomeService = (callback, validate) => {
 
@@ -42,10 +42,12 @@ const HomeService = (callback, validate) => {
             if(response.data.code == "general_success"){
                 Swal.fire({
                     icon: 'success',
-                    title: '<h4 style="font-family:Gordita-Bold" class="font-weight-bold">Ebaa</h4>',
-                    html: '<span style="font-family:Gordita-Light">'+ response.data.message +'<span/> <br><br/> <a style="font-family:Gordita-Light;color:white" target="_blank" href="https://api.whatsapp.com/send?1=pt_BR&phone=551128762641" class="green-button">Whatsapp <i class="fa fa-whatsapp pl-2"></i></a>',
-                    background :"#fff0",
-                    color:"white",
+                    title: '<h4 style="font-family:Gordita-Bold; margin: 10px">Ebaa</h4>',
+
+                    html: '<div style="display: flex; flex-direction: column; gap: 10px; padding-left: 25px; padding-right: 25px;"<p>'+ response.data.message +'<p/> <a style="background-color: var(--cor-1); padding: 5px 10px; border-radius: 10px; font-family:Gordita-Light;color:#fff;" target="_blank" href="https://api.whatsapp.com/send?1=pt_BR&phone=551128762641">Whatsapp</a></div>',
+
+                    background :"#0000007f",
+                    color:"#fff",
                     showConfirmButton: false,
                     showCloseButton: true,
                 })
@@ -55,14 +57,13 @@ const HomeService = (callback, validate) => {
 
                     const { value: formValues } = await Swal.fire({
                         icon:'error',
-                        title: '<p><h4 style="font-family:Gordita-Bold" class="font-weight-bold">Que pena...</h4></p>',
+                        title: '<p><h4 style="font-family:Gordita-Bold">Que pena...</h4></p>',
                         showCloseButton: true,
                         showConfirmButton: false,
-                        background :"#fff0",
-                        color:"white",
+                        background :"#0000007f",
+                        color:"#fff",
                         html:
-                        '<span style="margin:0" style="font-family:Gordita-Light">'+ response.data.message +'<span/> <br><br/>'+
-                        '<br><br/><a style="font-family:Gordita-Light;color:white" href="/Callme" class="green-button">Avise-me</a>',
+                        '<div style="display: flex; flex-direction: column; gap: 10px; padding-left: 25px; padding-right: 25px;"<p>'+ response.data.message +'<p/> <a style="background-color: var(--cor-1); padding: 5px 10px; border-radius: 10px; font-family:Gordita-Light;color:#fff;" target="_blank" href="https://api.whatsapp.com/send?1=pt_BR&phone=551128762641">Whatsapp</a></div>',
                         // '<input name="Nome" id="swal-input1" placeholder="Nome" class="swal2-input">' +
                         // '<input name="Telefone" id="swal-input2" placeholder="Telefone" class="swal2-input">',
                         focusConfirm: false,

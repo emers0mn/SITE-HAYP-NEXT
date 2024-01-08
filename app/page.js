@@ -102,18 +102,18 @@ export default function Home() {
           </a>
         </div>
 
-        <div className={styles.dados1}>
-          <strong>Av. Manuel Alves Soares, 638 - sala 3, Parque Colonial
-            <br />
-            <span className={styles.dados2}>Cep</span>: 04821-270</strong>
-        </div>
-
-        <div className={styles.dados1}>
-          <strong><span className={styles.dados2}>CNPJ</span>: 28.973.552/0001-03</strong>
-        </div>
-
-        <div className={styles.dados1}>
-          <strong><span className={styles.dados2}>Empresa autorizada pela Anatel</span>, ato 1018</strong>
+        <div hidden>
+          <div className={styles.dados1}>
+            <strong>Av. Manuel Alves Soares, 638 - sala 3, Parque Colonial
+              <br />
+              <span className={styles.dados2}>Cep</span>: 04821-270</strong>
+          </div>
+          <div className={styles.dados1}>
+            <strong><span className={styles.dados2}>CNPJ</span>: 28.973.552/0001-03</strong>
+          </div>
+          <div className={styles.dados1}>
+            <strong><span className={styles.dados2}>Empresa autorizada pela Anatel</span>, ato 1018</strong>
+          </div>
         </div>
 
       </footer>
