@@ -6,8 +6,8 @@ import { HeaderLayout } from '../app/(layout)/_header/headerLayout'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'HP Telecom Agora é HAYP',
-  description: 'Simplifique sua rotina assine HAYP',
+  title: 'HP Telecom Agora é HAYP - Interet 100% Fibra Óptica',
+  description: 'Simplifique sua rotina assine HAYP - Somos o provedor de internet mais bem avaliado de São Paulo',
 }
 
 export default function RootLayout({ children }) {

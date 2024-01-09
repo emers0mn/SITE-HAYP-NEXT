@@ -17,33 +17,33 @@ function Benefits(props) {
         <div className="grade">
           <div className="slides">
             <div className="slide primeira">
-              <h5>Clube de desconto</h5>
+              <h3>Clube de desconto</h3>
               <p>Economize em suas compras com nosso Clube de Desconto exclusivo, aproveitando ofertas especiais em diversos produtos e serviços.</p>
             </div>
           </div>
           <div className="slide">
-          <img src= {"/img/card.svg"} />
-            <h5>Clube de descontos</h5>
+          <img src= {"/img/card.svg"} alt="clube de desconto"/>
+            <h3>Clube de descontos</h3>
             <p hidden>Economize em suas compras com nosso Clube de Desconto exclusivo, aproveitando ofertas especiais em diversos produtos e serviços.</p>
           </div>
 
           <div className="slide" >
             <img src= {"/img/cofrinho.svg"} alt='Sem multa por cancelamento' />
-            <h5>Sem multa por <br /> cancelamento</h5>
+            <h3>Sem multa por <br /> cancelamento</h3>
             <p hidden>Oferecemos a flexibilidade de cancelar nossos serviços a qualquer momento, sem custos adicionais, para que você tenha total controle sobre sua assinatura.
             </p>
           </div>
 
           <div className="slide">
             <img src= {"/img/instalacao.svg"} alt='Instalação personalizada' />
-            <h5>Instalação <br /> personalizada</h5>
+            <h3>Instalação <br /> personalizada</h3>
             <p hidden>Nossa equipe de especialistas está pronta para personalizar a instalação de acordo com suas necessidades, garantindo que sua experiência seja adaptada às suas preferências.
             </p>
           </div>
 
           <div className="slide">
             <img src={"/img/365.svg"} alt='Pacotece microsoft 365 completo' />
-            <h5>Pacote Microsoft <br /> 365 Completo</h5>
+            <h3>Pacote Microsoft <br /> 365 Completo</h3>
             <p hidden>Desfrute de uma conexão de internet ultrarrápida e estável com nossa tecnologia Wi-Fi 6, proporcionando uma experiência online mais fluida.
             </p>
           </div>
@@ -62,16 +62,16 @@ function Benefits(props) {
         <h2 className="tittle-benefits-2">De um <spam className="name-marca">HAYP</spam> na sua Tv</h2>
         <div className="divisor"></div>
 
-        <h5 className="tittle-benefits-1">Canais abertos</h5>
+        <h3 className="tittle-benefits-1">Canais abertos</h3>
         <div className="container-canais">
           <div className="container-canais-aberto">
             <div className="carrossel-canais">
-              <img src={"/img/canal-band.svg"} alt='Canal Band' />
-              <img src={"/img/canal-globo.svg"} alt='Canal Globo' />
-              <img src={"/img/canal-sbt.svg"} alt='Canal SBT' />
-              <img src={"/img/canal-record.svg"} alt='Canal Record' />
-              <img src={"/img/canal-globo.svg"} alt='Canal Globo' />
-              <img src={"/img/canal-sbt.png"} alt='Canal SBT' />
+              <img src={"/img/canal-band.webp"} alt='Canal Band' />
+              <img src={"/img/canal-globo.webp"} alt='Canal Globo' />
+              <img src={"/img/canal-sbt.webp"} alt='Canal SBT' />
+              <img src={"/img/canal-record.webp"} alt='Canal Record' />
+              <img src={"/img/canal-globo.webp"} alt='Canal Globo' />
+              <img src={"/img/canal-sbt.webp"} alt='Canal SBT' />
             </div>
           </div>
         </div>
@@ -79,15 +79,15 @@ function Benefits(props) {
         <a href="https://wa.me/551128762641?text=Fiquei+interessado+no+combo+com+Tv+e+gostaria+ver+a+lista+de+canais.">Veja todos os canais abertos</a>
 
         <div className="container-canais">
-          <h5 className="tittle-benefits-1">Canais fechados</h5>
+          <h3 className="tittle-benefits-1">Canais fechados</h3>
           <div className="container-canais-fechados">
             <div className="carrossel-canais">
-              <img src={"/img/canal-warner.svg"} alt='Canal Warner' />
-              <img src={"/img/canal-discovery.svg"} alt='Canal Discovery' />
-              <img src={"/img/canal-fox.svg"} alt='Canal Fox' />
-              <img src={"/img/canal-espn.svg"} alt='Canal ESPN' />
-              <img src={"/img/canal-tlc.svg"} alt='Canal TLC' />
-              <img src={"/img/canal-animal.svg"} alt='Canal animal planet' />
+              <img src={"/img/canal-warner.webp"} alt='Canal Warner' />
+              <img src={"/img/canal-discovery.webp"} alt='Canal Discovery' />
+              <img src={"/img/canal-fox.webp"} alt='Canal Fox' />
+              <img src={"/img/canal-espn.webp"} alt='Canal ESPN' />
+              <img src={"/img/canal-tlc.webp"} alt='Canal TLC' />
+              <img src={"/img/canal-animal.webp"} alt='Canal animal planet' />
             </div>
           </div>
         </div>
@@ -103,23 +103,23 @@ function Benefits(props) {
       <Telefone />
 
       <div>
-        <h5 className="tittle-benefits-3"> Monte um combo e ganhe <br />  <span style={{color: "#04CB3A" }}>MEGAS de bônus</span>!!</h5>
+        <h2 className="tittle-benefits-3"> Monte um combo e ganhe <br />  <span style={{color: "#04CB3A" }}>MEGAS de bônus</span>!!</h2>
 
         <div>
           <div>
-            <p className="combo-assinando">Assinando</p>
+            <h3 className="combo-assinando">Assinando</h3>
             <img className="imgComboSimples" src={"/img/combo-simples.svg"} alt='Combo simples' />
-            <p>
+            <h4>
             Você ganha mais <spam className="name-marca-destaque">100 Mega</spam> de bônus
-            </p>
+            </h4>
             </div>
 
           <div>
-            <p className="combo-assinando">Assinando o <br/> <spam className="name-marca-destaque" >combo completo</spam></p>
-            <img className="imgComboCompleto" src={"/img/combo-completo.png"} alt='Combo Completo' />
-            <p >
+            <h4 className="combo-assinando">Assinando o <br/> <spam className="name-marca-destaque" >combo completo</spam></h4>
+            <img className="imgComboCompleto" src={"/img/combo-completo.svg"} alt='Combo Completo' />
+            <h4>
             Você ganha mais <spam className="name-marca-destaque">200 Mega</spam> de bônus
-            </p>
+            </h4>
             </div>
         </div>
 

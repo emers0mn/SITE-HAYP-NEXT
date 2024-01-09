@@ -4,7 +4,7 @@ function Telefone() {
     return (
         <>
             <div className='contianer-telefone'>
-                <h3 className='tittle-benefits-2'>Telefone Fixo<br />Ilimitado</h3>
+                <h2 className='tittle-benefits-2'>Telefone Fixo<br />Ilimitado</h2>
                 <div className="Lista-Telefone">
                     <ul>
 

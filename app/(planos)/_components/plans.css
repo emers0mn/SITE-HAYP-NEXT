@@ -30,6 +30,12 @@
 
 
 /*Começo dos planos*/
+
+.listCompleta{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 .content .container .packages .package-list {
     padding: 10px;
     width: 80%;

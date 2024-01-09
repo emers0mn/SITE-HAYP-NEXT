@@ -286,55 +286,53 @@ export default function Planos() {
                                     <div className="package-info">
                                         <div className="price-plan">
                                             <img className="minus" onClick={() => setIndex(index - 1)} src="./assets/images/icons/minus.svg"
-                                                alt="menos" />
+                                                alt="dminuir a quantidade de megas" />
 
                                             <h1>{plan.downSpeed} Mega</h1>
-                                            
+
                                             <img className="plus" onClick={() => setIndex(index + 1)} src="./assets/images/icons/plus.svg"
-                                                alt="mais" />
+                                                alt="adicionais mais megas" />
                                         </div>
                                         <div className="desc">
 
                                             <lu className="lista1">
-                                                <div>
-                                                    
-                                                    <li>
-                                                        <img className="downloadUpload" src="./img/download.svg" />
-                                                        <strong className="download">Download {plan.downSpeed} Mbps</strong>
-                                                    </li>
+                                                <li>
+                                                    <img className="downloadUpload" src="./img/download.svg" alt="icone de download" />
+                                                    <strong className="download">Download {plan.downSpeed} Mbps</strong>
+                                                </li>
 
-                                                    <li>
-                                                        <img className="downloadUpload" src="./img/upload.svg" />
-                                                        Upload {plan.upSpeed} Mbps
-                                                    </li>
-
-                                                </div>
+                                                <li>
+                                                    <img className="downloadUpload" src="./img/upload.svg" alt="icone de upload" />
+                                                    Upload {plan.upSpeed} Mbps
+                                                </li>
                                             </lu>
 
                                             <lu className="lista1">
-                                                    <li>
+                                                <li>
                                                     <img
-                                                            className="imgBeneficios"
-                                                            src="/assets/images/nofidelity.svg"
-                                                            alt="Sem fidelidade" />
-                                                        <strong className="listBeneficios">{plan.firstDescription}</strong>
-                                                    </li>
-                                                    <div hidden={plan.downSpeed === 300 ? true : (plan.downSpeed && variants.downSpeed >= 500 ? false : true)}>
-                                                        <li>
-                                                            <img
-                                                                className="imgBeneficios"
-                                                                src="/assets/images/365-plan.svg"
-                                                                alt="Pacote Microsft 365 Completo"
-                                                            />
-                                                            <strong className="listBeneficios">{plan.thirdDescription}</strong>
-                                                        </li></div>
-                                                    <li className="listaBeneficios">
-                                                        <img
-                                                            className="imgBeneficios"
-                                                            src="/assets/images/card-1.svg"
-                                                            alt="Clube de desconto" />
-                                                        <strong className="listBeneficios">{plan.fourthDescription}</strong>
-                                                    </li>
+                                                        className="imgBeneficios"
+                                                        src="/assets/images/nofidelity.svg"
+                                                        alt="Não temos fidelidade" />
+                                                    <strong className="listBeneficios">{plan.firstDescription}</strong>
+                                                </li>
+
+                                                <li hidden={plan.downSpeed === 300 ? true : (plan.downSpeed && variants.downSpeed >= 500 ? false : true)}>
+                                                    <img
+                                                        className="imgBeneficios"
+                                                        src="/assets/images/365-plan.svg"
+                                                        alt="Pacote Microsft 365 Completo"
+                                                    />
+                                                    <strong className="listBeneficios">{plan.thirdDescription}</strong>
+                                                </li>
+
+
+                                                <li className="listaBeneficios">
+                                                    <img
+                                                        className="imgBeneficios"
+                                                        src="/assets/images/card-1.svg"
+                                                        alt="Clube de desconto" />
+                                                    <strong className="listBeneficios">{plan.fourthDescription}</strong>
+                                                </li>
                                             </lu>
 
                                         </div>
@@ -343,36 +341,40 @@ export default function Planos() {
                                         <div className="container-new-list">
                                             <div className="container-bt">
                                             </div>
-                                            <ul>
+                                            <ul className="listCompleta">
                                                 <li>
                                                     <div className="list-bt" style={{ fontFamily: "Gordita", fontWeight: "500" }}>
-                                                        <input id="isInternetOnly" type="checkbox" name="interNetOnly"
-                                                            onChange={handleInternetCheckboxChange}
-                                                            defaultChecked={isInternetOnly}
-                                                            value="true">
-
-                                                        </input>
+                                                        <label for="checkBoxApenasInternet">
+                                                            <input id="isInternetOnly" type="checkbox" name="interNetOnly"
+                                                                onChange={handleInternetCheckboxChange}
+                                                                defaultChecked={isInternetOnly}
+                                                                value="true">
+                                                            </input>
+                                                        </label>
                                                         Apenas internet
                                                     </div>
                                                 </li>
-                                                <br />
+
                                                 {plansAdd.map((item) => (
                                                     plan.addPlanIsShow === 1 ?
+
                                                         <li key={item.Id}>
                                                             <div className="list-bt" style={{ fontFamily: "Gordita", fontWeight: "500" }}>
-                                                                <input id={item.Id} type="checkbox" name={item.Id} value="false"
-                                                                    onChange={handleChange}
-                                                                ></input>
+                                                                <label for="checkBoxPlanosAdicinais">
+                                                                    <input id={item.Id} type="checkbox" name={item.Id} value="false"
+                                                                        onChange={handleChange}
+                                                                    ></input>
+                                                                </label>
                                                                 {item.name}
                                                             </div>
                                                             {item.downSpeedBonus > 0 && plan.addPlanAddPackage === 1 ?
                                                                 (<span className="bonus">Ganhe + {item.downSpeedBonus} Mega</span>)
-                                                                : <><br /></>}
+                                                                : <></>}
                                                         </li>
                                                         : <></>
                                                 ))}
 
-                                                <br />
+
                                             </ul>
                                         </div>
 
