@@ -22,27 +22,27 @@ function Benefits(props) {
             </div>
           </div>
           <div className="slide">
-          <img src= {"/img/card.png"} />
+          <img src= {"/img/card.svg"} />
             <h5>Clube de descontos</h5>
             <p hidden>Economize em suas compras com nosso Clube de Desconto exclusivo, aproveitando ofertas especiais em diversos produtos e serviços.</p>
           </div>
 
           <div className="slide" >
-            <img src= {"/img/cofrinho.png"} alt='Sem multa por cancelamento' />
+            <img src= {"/img/cofrinho.svg"} alt='Sem multa por cancelamento' />
             <h5>Sem multa por <br /> cancelamento</h5>
             <p hidden>Oferecemos a flexibilidade de cancelar nossos serviços a qualquer momento, sem custos adicionais, para que você tenha total controle sobre sua assinatura.
             </p>
           </div>
 
           <div className="slide">
-            <img src= {"/img/instalacao.png"} alt='Instalação personalizada' />
+            <img src= {"/img/instalacao.svg"} alt='Instalação personalizada' />
             <h5>Instalação <br /> personalizada</h5>
             <p hidden>Nossa equipe de especialistas está pronta para personalizar a instalação de acordo com suas necessidades, garantindo que sua experiência seja adaptada às suas preferências.
             </p>
           </div>
 
           <div className="slide">
-            <img src={"/img/365.png"} alt='Pacotece microsoft 365 completo' />
+            <img src={"/img/365.svg"} alt='Pacotece microsoft 365 completo' />
             <h5>Pacote Microsoft <br /> 365 Completo</h5>
             <p hidden>Desfrute de uma conexão de internet ultrarrápida e estável com nossa tecnologia Wi-Fi 6, proporcionando uma experiência online mais fluida.
             </p>
@@ -66,11 +66,11 @@ function Benefits(props) {
         <div className="container-canais">
           <div className="container-canais-aberto">
             <div className="carrossel-canais">
-              <img src={"/img/canal-band.png"} alt='Canal Band' />
-              <img src={"/img/canal-globo.png"} alt='Canal Globo' />
-              <img src={"/img/canal-sbt.png"} alt='Canal SBT' />
-              <img src={"/img/canal-record.png"} alt='Canal Record' />
-              <img src={"/img/canal-globo.png"} alt='Canal Globo' />
+              <img src={"/img/canal-band.svg"} alt='Canal Band' />
+              <img src={"/img/canal-globo.svg"} alt='Canal Globo' />
+              <img src={"/img/canal-sbt.svg"} alt='Canal SBT' />
+              <img src={"/img/canal-record.svg"} alt='Canal Record' />
+              <img src={"/img/canal-globo.svg"} alt='Canal Globo' />
               <img src={"/img/canal-sbt.png"} alt='Canal SBT' />
             </div>
           </div>
@@ -82,12 +82,12 @@ function Benefits(props) {
           <h5 className="tittle-benefits-1">Canais fechados</h5>
           <div className="container-canais-fechados">
             <div className="carrossel-canais">
-              <img src={"/img/canal-warner.png"} alt='Canal Warner' />
-              <img src={"/img/canal-discovery.png"} alt='Canal Discovery' />
-              <img src={"/img/canal-espn.png"} alt='Canal ESPN' />
-              <img src={"/img/canal-tlc.png"} alt='Canal TLC' />
-              <img src={"/img/canal-animal.png"} alt='Canal animal planet' />
-              <img src={"/img/canal-fox.png"} alt='Canal Fox' />
+              <img src={"/img/canal-warner.svg"} alt='Canal Warner' />
+              <img src={"/img/canal-discovery.svg"} alt='Canal Discovery' />
+              <img src={"/img/canal-fox.svg"} alt='Canal Fox' />
+              <img src={"/img/canal-espn.svg"} alt='Canal ESPN' />
+              <img src={"/img/canal-tlc.svg"} alt='Canal TLC' />
+              <img src={"/img/canal-animal.svg"} alt='Canal animal planet' />
             </div>
           </div>
         </div>
@@ -108,7 +108,7 @@ function Benefits(props) {
         <div>
           <div>
             <p className="combo-assinando">Assinando</p>
-            <img src={"/img/combo-simples.png"} alt='Combo simples' />
+            <img className="imgComboSimples" src={"/img/combo-simples.svg"} alt='Combo simples' />
             <p>
             Você ganha mais <spam className="name-marca-destaque">100 Mega</spam> de bônus
             </p>
@@ -116,7 +116,7 @@ function Benefits(props) {
 
           <div>
             <p className="combo-assinando">Assinando o <br/> <spam className="name-marca-destaque" >combo completo</spam></p>
-            <img src={"/img/combo-completo.png"} alt='Combo Completo' />
+            <img className="imgComboCompleto" src={"/img/combo-completo.png"} alt='Combo Completo' />
             <p >
             Você ganha mais <spam className="name-marca-destaque">200 Mega</spam> de bônus
             </p>

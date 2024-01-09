@@ -17,86 +17,86 @@ export default function Home() {
     <div className={styles.containerMaster}>
       <div className={styles.container}>
         <header className={styles.header}>
-          <img className={styles.logo} src='assets/images/logo.png' />
+          <img className={styles.logo} src='assets/images/logo.svg' alt='Logo da HAYP' />
           <h1 className={styles.title}><strong>Simplifique sua rotina assine HAYP</strong></h1>
         </header>
-        <main className={styles.containerGrid}>
+        <nav className={styles.containerGrid}>
           <HomeCepCheck
             isOpen={showCep}
             toggle={toggleSignin}
           />
           <div onClick={toggleSignin} className={styles.cobertura}>
-            <div className={styles.menu}> <img className={styles.img} src="assets/images/icons/assets_disponibilidade.png" />
+            <div className={styles.menu}> <img className={styles.img} src="assets/images/icons/assets_disponibilidade.svg" alt='Consulte a disponibilidade do cep' />
               Cobertura</div>
           </div>
 
           <Link href={"/ClubeHAYP"}>
-            <div className={styles.menu}> <img className={styles.clube} src="assets/images/icons/card.svg" />
+            <div className={styles.menu}><img className={styles.img} src="assets/images/icons/card.svg" alt='clube de desconto HAYP' />
               Clube de <br /> descontos</div>
           </Link>
 
           <Link href={"/avaliacoes"}>
-            <div className={styles.menu}> <img className={styles.img} src="assets/images/icons/assets_recommends.png" />
+            <div className={styles.menu}><img className={styles.img} src="assets/images/icons/assets_recommends.svg" alt='Comentários da HAYP no Google' />
               Avaliações
               </div>
           </Link>
 
           <a href="https://api.whatsapp.com/send?1=pt_BR&phone=551128762641">
-            <div className={styles.menu}> <img className={styles.img} src="assets/images/icons/assets_nosso-whatsapp.png" />
+            <div className={styles.menu}> <img className={styles.img} src="assets/images/icons/assets_nosso-whatsapp.svg" alt='Nosso WhatsApp' />
               Nosso <br /> WhatsApp</div>
           </a>
 
           <Link href={"/Quemsomos"}>
-            <div className={styles.menu}> <img className={styles.img} src="assets/images/icons/assets_quem-somos.png" />
+            <div className={styles.menu}> <img className={styles.img} src="assets/images/icons/assets_quem-somos.svg" alt='Um pouco sobre a HAYP' />
               Quem <br /> somos
             </div>
           </Link>
 
           <Link href={"/planos"}>
-            <div className={styles.menu}> <img className={styles.img} src="assets/images/icons/assets_planos.png" />
+            <div className={styles.menu}> <img className={styles.img} src="assets/images/icons/assets_planos.svg" alt='Nossos planos' />
               Planos</div>
           </Link>
 
           <a href="tel:+551128762641">
-            <div className={styles.menu}> <img className={styles.img} src="assets/images/icons/assets_contato.png" />
+            <div className={styles.menu}> <img className={styles.img} src="assets/images/icons/assets_contato.svg" alt='Entre em contato por chamada de telefone' />
               Contato</div>
           </a>
 
           <a href="https://cda.hptelecom.com.br/central_assinante_web/" target='_blank'>
-            <div className={styles.menu}> <img className={styles.img} src="assets/images/icons/area-do-cliente-8.png" />
+            <div className={styles.menu}> <img className={styles.img} src="assets/images/icons/area-do-cliente-8.svg" alt='área do cliente' />
               Área do <br /> cliente
             </div>
           </a>
 
           <Link href={"/enviodeemail"}>
-            <div className={styles.menu}> <img className={styles.img} src="assets/images/icons/assets_e-mail.png" />
+            <div className={styles.menu}> <img className={styles.img} src="assets/images/icons/assets_e-mail.svg" alt='Envie um e-mail para contato@hptelecom.com.br'/>
               E-mail</div>
           </Link>
-
-        </main>
+        </nav>
 
 
 
       </div>
+      
       <footer className={styles.footer}>
         <div className={styles.redesSociais}>
           <a href="https://www.instagram.com/haypoficial/">
             <div>
-              <img className={styles.imgRedes} src="assets/images/icons/assets_instagram.png" />
+              <img className={styles.imgRedes} src="assets/images/icons/assets_instagram.svg" alt='Nosso perfil no Istagram'/>
               Instagram
             </div>
           </a>
 
           <a href="https://www.facebook.com/HaypTelecom/">
             <div>
-              <img className={styles.imgRedes} src="assets/images/icons/assets_facebook.png" />
+              <img className={styles.imgRedes} src="assets/images/icons/assets_facebook.svg" alt='Nosso perfil no Facebook' />
               Facebook
             </div>
           </a>
 
           <a href="https://br.linkedin.com/company/hayp-telecom">
             <div>
-              <img className={styles.imgRedes} src="assets/images/icons/assets_linkedin.png" />
+              <img className={styles.imgRedes} src="assets/images/icons/assets_linkedin.svg" alt='Nosso perfil no Linkedin'/>
               Linkedin
             </div>
           </a>

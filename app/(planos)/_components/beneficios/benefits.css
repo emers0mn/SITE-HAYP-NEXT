@@ -138,7 +138,7 @@
 .carrossel-canais {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 
   width: 300px;
 
@@ -280,6 +280,16 @@
   padding: 20px;
   border-radius: 5px;
 
+}
+
+.imgComboSimples{
+  width: 340px;
+  height: 107px;
+}
+
+.imgComboCompleto{
+  width: 299px;
+  height: 159px;
 }
 
 .bt-assinar{

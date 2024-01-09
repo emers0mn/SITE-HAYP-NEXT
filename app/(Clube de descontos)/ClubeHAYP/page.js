@@ -24,7 +24,7 @@ export default function ClubeHayp() {
                     </p>
 
                     <img
-                        src="./assets/images/marcas.png"
+                        src="./assets/images/marcasWebP.webp"
                         
                     />
 
@@ -34,7 +34,7 @@ export default function ClubeHayp() {
                     </p>
 
                     <img
-                        src="./assets/images/card_1.png"
+                        src="./assets/images/card_1WebP.webp"
 
                     />
 

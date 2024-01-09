@@ -20,18 +20,19 @@ function Telefone() {
                     </ul>
 
                     <img
-                        src={"/img/telefone.png"} alt='Usando o telefone HAYP'
+                        className='imgTelefone'
+                        src={"/img/telefone.svg"} alt='Usando o telefone HAYP'
                     />
                 </div>
 
                 <div className="icones-telefone">
                     <ul>
                         <li>
-                            <img src={"/img/casa-telefone.png"} alt='Sua casa com Telefone' />
+                            <img className='iconTelefone' src={"/img/casa-telefone.svg"} alt='Sua casa com Telefone' />
                             <p>Para sua casa</p>
                         </li>
                         <li>
-                            <img src={"/img/negocio-telefone.png"} alt='Sua casa com Telefone' />
+                            <img className='iconTelefone' src={"/img/negocio-telefone.svg"} alt='Sua casa com Telefone' />
                             <p>Para seu negócio</p>
                         </li>
                     </ul>

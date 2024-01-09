@@ -313,17 +313,17 @@ export default function Planos() {
 
                                             <lu className="lista1">
                                                     <li>
-                                                        <img
+                                                    <img
                                                             className="imgBeneficios"
-                                                            src="/assets/images/nofidelity.png"
-                                                            alt="Sem Fidelidade" />
+                                                            src="/assets/images/nofidelity.svg"
+                                                            alt="Sem fidelidade" />
                                                         <strong className="listBeneficios">{plan.firstDescription}</strong>
                                                     </li>
                                                     <div hidden={plan.downSpeed === 300 ? true : (plan.downSpeed && variants.downSpeed >= 500 ? false : true)}>
                                                         <li>
                                                             <img
                                                                 className="imgBeneficios"
-                                                                src="/assets/images/365-plan.png"
+                                                                src="/assets/images/365-plan.svg"
                                                                 alt="Pacote Microsft 365 Completo"
                                                             />
                                                             <strong className="listBeneficios">{plan.thirdDescription}</strong>

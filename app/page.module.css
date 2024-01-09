@@ -22,7 +22,9 @@
 }
 
 .logo{
-  width: 150px;
+  width: 70px;
+  padding: 15px;
+  margin: 20px;
   background-color: #0000007d;
 }
 
@@ -65,7 +67,7 @@
   background: linear-gradient(50deg, var(--cor-1) 0%, var(--cor-2) 59%);
   border-radius: 100%;
   padding: 5px;
-  margin: auto;
+  
 }
 
 .imgRedes{
@@ -83,16 +85,6 @@
 }
 
 
-
-.clube{
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(50deg, var(--cor-1) 0%, var(--cor-2) 59%);
-  border-radius: 100%;
-  padding: 5px;
-}
-
-
 /*Footer*/
 .footer{
   display: flex;
@@ -101,7 +93,7 @@
   
   text-align: center;
   bottom: 10px;
-  margin: 10px 20px;
+  margin: -30px auto 30px auto;
 }
 
 .redesSociais{
