@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './header.module.css';
 
 export const HeaderLayout = () => {
@@ -5,9 +6,9 @@ export const HeaderLayout = () => {
         <>
         <header className={styles.container}>
             <div>
-            <a href="/">
+            <Link href="/">
                     <div className={styles.iconHome} alt="Botão da Home"></div>
-                </a>
+                </Link>
             </div>
         </header>
         </>
