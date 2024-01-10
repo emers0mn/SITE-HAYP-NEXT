@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import './Telefone.css'
 
 function Telefone() {
@@ -19,9 +20,14 @@ function Telefone() {
                             100 Mega de Bônus</li>
                     </ul>
 
-                    <img
+                    <Image
+                        width={370.8}
+                        height={200}
                         className='imgTelefone'
-                        src={"/img/telefone.svg"} alt='Usando o telefone HAYP'
+                        src={"/img/telefone.svg"}
+                        alt='Usando o telefone HAYP'
+                        quality={30}
+                        loading="lazy"
                     />
                 </div>
 

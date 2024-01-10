@@ -6,6 +6,7 @@ import Api from "../../../service/Api";
 import LoadingSpinner from "../../../components/spinner/LoadingSpinner";
 import "../_components/plans.css";
 import Benefits from "../_components/beneficios/Benefits";
+import Image from "next/image";
 
 export default function Planos() {
 
@@ -277,7 +278,11 @@ export default function Planos() {
                             {isLoading ? <LoadingSpinner /> :
                                 <div key="plan" className="package-list center">
                                     <div className="package-icon" >
-                                        <img
+                                        <Image
+                                            width={80}
+                                            height={80}
+                                            quality={50}
+                                            loading="lazy"
                                             src={"/assets/images/" + plan.icon}
                                             alt="Velocimetro"
                                             className="img-fluid"
@@ -285,31 +290,35 @@ export default function Planos() {
                                     </div>
                                     <div className="package-info">
                                         <div className="price-plan">
-                                            <img className="minus" onClick={() => setIndex(index - 1)} src="./assets/images/icons/minus.svg"
+                                            <Image width={55} height={55} quality={50} loading="lazy" className="minus" onClick={() => setIndex(index - 1)} src="./assets/images/icons/minus.svg"
                                                 alt="dminuir a quantidade de megas" />
 
                                             <h1>{plan.downSpeed} Mega</h1>
 
-                                            <img className="plus" onClick={() => setIndex(index + 1)} src="./assets/images/icons/plus.svg"
+                                            <Image width={55} height={55} quality={50} loading="lazy" className="plus" onClick={() => setIndex(index + 1)} src="./assets/images/icons/plus.svg"
                                                 alt="adicionais mais megas" />
                                         </div>
                                         <div className="desc">
 
                                             <lu className="lista1">
                                                 <li>
-                                                    <img className="downloadUpload" src="./img/download.svg" alt="icone de download" />
+                                                    <Image width={15} height={15} quality={50} loading="lazy" className="downloadUpload" src="./img/download.svg" alt="icone de download" />
                                                     <strong className="download">Download {plan.downSpeed} Mbps</strong>
                                                 </li>
 
                                                 <li>
-                                                    <img className="downloadUpload" src="./img/upload.svg" alt="icone de upload" />
+                                                    <Image width={15} height={15} quality={50} loading="lazy" className="downloadUpload" src="./img/upload.svg" alt="icone de upload" />
                                                     Upload {plan.upSpeed} Mbps
                                                 </li>
                                             </lu>
 
                                             <lu className="lista1">
-                                                <li>
-                                                    <img
+                                                <li className="listaBeneficios">
+                                                    <Image
+                                                        width={20}
+                                                        height={20}
+                                                        quality={50}
+                                                        loading="lazy"
                                                         className="imgBeneficios"
                                                         src="/assets/images/nofidelity.svg"
                                                         alt="Não temos fidelidade" />
@@ -317,8 +326,11 @@ export default function Planos() {
                                                 </li>
 
                                                 <li hidden={plan.downSpeed === 300 ? true : (plan.downSpeed && variants.downSpeed >= 500 ? false : true)}>
-                                                    <img
-                                                        className="imgBeneficios"
+                                                    <Image
+                                                        width={20}
+                                                        height={20}
+                                                        quality={50}
+                                                        loading="lazy"
                                                         src="/assets/images/365-plan.svg"
                                                         alt="Pacote Microsft 365 Completo"
                                                     />
@@ -327,7 +339,11 @@ export default function Planos() {
 
 
                                                 <li className="listaBeneficios">
-                                                    <img
+                                                    <Image
+                                                        width={20}
+                                                        height={20}
+                                                        quality={50}
+                                                        loading="lazy"
                                                         className="imgBeneficios"
                                                         src="/assets/images/card-1.svg"
                                                         alt="Clube de desconto" />
