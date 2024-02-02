@@ -22,20 +22,20 @@ function Benefits(props) {
             </div>
           </div>
           <div className="slide">
-          <Image width={100} height={90} quality={50} loading="lazy" src= {"/img/card.svg"} alt="clube de desconto"/>
+            <Image width={100} height={90} quality={50} loading="lazy" src={"/img/card.svg"} alt="clube de desconto" />
             <h3>Clube de descontos</h3>
             <p hidden>Economize em suas compras com nosso Clube de Desconto exclusivo, aproveitando ofertas especiais em diversos produtos e serviços.</p>
           </div>
 
           <div className="slide" >
-            <Image width={100} height={90} quality={50} loading="lazy" src= {"/img/cofrinho.svg"} alt='Sem multa por cancelamento' />
+            <Image width={100} height={90} quality={50} loading="lazy" src={"/img/cofrinho.svg"} alt='Sem multa por cancelamento' />
             <h3>Sem multa por <br /> cancelamento</h3>
             <p hidden>Oferecemos a flexibilidade de cancelar nossos serviços a qualquer momento, sem custos adicionais, para que você tenha total controle sobre sua assinatura.
             </p>
           </div>
 
           <div className="slide">
-            <Image width={100} height={90} quality={50} loading="lazy" src= {"/img/instalacao.svg"} alt='Instalação personalizada' />
+            <Image width={100} height={90} quality={50} loading="lazy" src={"/img/instalacao.svg"} alt='Instalação personalizada' />
             <h3>Instalação <br /> personalizada</h3>
             <p hidden>Nossa equipe de especialistas está pronta para personalizar a instalação de acordo com suas necessidades, garantindo que sua experiência seja adaptada às suas preferências.
             </p>
@@ -50,13 +50,13 @@ function Benefits(props) {
 
 
         </div>
-
-        
       </div>
 
+      {/*Começo dos Canais*/}
+      
       <div className="bt-assinar">
-          <a href="https://wa.me/551128762641?text=Quero+saber+mais+sobre+os+benef%C3%ADcios%2C+em+especial+o%3A+" target="_blanck">Saiba mais</a>
-        </div>
+        <a href="https://wa.me/551128762641?text=Quero+saber+mais+sobre+os+benef%C3%ADcios%2C+em+especial+o%3A+" target="_blanck">Saiba mais</a>
+      </div>
 
       <div id="canais">
         <h2 className="tittle-benefits-2">De um <spam className="name-marca">HAYP</spam> na sua Tv</h2>
@@ -66,12 +66,12 @@ function Benefits(props) {
         <div className="container-canais">
           <div className="container-canais-aberto">
             <div className="carrossel-canais">
-              <Image width={300} height={500} src={"/img/canal-band.webp"} alt='Canal Band' quality={60} loading="lazy"/>
+              <Image width={300} height={500} src={"/img/canal-band.webp"} alt='Canal Band' quality={60} loading="lazy" />
               <Image width={300} height={500} src={"/img/canal-globo.webp"} alt='Canal Globo' quality={60} loading="lazy" />
-              <Image width={300} height={500} src={"/img/canal-sbt.webp"} alt='Canal SBT' quality={60} loading="lazy"/>
-              <Image width={300} height={500} src={"/img/canal-record.webp"} alt='Canal Record' quality={60} loading="lazy"/>
-              <Image width={300} height={500} src={"/img/canal-globo.webp"} alt='Canal Globo' quality={60} loading="lazy"/>
-              <Image width={300} height={500} src={"/img/canal-sbt.webp"} alt='Canal SBT' quality={60} loading="lazy"/>
+              <Image width={300} height={500} src={"/img/canal-sbt.webp"} alt='Canal SBT' quality={60} loading="lazy" />
+              <Image width={300} height={500} src={"/img/canal-record.webp"} alt='Canal Record' quality={60} loading="lazy" />
+              <Image width={300} height={500} src={"/img/canal-globo.webp"} alt='Canal Globo' quality={60} loading="lazy" />
+              <Image width={300} height={500} src={"/img/canal-sbt.webp"} alt='Canal SBT' quality={60} loading="lazy" />
             </div>
           </div>
         </div>
@@ -84,10 +84,10 @@ function Benefits(props) {
             <div className="carrossel-canais">
               <Image width={300} height={500} src={"/img/canal-warner.webp"} alt='Canal Warner' quality={60} loading="lazy" />
               <Image width={300} height={500} src={"/img/canal-discovery.webp"} alt='Canal Discovery' quality={60} loading="lazy" />
-              <Image width={300} height={500} src={"/img/canal-fox.webp"} alt='Canal Fox' quality={60} loading="lazy"/>
-              <Image width={300} height={500} src={"/img/canal-espn.webp"} alt='Canal ESPN' quality={60} loading="lazy"/>
-              <Image width={300} height={500} src={"/img/canal-tlc.webp"} alt='Canal TLC' quality={60} loading="lazy"/>
-              <Image width={300} height={500} src={"/img/canal-animal.webp"} alt='Canal animal planet' quality={60} loading="lazy"/>
+              <Image width={300} height={500} src={"/img/canal-fox.webp"} alt='Canal Fox' quality={60} loading="lazy" />
+              <Image width={300} height={500} src={"/img/canal-espn.webp"} alt='Canal ESPN' quality={60} loading="lazy" />
+              <Image width={300} height={500} src={"/img/canal-tlc.webp"} alt='Canal TLC' quality={60} loading="lazy" />
+              <Image width={300} height={500} src={"/img/canal-animal.webp"} alt='Canal animal planet' quality={60} loading="lazy" />
             </div>
           </div>
         </div>
@@ -103,24 +103,24 @@ function Benefits(props) {
       <Telefone />
 
       <div>
-        <h2 className="tittle-benefits-3"> Monte um combo e ganhe <br />  <span style={{color: "#04CB3A" }}>MEGAS de bônus</span>!!</h2>
+        <h2 className="tittle-benefits-3"> Monte um combo e ganhe <br />  <span style={{ color: "#04CB3A" }}>MEGAS de bônus</span>!!</h2>
 
         <div>
           <div>
             <h3 className="combo-assinando">Assinando</h3>
-            <Image width={340} height={107} src={"/img/combo-simples.svg"} alt='Combo simples' quality={60} loading="lazy"/>
+            <Image width={340} height={107} src={"/img/combo-simples.svg"} alt='Combo simples' quality={60} loading="lazy" />
             <h4>
-            Você ganha mais <spam className="name-marca-destaque">60 Mega</spam> de bônus
+              Você ganha mais <spam className="name-marca-destaque">60 Mega</spam> de bônus
             </h4>
-            </div>
+          </div>
 
           <div>
-            <h4 className="combo-assinando">Assinando o <br/> <spam className="name-marca-destaque" >combo completo</spam></h4>
+            <h4 className="combo-assinando">Assinando o <br /> <spam className="name-marca-destaque" >combo completo</spam></h4>
             <Image width={300} height={160} src={"/img/combo-completo.svg"} alt='Combo Completo' quality={60} loading="lazy" />
             <h4>
-            Você ganha mais <spam className="name-marca-destaque">500 Mega</spam> de bônus
+              Você ganha mais <spam className="name-marca-destaque">500 Mega</spam> de bônus
             </h4>
-            </div>
+          </div>
         </div>
 
         <div className="bt-assinar">
