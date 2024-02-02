@@ -1,0 +1,310 @@
+.primeira{
+  opacity: 0;
+}
+
+.tittle-benefits-1 {
+  font-family: gordita;
+  padding: 5px;
+  font-size: 1.5rem;
+  margin: 10px auto;
+}
+
+.tittle-benefits-2 {
+  font-family: gordita-bold;
+  font-size: 40px;
+  margin: auto auto 20px auto;
+  line-height: 45px;
+}
+
+.tittle-benefits-3{
+  margin: auto;
+  font-family: gordita;
+  font-size: 150%;
+}
+
+/*Começo dos beneficios */
+
+.container-Benefits {
+  max-width: 90%;
+  margin: 20px auto 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+.carrossel-Benefits {
+  width: auto;
+  height: 180px;
+  margin: 10px 30px;
+  display: flex;
+  
+}
+
+.carrossel-Benefits h3{
+  font-family: gordita;
+  font-size: 16px;
+  margin: 5px auto;
+}
+
+.carrossel-Benefits img {
+  width: 100px;
+}
+
+.grade {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: carrossel-beneficios 20s infinite;
+  overflow: hidden;
+}
+
+.slide{
+  width: 300px;
+  
+}
+
+@keyframes carrossel-beneficios {
+
+  0% {
+    transform: translateX(+20%);
+  }
+
+  10% {
+    transform: translateX(+20%);
+    
+  }
+
+  20% {
+    transform: translateX(0%);
+    
+  }
+
+  30% {
+    transform: translateX(0%);
+    
+  }
+
+  40% {
+    transform: translateX(-20%);
+    
+  }
+
+  50% {
+    transform: translateX(-20%);
+    
+  }
+
+  60% {
+    transform: translateX(-40%);
+    
+  }
+  70% {
+    transform: translateX(-40%);
+    
+  }
+
+  100% {
+    transform: translateX(+20%);
+    
+  }
+}
+
+.grade p {
+  margin: 0 auto;
+  width: 300px;
+  padding: 0 20px;
+}
+
+
+
+.divisor {
+  margin: auto;
+  width: 56px;
+  height: 2px;
+  background: var(--cor-1);
+}
+
+/*Começo dos canais */
+
+#canais {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carrossel-canais {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  width: 300px;
+
+}
+
+.container-Benefits a {
+  font-size: 16px;
+  color: #fff;
+  text-decoration: underline var(--cor-1);
+}
+
+.container-canais-aberto {
+  
+  animation: carrossel-canais-aberto 15s infinite;
+
+}
+
+@keyframes carrossel-canais-aberto {
+
+  0% {
+    transform: translateX(0%);
+
+  }
+
+  25% {
+    transform: translateX(-100%);
+
+  }
+
+  50% {
+    transform: translateX(-200%);
+    
+  }
+
+  75% {
+    transform: translateX(-300%);
+  }
+
+
+
+}
+
+.container-canais-fechados {
+  width: 295px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  animation: carrossel-canais-fechados 15s infinite;
+
+}
+
+@keyframes carrossel-canais-fechados {
+
+  0% {
+    transform: translateX(0%);
+
+  }
+
+  20% {
+    transform: translateX(-100%);
+
+  }
+
+  40% {
+    transform: translateX(-200%);
+
+  }
+
+
+  60% {
+    transform: translateX(-300%);
+    
+  }
+
+  80% {
+    transform: translateX(-400%);
+  }
+
+  90% {
+    transform: translateX(-500%);
+  }
+
+}
+
+.plus {
+  font-size: 1.3rem;
+  font-family: gordita-bold;
+  color: var(--cor-1);
+}
+
+/*Começo dos combos telefones*/
+
+.name-marca {
+  font-family: gordita-bold;
+  color: var(--cor-2);
+
+}
+
+.name-marca-destaque{
+  font-family: gordita-bold;
+  color: var(--cor-2);
+  font-size: 20px;
+}
+
+.combo-assinando{
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 0 10px 0 ;
+  line-height: 120%;
+  font-family: gordita-bold;
+
+}
+
+.perguntas {
+  display: flex;
+
+  position: relative;
+  padding: 10px;
+}
+
+.tittle-pergunta {
+  font-weight: bold;
+}
+
+.perguntas img {
+  position: absolute;
+
+  width: 20px;
+  right: 5%;
+  bottom: 15%;
+
+}
+
+.lista-perguntas {
+  text-align: left;
+  margin: 5px;
+  background: #1D3840;
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+
+}
+
+.imgComboSimples{
+  width: 340px;
+  height: 107px;
+}
+
+.imgComboCompleto{
+  width: 299px;
+  height: 159px;
+}
+
+.bt-assinar{
+  background-color: var(--cor-1);
+  padding: 10px;
+  margin: 15px auto 30px auto; 
+  border-radius: 5px;
+  font-family: gordita;
+}
+
+.bt-assinar a {
+  font-family: gordita-bold;
+  width: auto;
+}
+
+.saber-mais {
+  cursor: pointer;
+}

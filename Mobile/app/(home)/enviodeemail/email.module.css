@@ -1,0 +1,47 @@
+.container{
+    margin: 5px 5%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    font-family: Gordita;
+    
+}
+
+.formulario{
+    
+    border: solid transparent;
+    border-radius: 5px;
+    width: 100%;
+    font-family: gordita;
+    padding: 5px;
+}
+
+.form1{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 10px 10px 10px 0;
+    
+}
+
+.form2{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 10px 10px 10px 0;
+}
+
+.btEnviar{
+    background-color: var(--cor-1);
+    padding: 10px;
+    margin: 5px 5px 5px 0;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+
+}
