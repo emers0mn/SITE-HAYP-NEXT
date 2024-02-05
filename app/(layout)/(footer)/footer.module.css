@@ -6,9 +6,9 @@
     width: 30px;
     height: auto;
     
-    border: 2px solid var(--cor-2) ;
+    border: 1px solid var(--cor-2) ;
     
-    border-radius: 100%;
+    border-radius: 100px;
     padding: 5px;
   }
 
@@ -16,24 +16,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: sticky;
+    bottom: 0px;
   }
-  
+
   .redesSociais{
     
     display: flex;
     gap: 20px;
     align-items: center;
-    justify-content: center;
-    position: fixed;
-    bottom: 1px;
-    
+    justify-content: center;    
   
     background: linear-gradient(90deg, #222222c3 0%, #222222c3 89%);
     width: 100vw;
     height: auto;
     padding: 10px 0;
   
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
   }
   
   .dados1{
@@ -45,15 +44,3 @@
     color: var(--cor-2);
     
   }
-  
-  
-  @media screen and (max-width: 360px)
-    {
-      .footer{
-        margin: 0px 20px;
-      }
-      .redesSociais{
-        margin-bottom: 20px;
-        margin-top: 0;
-      }
-    }  

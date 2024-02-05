@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { HomeFooterPage } from './(home)/_home/homeFooterPage';
 import Banner from './(home)/(banner)/Banner';
 import Footer from './(layout)/(footer)/Footer';
+import AvaliaHome from './(Avaliação)/(Avaliação_Home)/avalia_home';
 
 export default function Home() {
 
@@ -78,6 +79,7 @@ export default function Home() {
       </div>
 
       <Banner />
+      <AvaliaHome />
       <Footer />
     </div>
 

@@ -1,0 +1,173 @@
+.containerComentarios {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+
+    justify-content: space-between;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.mainComentarios {
+    display: flex;
+    justify-content: space-around;
+    width: 450vw;
+    gap: 25px;
+    margin: 30px auto;
+    padding: 30px auto;
+
+    animation: comentarios 20s infinite alternate ease-in-out;
+
+}
+
+.mainComentarios:hover {
+    animation-duration: 20s;
+}
+
+.headingTitle h2 {
+    font-size: 30px;
+    margin: auto;
+    text-align: center;
+}
+
+.headingTitle strong {
+    color: var(--cor-1);
+}
+
+.divisor {
+    margin: 10px auto 20px auto;
+    width: 100px;
+    height: 5px;
+    border-radius: 10px;
+    background: linear-gradient(82deg, var(--cor-1) 4.34%, #04CB3A 97.83%);
+}
+
+.comentarios {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 30px;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.041);
+    border: 0.75px solid var(--cor-4);
+    border-radius: 5px;
+
+}
+
+.contentStars {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comentarios .foto {
+    width: 80px;
+    height: 80px;
+}
+
+.comentarios h5 {
+    font-size: 25px;
+    margin: 15px;
+}
+
+
+.comentarios:hover {
+    box-shadow: 0 0 1px 1px var(--cor-1);
+}
+
+.personas {
+    width: 50px;
+    height: 50px;
+}
+
+.name {
+    font-size: 25px;
+}
+
+.text {
+    font-size: 14px;
+}
+
+
+@keyframes comentarios {
+
+    10%,
+    20% {
+        transform: translateX(0);
+    }
+
+    30%,
+    40% {
+        transform: translateX(-20%);
+    }
+
+    50%,
+    60% {
+        transform: translateX(-41%);
+    }
+
+    70%,
+    80% {
+        transform: translateX(-61%);
+    }
+
+    90%,
+    100% {
+        transform: translateX(-81%);
+    }
+}
+
+/*---------------------------------------------------------------------
+                         darkmode
+-----------------------------------------------------------------------*/
+
+@media (prefers-color-scheme: dark) {
+    .headingTitle strong {
+        color: var(--cor-2);
+    }
+
+    .comentarios {
+        border: 2px solid var(--cor-1);
+
+    }
+
+    .comentarios:hover {
+        box-shadow: 0 0 3px 3px var(--cor-2);
+    }
+
+}
+
+@media screen and (min-width: 600px) {
+    .mainComentarios {
+        width: 200%;
+    }
+
+    @keyframes comentarios {
+
+        10%,
+        20% {
+            transform: translateX(0);
+        }
+    
+        30%,
+        40% {
+            transform: translateX(-20%);
+        }
+    
+        50%,
+        60% {
+            transform: translateX(-40%);
+        }
+
+        70%,
+        80% {
+            transform: translateX(-53%);
+        }
+    
+    }
+}

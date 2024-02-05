@@ -1,3 +1,4 @@
+import Link from "next/link"
 import styles from "./footer.module.css"
 
 
@@ -8,28 +9,35 @@ export default function Footer() {
         <a href="tel:+551128762641">
             <div>
               <img className={styles.imgRedes} src="assets/images/icons/assets_telefone.svg" alt='Nosso perfil no Istagram'/>
-              Telefone
+              {/* Telefone */}
             </div>
           </a>
 
           <a href="mailto:contato@hptelecom.com.br">
             <div>
               <img className={styles.imgRedes} src="assets/images/icons/assets_email.svg" alt='Nosso perfil no Istagram'/>
-              E-mail
+              {/* E-mail */}
             </div>
           </a>
+
+          {/* <Link href="/">
+            <div>
+              <img className={styles.home} src="assets/images/icons/home.svg" alt='Nosso perfil no Istagram'/>
+               
+            </div>
+          </Link> */}
           
           <a href="https://www.instagram.com/haypoficial/">
             <div>
               <img className={styles.imgRedes} src="assets/images/icons/assets_instagram.svg" alt='Nosso perfil no Istagram'/>
-              Instagram
+              {/* Instagram */}
             </div>
           </a>
 
           <a href="https://www.facebook.com/HaypTelecom/">
             <div>
               <img className={styles.imgRedes} src="assets/images/icons/assets_facebook.svg" alt='Nosso perfil no Facebook' />
-              Facebook
+              {/* Facebook */}
             </div>
           </a>
         </div>

@@ -6,10 +6,7 @@ export default function Banner() {
         <div className={styles.container}>
             <h3>Teste de Velocidade</h3>
             <video className={styles.video} autoPlay loop muted src="/video/teste_de_velocidade.mp4" />
-            <h3>Avaliações<br />no Google</h3>
-            <Image
-                src={exemplo2}
-            />
+            
         </div>
     )
 }

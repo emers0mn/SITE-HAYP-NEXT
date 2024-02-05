@@ -15,8 +15,9 @@
 }
 
 .video{
-    width: 290px;
+    width: 250px;
     height: auto;
-
     border-radius: 10px;
+    border:  solid var(--cor-1);
 }
+
