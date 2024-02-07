@@ -1,10 +1,12 @@
 "use client";
 
 import { useState } from 'react';
-import { HomeCepCheck } from "../app/(home)/_home/homeCepCheck";
+import { HomeCepCheck } from "../../(home)/_home/homeCepCheck";
 import styles from './page.module.css';
 import Link from 'next/link';
-import { HomeFooterPage } from './(home)/_home/homeFooterPage';
+import Banner from '../../(home)/(banner)/Banner';
+import Footer from '../../(layout)/(footer)/Footer';
+import AvaliaHome from '../../(Avaliação)/(Avaliação_Home)/avalia_home';
 
 export default function Home() {
 
@@ -18,7 +20,7 @@ export default function Home() {
       <div className={styles.container}>
         <header className={styles.header}>
           <img className={styles.logo} src='assets/images/logo.svg' alt='Logo da HAYP' />
-          <h1 className={styles.title}><strong>Simplifique sua rotina assine HAYP</strong></h1>
+          <h1 className={styles.title}><strong>Internet para pessoas exigentes</strong></h1>
         </header>
         <nav className={styles.containerGrid}>
           <HomeCepCheck
@@ -35,7 +37,7 @@ export default function Home() {
               Clube de <br /> descontos</div>
           </Link>
 
-          <Link href={"/avaliacoes"}>
+          <Link hidden href={"/avaliacoes"}>
             <div className={styles.menu}><img className={styles.img} src="assets/images/icons/assets_recommends.svg" alt='Comentários da HAYP no Google' />
               Avaliações
               </div>
@@ -57,7 +59,7 @@ export default function Home() {
               Planos</div>
           </Link>
 
-          <a href="tel:+551128762641">
+          <a hidden href="tel:+551128762641">
             <div className={styles.menu}> <img className={styles.img} src="assets/images/icons/assets_contato.svg" alt='Entre em contato por chamada de telefone' />
               Contato</div>
           </a>
@@ -68,55 +70,16 @@ export default function Home() {
             </div>
           </a>
 
-          <Link href={"/enviodeemail"}>
+          <Link hidden href={"/enviodeemail"}>
             <div className={styles.menu}> <img className={styles.img} src="assets/images/icons/assets_e-mail.svg" alt='Envie um e-mail para contato@hptelecom.com.br'/>
               E-mail</div>
           </Link>
         </nav>
-
-
-
       </div>
-      
-      <footer className={styles.footer}>
-        <div className={styles.redesSociais}>
-          <a href="https://www.instagram.com/haypoficial/">
-            <div>
-              <img className={styles.imgRedes} src="assets/images/icons/assets_instagram.svg" alt='Nosso perfil no Istagram'/>
-              Instagram
-            </div>
-          </a>
 
-          <a href="https://www.facebook.com/HaypTelecom/">
-            <div>
-              <img className={styles.imgRedes} src="assets/images/icons/assets_facebook.svg" alt='Nosso perfil no Facebook' />
-              Facebook
-            </div>
-          </a>
-
-          <a href="https://br.linkedin.com/company/hayp-telecom">
-            <div>
-              <img className={styles.imgRedes} src="assets/images/icons/assets_linkedin.svg" alt='Nosso perfil no Linkedin'/>
-              Linkedin
-            </div>
-          </a>
-        </div>
-
-        <div hidden>
-          <div className={styles.dados1}>
-            <strong>Av. Manuel Alves Soares, 638 - sala 3, Parque Colonial
-              <br />
-              <span className={styles.dados2}>Cep</span>: 04821-270</strong>
-          </div>
-          <div className={styles.dados1}>
-            <strong><span className={styles.dados2}>CNPJ</span>: 28.973.552/0001-03</strong>
-          </div>
-          <div className={styles.dados1}>
-            <strong><span className={styles.dados2}>Empresa autorizada pela Anatel</span>, ato 1018</strong>
-          </div>
-        </div>
-
-      </footer>
+      <Banner />
+      <AvaliaHome />
+      <Footer />
     </div>
 
   )
