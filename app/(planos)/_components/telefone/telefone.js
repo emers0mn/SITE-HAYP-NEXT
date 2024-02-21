@@ -20,7 +20,7 @@ function Telefone() {
                             100 Mega de Bônus</li>
                     </ul>
 
-                    <Image
+                    <img
                         width={370.8}
                         height={200}
                         className='imgTelefone'

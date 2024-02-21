@@ -51,7 +51,7 @@ const ComentPage = () => {
                                             <h5 className={styles.name}> {item.author_name}</h5>
 
                                             <div className={styles.contentStars}>
-                                                <Image
+                                                <img
                                                     width={100}
                                                     height={30}
                                                     alt="Avaliação dos clientes (vai de 1 a 5 estrelas)"
