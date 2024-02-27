@@ -6,6 +6,36 @@ import './benefits.css';
 import Perguntas_Frequentes from "./Perguntas_Frequentes"
 import Telefone from "../telefone/telefone";
 
+function IconBeneficios({ textBeneficios, beneficio, altBeneficio, imgBeneficios }) {
+  return (
+    <article>
+      <div className="slide">
+        <img
+          width={200}
+          height={100}
+          quality={50}
+          loading="lazy"
+          src={`/img/${imgBeneficios}`}
+          alt={`Beneficio: ${beneficio}`} />
+        <h3>{beneficio}</h3>
+        <p>{textBeneficios}</p>
+      </div>
+    </article>
+  )
+}
+
+function Tv({ canal }) {
+  return (
+
+    <img
+      width={300}
+      height={500}
+      src={`/img/canais/canal-${canal}.svg`}
+      alt={`Canal ${canal}`} />
+
+  )
+}
+
 function Benefits(props) {
   return (
     <section className="container-Benefits">
@@ -15,45 +45,31 @@ function Benefits(props) {
 
       <div className="carrossel-Benefits">
         <div className="grade">
-          <div className="slides">
-            <div className="slide primeira">
-              <h3>Clube de desconto</h3>
-              <p>Economize em suas compras com nosso Clube de Desconto exclusivo, aproveitando ofertas especiais em diversos produtos e serviços.</p>
-            </div>
-          </div>
-          <div className="slide">
-            <img width={100} height={90} quality={50} loading="lazy" src={"/img/card.svg"} alt="clube de desconto" />
-            <h3>Clube de descontos</h3>
-            <p hidden>Economize em suas compras com nosso Clube de Desconto exclusivo, aproveitando ofertas especiais em diversos produtos e serviços.</p>
-          </div>
-
-          <div className="slide" >
-            <img width={100} height={90} quality={50} loading="lazy" src={"/img/cofrinho.svg"} alt='Sem multa por cancelamento' />
-            <h3>Sem multa por <br /> cancelamento</h3>
-            <p hidden>Oferecemos a flexibilidade de cancelar nossos serviços a qualquer momento, sem custos adicionais, para que você tenha total controle sobre sua assinatura.
-            </p>
-          </div>
-
-          <div className="slide">
-            <img width={100} height={90} quality={50} loading="lazy" src={"/img/instalacao.svg"} alt='Instalação personalizada' />
-            <h3>Instalação <br /> personalizada</h3>
-            <p hidden>Nossa equipe de especialistas está pronta para personalizar a instalação de acordo com suas necessidades, garantindo que sua experiência seja adaptada às suas preferências.
-            </p>
-          </div>
-
-          <div className="slide">
-            <img width={100} height={90} quality={50} loading="lazy" src={"/img/365.svg"} alt='Pacotece microsoft 365 completo' />
-            <h3>Pacote Microsoft <br /> 365 Completo</h3>
-            <p hidden>Desfrute de uma conexão de internet ultrarrápida e estável com nossa tecnologia Wi-Fi 6, proporcionando uma experiência online mais fluida.
-            </p>
-          </div>
-
-
+          <IconBeneficios
+            beneficio="Pacote Microsoft 365 completo"
+            imgBeneficios="365.svg"
+          />
+          <IconBeneficios
+            beneficio="Clube de desconto HAYP"
+            imgBeneficios="card.svg"
+          />
+          <IconBeneficios
+            beneficio="Sem multa por cancelamento"
+            imgBeneficios="cofrinho.svg"
+          />
+          <IconBeneficios
+            beneficio="Instalação personalizada"
+            imgBeneficios="instalacao.svg"
+          />
+          <IconBeneficios
+            beneficio="Pacote Microsoft 365 completo"
+            imgBeneficios="365.svg"
+          />
         </div>
       </div>
 
       {/*Começo dos Canais*/}
-      
+
       <div className="bt-assinar">
         <a href="https://wa.me/551128762641?text=Quero+saber+mais+sobre+os+benef%C3%ADcios%2C+em+especial+o%3A+" target="_blanck">Saiba mais</a>
       </div>
@@ -66,12 +82,12 @@ function Benefits(props) {
         <div className="container-canais">
           <div className="container-canais-aberto">
             <div className="carrossel-canais">
-              <img width={300} height={500} src={"/img/canal-band.webp"} alt='Canal Band' quality={60} loading="lazy" />
-              <img width={300} height={500} src={"/img/canal-globo.webp"} alt='Canal Globo' quality={60} loading="lazy" />
-              <img width={300} height={500} src={"/img/canal-sbt.webp"} alt='Canal SBT' quality={60} loading="lazy" />
-              <img width={300} height={500} src={"/img/canal-record.webp"} alt='Canal Record' quality={60} loading="lazy" />
-              <img width={300} height={500} src={"/img/canal-globo.webp"} alt='Canal Globo' quality={60} loading="lazy" />
-              <img width={300} height={500} src={"/img/canal-sbt.webp"} alt='Canal SBT' quality={60} loading="lazy" />
+              <Tv canal="Band" />
+              <Tv canal="Globo" />
+              <Tv canal="SBT" />
+              <Tv canal="Record" />
+              <Tv canal="Globo" />
+              <Tv canal="SBT" />
             </div>
           </div>
         </div>
@@ -82,12 +98,12 @@ function Benefits(props) {
           <h3 className="tittle-benefits-1">Canais fechados</h3>
           <div className="container-canais-fechados">
             <div className="carrossel-canais">
-              <img width={300} height={500} src={"/img/canal-warner.webp"} alt='Canal Warner' quality={60} loading="lazy" />
-              <img width={300} height={500} src={"/img/canal-discovery.webp"} alt='Canal Discovery' quality={60} loading="lazy" />
-              <img width={300} height={500} src={"/img/canal-fox.webp"} alt='Canal Fox' quality={60} loading="lazy" />
-              <img width={300} height={500} src={"/img/canal-espn.webp"} alt='Canal ESPN' quality={60} loading="lazy" />
-              <img width={300} height={500} src={"/img/canal-tlc.webp"} alt='Canal TLC' quality={60} loading="lazy" />
-              <img width={300} height={500} src={"/img/canal-animal.webp"} alt='Canal animal planet' quality={60} loading="lazy" />
+              <Tv canal="Warner" />
+              <Tv canal="Discovery" />
+              <Tv canal="Fox" />
+              <Tv canal="ESPN" />
+              <Tv canal="Animal-Planet" />
+              <Tv canal="TLC" />
             </div>
           </div>
         </div>

@@ -300,7 +300,7 @@ export default function Planos() {
                                         </div>
                                         <div className="desc">
 
-                                            <lu className="lista1">
+                                            {/* <lu className="lista1">
                                                 <li>
                                                     <img width={15} height={15} quality={50} loading="lazy" className="downloadUpload" src="./img/download.svg" alt="icone de download" />
                                                     <strong className="download">Download {plan.downSpeed} Mbps</strong>
@@ -310,7 +310,7 @@ export default function Planos() {
                                                     <img width={15} height={15} quality={50} loading="lazy" className="downloadUpload" src="./img/upload.svg" alt="icone de upload" />
                                                     Upload {plan.upSpeed} Mbps
                                                 </li>
-                                            </lu>
+                                            </lu> */}
 
                                             <lu className="lista1">
                                                 <li className="listaBeneficios">
@@ -320,18 +320,19 @@ export default function Planos() {
                                                         quality={50}
                                                         loading="lazy"
                                                         className="imgBeneficios"
-                                                        src="/assets/images/nofidelity.svg"
+                                                        src="/assets/images/sem-fidelidade.svg"
                                                         alt="Não temos fidelidade" />
                                                     <strong className="listBeneficios">{plan.firstDescription}</strong>
                                                 </li>
 
-                                                <li hidden={plan.downSpeed === 300 ? true : (plan.downSpeed && variants.downSpeed >= 500 ? false : true)}>
+                                                <li  style={plan.downSpeed === 300 ? { display: "none" } : (plan.downSpeed && variants.downSpeed >= 500 ? { display: "flex" } : { display: "none" })}>
                                                     <img
+                                                        className="plan365"
                                                         width={20}
                                                         height={20}
                                                         quality={50}
                                                         loading="lazy"
-                                                        src="/assets/images/365-plan.svg"
+                                                        src="/assets/images/365.svg"
                                                         alt="Pacote Microsft 365 Completo"
                                                     />
                                                     <strong className="listBeneficios">{plan.thirdDescription}</strong>
@@ -384,7 +385,7 @@ export default function Planos() {
                                                                 {item.name}
                                                             </div>
                                                             {item.downSpeedBonus > 0 && plan.addPlanAddPackage === 1 ?
-                                                                (<span className="bonus">Ganhe + {item.downSpeedBonus} Mega</span>)
+                                                                <span className="bonus">(Ganhe + {item.downSpeedBonus} Mega)</span>
                                                                 : <></>}
                                                         </li>
                                                         : <></>
@@ -393,23 +394,23 @@ export default function Planos() {
 
                                             </ul>
                                         </div>
-
-                                        <p hidden={descontoAntecipado} style={{ fontFamily: "Gordita", fontWeight: "500", fontSize: "14px" }}>Pagando até o vencimento <br />  você ganha R$10 de desconto</p>
-
-
                                     </div>
                                     {isInternetOnly === false ?
-                                        <div>
-                                            <h3 style={{ fontFamily: "Gordita", fontWeight: "bold", fontSize: "20px" }}>Você irá receber</h3>
-                                            <span style={{ fontFamily: "Gordita", fontWeight: "900", color: "#008D1E", fontSize: "20px" }} className="price">{variants.downSpeed} Megas</span>
+                                        <div className="bonusMega">
+                                            <h3>Você irá receber</h3>
+                                            <span style={{ fontFamily: "Gordita", fontWeight: "900", color: "var(--cor-2)", fontSize: "20px" }} className="price">{variants.downSpeed} Mega</span>
                                         </div>
                                         : <></>
                                     }
-                                    <br />
 
                                     <div className="package-price">
                                         <span className="sale">R$ {(variants.price - 0).toFixed(2).replace('.', ',')}</span>
+
+                                        <p hidden={descontoAntecipado} style={{ fontFamily: "Gordita", fontWeight: "500", fontSize: "14px" }}>Pagando até o vencimento <br />  você ganha R$10 de desconto
+                                        </p>
+                                        
                                         <span style={{ fontFamily: "Gordita", fontWeight: "900", color: "#008D1E", fontSize: "40px" }} className="price">
+                                            
                                             R${(variants.price - (variants.price > 0 ? plan.discount : 0)).toFixed(2).replace('.', ',')}<span style={{ color: "#000", fontWeight: "500" }}>/mês</span>
                                         </span>
                                     </div>

@@ -66,6 +66,10 @@
   
 }
 
+.slide h3{
+  width: 150px;
+}
+
 @keyframes carrossel-beneficios {
 
   0% {

@@ -30,9 +30,9 @@ export default function Home() {
               Cobertura</div>
           </div>
 
-          <Link href={"/ClubeHAYP"}>
+          <Link href={"/beneficios"}>
             <div className={styles.menu}><img className={styles.img} src="assets/images/icons/card.svg" alt='clube de desconto HAYP' />
-              Clube de <br /> descontos</div>
+              Benefícios</div>
           </Link>
 
           <Link href={"/avaliacoes"}>

@@ -1,9 +1,9 @@
 import { Inter } from 'next/font/google';
-///import 'bootstrap/dist/css/bootstrap.min.css';
 import './globals.css';
 import { HeaderLayout } from '../app/(layout)/_header/headerLayout'
 import Footer from './(layout)/(footer)/Footer';
 import Links from '@/components/(links)/Links';
+import { Hotjar } from './(layout)/(SEO)/SEO';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,13 +17,18 @@ export default function RootLayout({ children }) {
     <html lang="Pt-br">
       <body className={inter.className}>
         <HeaderLayout />
+        {/* <Hotjar /> */}
         {children}
         {/* <Links /> */}
-        {/* <Footer /> */}
+        
+        <div id="stars" />
+        <div id="stars2" />
+        <div id="stars3" />
+        <Footer />
       </body>
     </html>
 
-    
+
   )
 
 }

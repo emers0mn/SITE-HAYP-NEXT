@@ -309,11 +309,6 @@ header:after {
     padding: 1rem;
     overflow: hidden;
 }
-
-.slick-list {
-    overflow: visible !important;
-}
-
 .slick-dots {
     display: flex;
     justify-content: center;

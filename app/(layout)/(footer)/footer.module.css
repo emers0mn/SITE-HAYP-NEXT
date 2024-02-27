@@ -1,4 +1,4 @@
-.imgRedes{
+/* .imgRedes{
     display: flex;
     
   
@@ -43,4 +43,98 @@
   .dados2{
     color: var(--cor-2);
     
-  }
+  } */
+
+  .container{
+    background-color: var(--cor-3);
+    position: relative;
+    margin: auto;
+}
+
+.logoAnimado {
+  display: none;
+}
+
+.container a{
+    width: auto;
+
+}
+
+.container h4{
+    font-size: 20px;
+    color:var(--cor-2);
+    margin-bottom: 20px;
+}
+
+.containerFooter{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    margin: auto 15%;
+    position: relative;
+}
+
+.lista1 ul, .lista2 ul, .lista3 ul {
+  padding: 0px;
+}
+
+.lista3 ul li{
+    display: flex;
+    gap: 10px;
+    
+}
+
+.lista3 h5, .lista3 p{
+  margin: 10px;
+}
+
+.lista4{
+    width: auto;
+}
+
+.lista4 strong{
+    color: var(--cor-2);
+}
+
+
+
+.lista4 ul li{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px auto;
+}
+
+.localiza{
+    display: flex;
+    position: relative;
+    right: 42px;
+    gap: 5px;
+}
+
+.endFooter{
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.endFooter h6{
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.endFooter strong{
+    color: var(--cor-2);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.redesSociais{
+    display: flex;
+    gap: 10px;
+}
+
+

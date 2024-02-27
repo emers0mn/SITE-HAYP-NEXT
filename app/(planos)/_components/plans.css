@@ -31,6 +31,10 @@
 
 /*Começo dos planos*/
 
+.content {
+    margin-top: 1rem;
+}
+
 .listCompleta{
     display: flex;
     flex-direction: column;
@@ -40,6 +44,18 @@
     padding: 10px;
     width: 80%;
     margin: auto;
+    background-color: #ffffff;
+    color: var(--cor-3);
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px #333;
+}
+
+.content .container .packages {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1rem;
+    overflow: hidden;
 }
 
 .content .container .packages .package-list .package-icon {
@@ -105,6 +121,14 @@
     align-items: center;
 }
 
+.lista1 li{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
 .listaBeneficios{
     display: flex;
     align-items: center;
@@ -143,14 +167,19 @@
     margin: 0 0 20px 0;
 }
 
-.content .container .packages .package-list .package-price .sale {
+.package-price .sale {
     display: block;
     text-align: center;
-    color: #035b1a;
+    color: hsla(0,0%,50%,.356);
     font-family: Gordita;
-    font-weight: 500;
+    font-weight: 800;
     font-size: 20px;
 }
+
+.package-price p{
+    margin: 5px auto;
+}
+
 
 .content .container .packages .package-list .package-price .price {
     text-align: auto;
@@ -290,6 +319,17 @@ input:checked[type="checkbox"]:before {
     color: white;
 
     background: var(--cor-1);
+}
+
+.bonusMega {
+    margin: 10px 0px;
+}
+
+.bonusMega h3{
+    font-size: 20px;
+    font-weight: 800;
+    font-family: gordita;
+    margin: 5px 0px 0px 0px;
 }
 
 .button .green-button {

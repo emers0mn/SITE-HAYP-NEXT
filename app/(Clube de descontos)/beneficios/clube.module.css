@@ -1,0 +1,102 @@
+.content{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px 15%;
+    gap: 20px;
+}
+
+.content h1{
+    margin: 0;
+}
+
+.content p{
+    margin: 0;
+}
+
+.titlePrincipal{
+    margin: 20px auto;
+}
+
+.titlePrincipal h2{
+    margin: 0;
+}
+
+.titlePrincipal p {
+    margin: 25px auto;
+}
+
+.title1{
+    font-size: 30px;
+    font-weight: 800;
+
+}
+
+.title1 strong{
+    color: var(--cor-2);
+}
+
+.card{
+    width: 100px;
+    height: 90px;
+}
+
+.title2{
+    line-height: 20px;
+    font-size: 20px;
+    margin: 20px auto;
+}
+
+.subtitle1{
+    
+    color: var(--cor-2);
+}
+
+.subtitle2{
+    
+    color: var(--cor-2);
+}
+
+.subtitlefooter{
+    font-size: 10px;
+    margin: 30px auto ;
+}
+
+.link{
+    color: #fff;
+    font-weight: 500;
+    
+}
+
+.btSaibaMais{
+    
+    background-color: var(--cor-2);
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin: 20px 50px;
+}
+
+.button{
+    position: relative;
+    color: #fff;
+    padding: 10px 20px;
+    background: linear-gradient(50deg, var(--cor-1) 0%, var(--cor-2) 100%);
+    border-radius: 5px;
+    font-weight: 500;
+    font-family: gordita;
+
+}
+
+.ativo{
+    border: none;
+    scale: 1.09;
+}
+
+
+.desativo{
+    background: var(--cor-3);
+    border: solid var(--cor-2);
+}
