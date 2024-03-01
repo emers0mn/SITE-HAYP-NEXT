@@ -34,6 +34,13 @@
   text-align: center;
 }
 
+.container-canais{
+  
+  position: relative;
+  left: 35%;
+
+}
+
 .carrossel-Benefits {
   width: auto;
   height: 180px;
@@ -311,4 +318,15 @@
 
 .saber-mais {
   cursor: pointer;
+}
+
+@media screen and (min-width: 500px) {
+
+  .container-canais{
+  
+    position: relative;
+    left: 0%;
+  
+  }
+
 }

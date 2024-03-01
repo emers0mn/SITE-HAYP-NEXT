@@ -5,6 +5,7 @@ import React from "react";
 import './benefits.css';
 import Perguntas_Frequentes from "./Perguntas_Frequentes"
 import Telefone from "../telefone/telefone";
+import {TvAberta, TvFechada} from "../../../tv/Tvs"
 
 function IconBeneficios({ textBeneficios, beneficio, altBeneficio, imgBeneficios }) {
   return (
@@ -24,17 +25,17 @@ function IconBeneficios({ textBeneficios, beneficio, altBeneficio, imgBeneficios
   )
 }
 
-function Tv({ canal }) {
-  return (
+// function Tv({ canal }) {
+//   return (
 
-    <img
-      width={300}
-      height={500}
-      src={`/img/canais/canal-${canal}.svg`}
-      alt={`Canal ${canal}`} />
+//     <img
+//       width={300}
+//       height={500}
+//       src={`/img/canais/canal-${canal}.svg`}
+//       alt={`Canal ${canal}`} />
 
-  )
-}
+//   )
+// }
 
 function Benefits(props) {
   return (
@@ -75,12 +76,12 @@ function Benefits(props) {
       </div>
 
       <div id="canais">
-        <h2 className="tittle-benefits-2">De um <spam className="name-marca">HAYP</spam> na sua Tv</h2>
+        <h2 className="tittle-benefits-2">De um <spam className="name-marca"> <br />HAYP</spam> na sua Tv</h2>
         <div className="divisor"></div>
 
         <h3 className="tittle-benefits-1">Canais abertos</h3>
         <div className="container-canais">
-          <div className="container-canais-aberto">
+          {/* <div className="container-canais-aberto">
             <div className="carrossel-canais">
               <Tv canal="Band" />
               <Tv canal="Globo" />
@@ -89,14 +90,15 @@ function Benefits(props) {
               <Tv canal="Globo" />
               <Tv canal="SBT" />
             </div>
-          </div>
+          </div> */}
+          <TvAberta />
         </div>
 
         <a href="https://wa.me/551128762641?text=Fiquei+interessado+no+combo+com+Tv+e+gostaria+ver+a+lista+de+canais.">Veja todos os canais abertos</a>
 
-        <div className="container-canais">
+        <div>
           <h3 className="tittle-benefits-1">Canais fechados</h3>
-          <div className="container-canais-fechados">
+          {/* <div className="container-canais-fechados">
             <div className="carrossel-canais">
               <Tv canal="Warner" />
               <Tv canal="Discovery" />
@@ -105,6 +107,9 @@ function Benefits(props) {
               <Tv canal="Animal-Planet" />
               <Tv canal="TLC" />
             </div>
+          </div> */}
+          <div className="container-canais">
+            <TvFechada />
           </div>
         </div>
 

@@ -45,7 +45,7 @@
     
   } */
 
-  .container{
+.container{
     background-color: var(--cor-3);
     position: relative;
     margin: auto;
