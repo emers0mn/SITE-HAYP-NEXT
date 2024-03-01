@@ -1,5 +1,9 @@
 import styles from "./quemsomos.module.css"
 
+export const metadata = {
+    title: 'Quem somos'
+} 
+
 export default function QuemSomos() {
     return (
         <>
