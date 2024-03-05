@@ -5,7 +5,8 @@ import React from "react";
 import './benefits.css';
 import Perguntas_Frequentes from "./Perguntas_Frequentes"
 import Telefone from "../telefone/telefone";
-import {TvAberta, TvFechada} from "../../../tv/Tvs"
+import {TvAberta, TvFechada, Slide} from "../../../tv/Tvs"
+import Link from "next/link";
 
 function IconBeneficios({ textBeneficios, beneficio, altBeneficio, imgBeneficios }) {
   return (
@@ -46,10 +47,12 @@ function Benefits(props) {
 
       <div className="carrossel-Benefits">
         <div className="grade">
-          <IconBeneficios
-            beneficio="Pacote Microsoft 365 completo"
-            imgBeneficios="365.svg"
-          />
+          <div className="extra-slide">
+            <IconBeneficios
+              beneficio="Pacote Microsoft 365 completo"
+              imgBeneficios="365.svg"
+            />
+          </div>
           <IconBeneficios
             beneficio="Clube de desconto HAYP"
             imgBeneficios="card.svg"
@@ -72,7 +75,7 @@ function Benefits(props) {
       {/*Começo dos Canais*/}
 
       <div className="bt-assinar">
-        <a href="https://wa.me/551128762641?text=Quero+saber+mais+sobre+os+benef%C3%ADcios%2C+em+especial+o%3A+" target="_blanck">Saiba mais</a>
+        <Link href={'/beneficios'}>Saiba mais</Link>
       </div>
 
       <div id="canais">

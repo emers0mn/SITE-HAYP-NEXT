@@ -1,0 +1,24 @@
+.CButton{
+  
+    background: linear-gradient(82deg, var(--cor-1) 4.34%, var(--cor-2) 97.83%);
+    width: auto;
+    margin: 15px auto;
+    padding: 15px 25px;
+    font-size: 16px;
+    color: #FFF;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    font-family: gordita;
+    cursor: pointer;
+  }
+
+  .CButton a{
+    width: auto;
+  }
+
+  .CButton:hover {
+    background: var(--cor-3);
+    background: var(--cor-1);
+    scale: 1.01;
+  }

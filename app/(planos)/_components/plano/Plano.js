@@ -4,10 +4,6 @@ import React, { useEffect, useState } from "react";
 import Api from "../../../../service/Api";
 import LoadingSpinner from "../../../../components/spinner/LoadingSpinner";
 import "../../_components/plans.css";
-import Benefits from "../../_components/beneficios/Benefits";
-import Image from "next/image";
-import Head from "next/head";
-
 
 export default function Planos() {
 

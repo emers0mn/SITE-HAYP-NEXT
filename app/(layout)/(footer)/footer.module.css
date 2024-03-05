@@ -86,7 +86,8 @@
 }
 
 .lista3 h5, .lista3 p{
-  margin: 10px;
+  
+  margin: 0px 0px 10px 0px;
 }
 
 .lista4{
@@ -109,10 +110,19 @@
 
 .localiza{
     display: flex;
-    position: relative;
-    right: 42px;
     gap: 5px;
 }
+
+ul li .localiza{
+  position: relative;
+  right: 42px;
+}
+
+.localiza p {
+  margin: 0px 0px 10px 0px;
+}
+
+
 
 .endFooter{
 

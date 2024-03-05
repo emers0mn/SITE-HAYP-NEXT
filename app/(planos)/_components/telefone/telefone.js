@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import './Telefone.css'
+import Button from '@/app/components/(button)/Button';
 
 function Telefone() {
     return (
         <>
             <div className='contianer-telefone'>
-                <h2 className='tittle-benefits-2'>Telefone Fixo<br />Ilimitado</h2>
+                <h2 className='tittle-benefits-2'>Telefone Fixo Ilimitado</h2>
                 <div className="Lista-Telefone">
                     <ul>
 
@@ -17,12 +18,20 @@ function Telefone() {
                             Ligações ilimitada para fixo<br />e móvel em todo brasil</li>
                         <li>
                             <img src={"/img/plus-telefone.png"} alt='Sua casa com Telefone' />
-                            100 Mega de Bônus</li>
+                            100 Mega de Bônus
+                        </li>
+
+                        <li className='button-telefone1'>
+                        <Button
+                        btText="Assine agora"
+                        href="https://wa.me/551128762641?text=Ol%C3%A1%2C+eu+gostaria+de+saber+mais+sobre+o+plano+com+Telefone+Fixo"
+                    />
+                        </li>
                     </ul>
 
                     <img
-                        width={370.8}
-                        height={200}
+                        width={500}
+                        height={282}
                         className='imgTelefone'
                         src={"/img/telefone.svg"}
                         alt='Usando o telefone HAYP'
@@ -44,7 +53,12 @@ function Telefone() {
                     </ul>
                 </div>
 
-                <a className="bt-assinar" href="https://wa.me/551128762641?text=Ol%C3%A1%2C+eu+gostaria+de+saber+mais+sobre+o+plano+com+Telefone+Fixo">Saiba mais</a>
+                <div  className='button-telefone2'>
+                    <Button
+                        btText="Assine agora"
+                        href="https://wa.me/551128762641?text=Ol%C3%A1%2C+eu+gostaria+de+saber+mais+sobre+o+plano+com+Telefone+Fixo"
+                    />
+                </div>
             </div>
         </>
     )

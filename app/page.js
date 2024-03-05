@@ -80,21 +80,21 @@ export default function Home() {
       
       <footer className={styles.footer}>
         <div className={styles.redesSociais}>
-          <a href="https://www.instagram.com/haypoficial/">
+          <a href="https://www.instagram.com/haypoficial/" target='_blank'>
             <div>
               <img className={styles.imgRedes} src="assets/images/icons/assets_instagram.svg" alt='Nosso perfil no Istagram'/>
               Instagram
             </div>
           </a>
 
-          <a href="https://www.facebook.com/HaypTelecom/">
+          <a href="https://www.facebook.com/HaypTelecom/" target='_blank'>
             <div>
               <img className={styles.imgRedes} src="assets/images/icons/assets_facebook.svg" alt='Nosso perfil no Facebook' />
               Facebook
             </div>
           </a>
 
-          <a href="https://br.linkedin.com/company/hayp-telecom">
+          <a href="https://br.linkedin.com/company/hayp-telecom" target='_blank'>
             <div>
               <img className={styles.imgRedes} src="assets/images/icons/assets_linkedin.svg" alt='Nosso perfil no Linkedin'/>
               Linkedin

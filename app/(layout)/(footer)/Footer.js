@@ -118,7 +118,7 @@ export default function Footer() {
             <section className={style.endFooter}>
                 <div className={style.redesSociais}>
 
-                    <Link href={"https://www.facebook.com/HaypTelecom"}>
+                    <a href={"https://www.facebook.com/HaypTelecom"} target="_blank">
                         <img
                             src={"/images/footer/facebook-8.png"}
                             width={45}
@@ -127,9 +127,9 @@ export default function Footer() {
                             quality={10}
                             alt="facebook"
                         />
-                    </Link>
+                    </a>
 
-                    <Link href={"https://www.instagram.com/haypoficial/"}>
+                    <a href="https://www.instagram.com/haypoficial/" target="_blank">
                         <img
                             src={"/images/footer/instagram-8.png"}
                             width={45}
@@ -138,9 +138,9 @@ export default function Footer() {
                             quality={10}
                             alt="Instagram"
                         />
-                    </Link>
+                    </a>
 
-                    <Link href={"https://www.linkedin.com/company/hayp-telecom"}>
+                    <a href={"https://www.linkedin.com/company/hayp-telecom"} target="_blank">
                         <img
                             src={"/images/footer/linkedin-8.png"}
                             width={45}
@@ -149,7 +149,7 @@ export default function Footer() {
                             quality={10}
                             alt="Linkedin"
                         />
-                    </Link>
+                    </a>
                 </div>
 
                 <h6>Todos os direitos reservados <strong>HAYP Telecom LTDA</strong></h6>

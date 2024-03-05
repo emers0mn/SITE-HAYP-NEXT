@@ -1,5 +1,7 @@
-import Benefits from "../_components/beneficios/Benefits";
-import Planos from "../_components/plano/Plano";
+import dynamic from "next/dynamic";
+
+const Planos = dynamic(() => import("../_components/plano/Plano"));
+const Benefits = dynamic(() => import("../_components/beneficios/Benefits"));
 
 
 export const metadata = {

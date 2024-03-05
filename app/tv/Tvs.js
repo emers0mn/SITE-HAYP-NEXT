@@ -1,4 +1,5 @@
-import style from './tv.module.css'
+import style from './tv.module.css';
+import Slider from 'infinite-react-carousel';
 
 export function Tvs({ canal }) {
     return (
@@ -65,5 +66,28 @@ export function TvFechada() {
                 />
             </div>
         </div>
+    )
+}
+
+export function Slide() {
+    return (
+        
+            <Slider
+            dots
+            autoplay="true"
+            pauseOnhover="false"
+            className="carousel-initialized"
+            >
+                <Tvs
+                    canal="Discoverry"
+                />
+                <Tvs
+                    canal="Warner"
+                />
+                <Tvs
+                    canal="Animal"
+                />
+            </Slider>
+        
     )
 }

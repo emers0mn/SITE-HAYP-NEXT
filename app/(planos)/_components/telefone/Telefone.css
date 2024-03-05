@@ -4,12 +4,18 @@
     gap: 20px;
     align-items: center;
     text-align: center;
+    margin: 20px auto;
+}
+
+.Lista-Telefone{
+    display: flex;
+    text-align: left;
 }
 
 .Lista-Telefone ul{
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
     margin-bottom: 20px;
 }
 
@@ -23,10 +29,16 @@
     margin-right: 10px;
 }
 
+.button-telefone2{
+    display: none;
+}
+
 .icones-telefone ul{
     display: flex;
     flex-direction: row;
     gap: 30px;
+    position: relative;
+    left: 120px;
 }
 
 .icones-telefone ul li{
@@ -51,4 +63,36 @@
 .imgTelefone{
     width: 598px;
     height: 200px;
+}
+
+@media screen and (max-width: 600px) {
+    
+    .contianer-telefone{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+        margin: 0px ;
+    }
+
+    .Lista-Telefone{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .icones-telefone ul{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        position: relative;
+        left: 0px;
+    }
+
+    .button-telefone1{
+        display: none;
+    }
+    .button-telefone2{
+        display: block;
+    }
 }
