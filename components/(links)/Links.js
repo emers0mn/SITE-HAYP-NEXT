@@ -1,14 +1,16 @@
-"use client";
+'use client';
 
-import { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import Planos from '@/app/(planos)/_components/plano/Plano';
+import PlanosPC from '@/app/(planos)/_components/planoPC/PlanosPC';
 
 export default function Links() {
+    const [isMobile, setIsMobile] = useState(false);
+
     useEffect(() => {
         function handleResize() {
-            var width = window.innerWidth;
-            if(width >= 1470){
-                window.location.href = 'https://site-pc-hayp-next.vercel.app/';
-            }
+            const width = window.innerWidth;
+            setIsMobile(width <= 1600);
         }
 
         window.addEventListener('resize', handleResize);
@@ -17,6 +19,9 @@ export default function Links() {
         };
     }, []);
 
-  return null;
+    return (
+        <>
+            {isMobile ? <Planos /> : <PlanosPC />}
+        </>
+    );
 }
-

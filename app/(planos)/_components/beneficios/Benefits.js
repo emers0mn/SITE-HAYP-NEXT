@@ -71,6 +71,9 @@ function Benefits(props) {
           />
         </div>
       </div>
+        <div id="stars" />
+        <div id="stars2" />
+        <div id="stars3" />
 
       {/*Começo dos Canais*/}
 

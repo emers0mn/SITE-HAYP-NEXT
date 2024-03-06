@@ -237,10 +237,18 @@ export default function Planos() {
 
 
 
-
     return (
         <>
             <main className="content">
+
+            <div className="heading-title">
+                    <h3>Internet <span>100%</span> Fibra Óptica</h3>
+                    <div className="line-divisor1"></div>
+                    <p>
+                        Não sabe qual é o melhor plano para sua casa?<br />Tem dúvidas de qual possa atender melhor a demanda da sua empresa?
+                    </p>
+                    <p><a target="_blank" rel="noreferrer" href="https://wa.me/551128762641?text=Ol%C3%A1%2C+estou+em+dúvida+de+qual+plano+escolher,+preciso+de+uma+ajuda">Mande uma mensagem</a> que vamos te ajudar a escolher o melhor plano com base no seu perfil.</p>
+                </div>
 
                 <div className="container text-center">
                     <div className="packages">
@@ -322,7 +330,7 @@ export default function Planos() {
                                                     <strong className="listBeneficios">{plan.firstDescription}</strong>
                                                 </li>
 
-                                                <li  style={plan.downSpeed === 300 ? { display: "none" } : (plan.downSpeed && variants.downSpeed >= 500 ? { display: "flex" } : { display: "none" })}>
+                                                <li style={plan.downSpeed === 300 ? { display: "none" } : (plan.downSpeed && variants.downSpeed >= 500 ? { display: "flex" } : { display: "none" })}>
                                                     <img
                                                         className="plan365"
                                                         width={20}
@@ -371,7 +379,7 @@ export default function Planos() {
 
                                                 {plansAdd.map((item) => (
                                                     plan.addPlanIsShow === 1 ?
-
+                                                        
                                                         <li key={item.Id}>
                                                             <div className="list-bt" style={{ fontFamily: "Gordita", fontWeight: "500" }}>
                                                                 <label for="checkBoxPlanosAdicinais">
@@ -392,6 +400,8 @@ export default function Planos() {
                                             </ul>
                                         </div>
                                     </div>
+
+
                                     {isInternetOnly === false ?
                                         <div className="bonusMega">
                                             <h3>Você irá receber</h3>
@@ -405,9 +415,9 @@ export default function Planos() {
 
                                         <p hidden={descontoAntecipado} style={{ fontFamily: "Gordita", fontWeight: "500", fontSize: "14px" }}>Pagando até o vencimento <br />  você ganha R$10 de desconto
                                         </p>
-                                        
+
                                         <span style={{ fontFamily: "Gordita", fontWeight: "900", color: "#008D1E", fontSize: "40px" }} className="price">
-                                            
+
                                             R${(variants.price - (variants.price > 0 ? plan.discount : 0)).toFixed(2).replace('.', ',')}<span style={{ color: "#000", fontWeight: "500" }}>/mês</span>
                                         </span>
                                     </div>
@@ -423,6 +433,9 @@ export default function Planos() {
 
                     </div>
                 </div>
+                <div id="stars" />
+                <div id="stars2" />
+                <div id="stars3" />
             </main>
         </>
     )

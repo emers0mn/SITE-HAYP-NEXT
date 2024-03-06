@@ -94,6 +94,10 @@
     width: auto;
 }
 
+.lista4 ul{
+  padding-left: 40px;
+}
+
 .lista4 strong{
     color: var(--cor-2);
 }

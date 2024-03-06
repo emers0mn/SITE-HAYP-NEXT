@@ -6,6 +6,10 @@
     margin-bottom: 20px;
 }
 
+.heading-title {
+    display: none;
+  }
+  
 /*Começo planos anual, semestral, mensal*/
 .index-planos button{
     background: white;
@@ -366,4 +370,41 @@ input:checked[type="checkbox"]:before {
         
     }
     
+    .heading-title h3 {
+        display: block;
+        font-size: 40px;
+        margin: 5px auto;
+      }
+
+      .heading-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto 20px auto;
+        text-align: center;
+      }
+
+      .heading-title p {
+        margin: 2px;
+      }
+      
+      .heading-title span {
+        color: var(--cor-2);
+      }
+      
+      
+      .heading-title a {
+        font-weight: 500;
+        color: var(--cor-2);
+        text-decoration: underline;
+      }
+    
+      .line-divisor1 {
+        margin: 10px auto 20px auto;
+        width: 100px;
+        height: 5px;
+        border-radius: 10px;
+        background: linear-gradient(82deg, var(--cor-1) 4.34%, #04CB3A 97.83%);
+      }
 }
