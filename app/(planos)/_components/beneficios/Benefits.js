@@ -137,7 +137,7 @@ function Benefits(props) {
             <h3 className="combo-assinando">Assinando</h3>
             <img width={340} height={107} src={"/img/combo-simples.svg"} alt='Combo simples' quality={60} loading="lazy" />
             <h4>
-              Você ganha mais <spam className="name-marca-destaque">60 Mega</spam> de bônus
+              Você ganha mais <spam className="name-marca-destaque">100 Mega</spam> de bônus
             </h4>
           </div>
 
@@ -145,7 +145,7 @@ function Benefits(props) {
             <h4 className="combo-assinando">Assinando o <br /> <spam className="name-marca-destaque" >combo completo</spam></h4>
             <img width={300} height={160} src={"/img/combo-completo.svg"} alt='Combo Completo' quality={60} loading="lazy" />
             <h4>
-              Você ganha mais <spam className="name-marca-destaque">500 Mega</spam> de bônus
+              Você ganha <spam className="name-marca-destaque">200 Mega</spam> de bônus
             </h4>
           </div>
         </div>

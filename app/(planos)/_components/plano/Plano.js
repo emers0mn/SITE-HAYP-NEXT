@@ -241,7 +241,7 @@ export default function Planos() {
         <>
             <main className="content">
 
-            <div className="heading-title">
+            <div className="heading-title" hidden>
                     <h3>Internet <span>100%</span> Fibra Óptica</h3>
                     <div className="line-divisor1"></div>
                     <p>

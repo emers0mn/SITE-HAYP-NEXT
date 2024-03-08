@@ -10,13 +10,13 @@ export function Tvs({ canal }) {
                     width={300}
                     height={500}
                     className={style.imagen}
-                    src={`/${canal}.svg`}
+                    src={`/${canal}`}
                     alt={`Canal ${canal}`}
                 />
 
                 <img
                     className={style.logo}
-                    src={`/logo-${canal}.svg`}
+                    src={`/logo-${canal}`}
                     alt={`logo ${canal}`}
                 />
 
@@ -31,16 +31,16 @@ export function TvAberta() {
         <div className={style.main}>
             <div className={style.container}>
                 <Tvs
-                    canal="Globo"
+                    canal="Globo.svg"
                 />
                 <Tvs
-                    canal="Band"
+                    canal="Band.svg"
                 />
                 <Tvs
-                    canal="SBT"
+                    canal="SBT.svg"
                 />
                 <Tvs
-                    canal="Record"
+                    canal="Record.svg"
                 />
             </div>
         </div>
@@ -52,16 +52,16 @@ export function TvFechada() {
         <div className={style.main}>
             <div className={style.container}>
                 <Tvs
-                    canal="Discoverry"
+                    canal="Discoverry.svg"
                 />
                 <Tvs
-                    canal="Warner"
+                    canal="Warner.svg"
                 />
                 <Tvs
-                    canal="Animal"
+                    canal="Animal-Planet.svg"
                 />
                 <Tvs
-                    canal="Fox"
+                    canal="Fox.svg"
                 />
             </div>
         </div>
