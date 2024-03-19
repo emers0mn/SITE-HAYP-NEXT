@@ -24,20 +24,20 @@ export default function Footer() {
                     <ul>
                         <li>- <Link href={"/planos"}>Planos</Link></li>
 
-                        <li>- <Link href={"https://cda.hptelecom.com.br/central_assinante_web/"}>Área do cliente</Link>
+                        <li>- <Link href={"https://cda.hptelecom.com.br/central_assinante_web/"} target="_blank">Área do cliente</Link>
                         </li>
 
-                        <li>- <Link href={"/quem-somos/perguntas-frequentes"}>Perguntas frequentes</Link></li>
+                        {/* <li>- <Link href={"/quem-somos/perguntas-frequentes"}>Perguntas frequentes</Link></li> */}
                     </ul>
                 </div>
                 <div className={style.lista1}>
                     <h4>institucional</h4>
                     <ul>
-                        <li>- <Link href={"https://www.linkedin.com/company/hayp-telecom"}>Trabalhe conosco</Link>
+                        <li>- <Link href={"https://www.linkedin.com/company/hayp-telecom"} target="_blank">Trabalhe conosco</Link>
                         </li>
-                        <li>- <Link href={"https://drive.google.com/file/d/13RW5zmQRpBEoEcxki59-x5B_Z4Ko11bN/view"}>Contrato</Link></li>
-                        <li>- <Link href={"/quem-somos/politicas-internas"}>Privacidade</Link></li>
-                        <li>- <Link href={"/quem-somos"}>Quem somos</Link></li>
+                        <li>- <Link href={"https://drive.google.com/file/d/13RW5zmQRpBEoEcxki59-x5B_Z4Ko11bN/view"} target="_blank">Contrato</Link></li>
+                        <li>- <Link href={"/Quemsomos/politicas-internas"}>Privacidade</Link></li>
+                        <li>- <Link href={"/Quemsomos"}>Quem somos</Link></li>
                     </ul>
                 </div>
 
@@ -54,7 +54,7 @@ export default function Footer() {
                                 alt="Telefone - Clique para entrar em contato"
                             />
                             <div>
-                                <Link href={"tel:1128762641"}>
+                                <Link href={"tel:1128762641"} target="_blank">
                                     <h5>Telefone</h5>
                                     <p>11 2876-2641</p>
                                 </Link>
@@ -70,7 +70,7 @@ export default function Footer() {
                                 alt="WhatsApp - Clique e envei uma mesnsagem"
                             />
                             <div>
-                                <Link href={"https://api.whatsapp.com/send?phone=551128762641"}>
+                                <Link href={"https://api.whatsapp.com/send?phone=551128762641"} target="_blank">
                                     <h5>WhatsApp</h5>
                                     <p>11 2876-2641</p>
                                 </Link>
@@ -86,7 +86,7 @@ export default function Footer() {
                                 alt="E-mail - Clique e envie uma mensagem"
                             />
                             <div>
-                                <Link href={"mailto:contato@hptelecom.com.br"}>
+                                <Link href={"mailto:contato@hptelecom.com.br"} target="_blank">
                                     <h5>E-mail</h5>
                                     <p>contato@hptelecom.com.br</p>
                                 </Link>
@@ -98,7 +98,7 @@ export default function Footer() {
                     <h4>Endereço</h4>
                     <ul>
                         <li>
-                            <Link href={"https://www.google.com/maps/dir//Hayp+Av.+Manuel+Alves+Soares,+638+-+Sala+3+-+Parque+Colonial+S%C3%A3o+Paulo+-+SP+04821-270,+Brasil/@-23.7263319,-46.6862102,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x94ce4f1a16fe3451:0x2ceb01894481701d"} className={style.localiza}>
+                            <Link href={"https://www.google.com/maps/dir//Hayp+Av.+Manuel+Alves+Soares,+638+-+Sala+3+-+Parque+Colonial+S%C3%A3o+Paulo+-+SP+04821-270,+Brasil/@-23.7263319,-46.6862102,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x94ce4f1a16fe3451:0x2ceb01894481701d"} className={style.localiza} target="_blank">
                                 <img
                                     src={"/images/footer/localiza-8.png"}
                                     width={39}

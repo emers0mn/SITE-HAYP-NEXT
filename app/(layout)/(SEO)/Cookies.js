@@ -1,4 +1,5 @@
 'use client';
+import Link from "next/link";
 import CookieConsent from "react-cookie-consent";
 
 // https://www.npmjs.com/package/react-cookie-consent#getting-the-cookies-value-in-your-own-code
@@ -8,7 +9,7 @@ export default function Cookies() {
         <CookieConsent
             location="bottom"
             buttonText="Aceitar"
-            
+            // visible="show"
             cookieName="myAwesomeCookieName2"
             
             style={{ 
@@ -28,7 +29,7 @@ export default function Cookies() {
             
         >
             Esta página utiliza Cookies para poder garantir a melhor experência.{" "}
-            <a href="/saibamais" style={{ fontSize: "10px", color:"var(--cor-2)" }}>Políticas de privacidade</a>
+            <Link href={"/Quemsomos/politicas-internas"} style={{ fontSize: "10px", color:"var(--cor-2)", marginLeft:"10px" }}>Políticas de privacidade</Link>
         </CookieConsent>
     )
 }

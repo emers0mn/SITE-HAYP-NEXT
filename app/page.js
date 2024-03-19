@@ -17,7 +17,7 @@ export default function Home() {
     <div className={styles.containerMaster}>
       <div className={styles.container}>
         <header className={styles.header}>
-          <img className={styles.logo} src='assets/images/logo.svg' alt='Logo da HAYP' />
+          <img className={styles.logo} src='https://hayp.imgix.net/assets/images/logo.svg?auto=true' alt='Logo da HAYP' />
           <h1 className={styles.title}><strong>Simplifique sua rotina assine HAYP</strong></h1>
         </header>
         <nav className={styles.containerGrid}>
@@ -26,12 +26,12 @@ export default function Home() {
             toggle={toggleSignin}
           />
           <div onClick={toggleSignin} className={styles.cobertura}>
-            <div className={styles.menu}> <img className={styles.img} src="assets/images/icons/assets_disponibilidade.svg" alt='Consulte a disponibilidade do cep' />
+            <div className={styles.menu}> <img className={styles.img} src="https://hayp.imgix.net/assets/images/icons/assets_disponibilidade.svg" alt='Consulte a disponibilidade do cep' />
               Cobertura</div>
           </div>
 
           <Link href={"/beneficios"}>
-            <div className={styles.menu}><img className={styles.img} src="assets/images/icons/card.svg" alt='clube de desconto HAYP' />
+            <div className={styles.menu}><img className={styles.img} src="https://hayp.imgix.net/assets/images/icons/card.svg" alt='clube de desconto HAYP' />
               Benefícios</div>
           </Link>
 
@@ -41,35 +41,35 @@ export default function Home() {
               </div>
           </Link>
 
-          <a href="https://api.whatsapp.com/send?1=pt_BR&phone=551128762641">
-            <div className={styles.menu}> <img className={styles.img} src="assets/images/icons/assets_nosso-whatsapp.svg" alt='Nosso WhatsApp' />
+          <Link href="https://api.whatsapp.com/send?1=pt_BR&phone=551128762641" target="_blank">
+            <div className={styles.menu}> <img className={styles.img} src="https://hayp.imgix.net/assets/images/icons/assets_nosso-whatsapp.svg" alt='Nosso WhatsApp' />
               Nosso <br /> WhatsApp</div>
-          </a>
+          </Link>
 
           <Link href={"/Quemsomos"}>
-            <div className={styles.menu}> <img className={styles.img} src="assets/images/icons/assets_quem-somos.svg" alt='Um pouco sobre a HAYP' />
+            <div className={styles.menu}> <img className={styles.img} src="https://hayp.imgix.net/assets/images/icons/assets_quem-somos.svg" alt='Um pouco sobre a HAYP' />
               Quem <br /> somos
             </div>
           </Link>
 
           <Link href={"/planos"}>
-            <div className={styles.menu}> <img className={styles.img} src="assets/images/icons/assets_planos.svg" alt='Nossos planos' />
+            <div className={styles.menu}> <img className={styles.img} src="https://hayp.imgix.net/assets/images/icons/assets_planos.svg" alt='Nossos planos' />
               Planos</div>
           </Link>
 
-          <a href="tel:+551128762641">
-            <div className={styles.menu}> <img className={styles.img} src="assets/images/icons/assets_contato.svg" alt='Entre em contato por chamada de telefone' />
+          <Link href="tel:+551128762641" target="_blank">
+            <div className={styles.menu}> <img className={styles.img} src="https://hayp.imgix.net/assets/images/icons/assets_contato.svg" alt='Entre em contato por chamada de telefone' />
               Contato</div>
-          </a>
+          </Link>
 
-          <a href="https://cda.hptelecom.com.br/central_assinante_web/" target='_blank'>
-            <div className={styles.menu}> <img className={styles.img} src="assets/images/icons/area-do-cliente-8.svg" alt='área do cliente' />
+          <Link href="https://cda.hptelecom.com.br/central_assinante_web/" target='_blank'>
+            <div className={styles.menu}> <img className={styles.img} src="https://hayp.imgix.net/assets/images/icons/area-do-cliente-8.svg" alt='área do cliente' />
               Área do <br /> cliente
             </div>
-          </a>
+          </Link>
 
           <Link href={"/enviodeemail"}>
-            <div className={styles.menu}> <img className={styles.img} src="assets/images/icons/assets_e-mail.svg" alt='Envie um e-mail para contato@hptelecom.com.br'/>
+            <div className={styles.menu}> <img className={styles.img} src="https://hayp.imgix.net/assets/images/icons/assets_e-mail.svg" alt='Envie um e-mail para contato@hptelecom.com.br'/>
               E-mail</div>
           </Link>
         </nav>
@@ -80,26 +80,26 @@ export default function Home() {
       
       <footer className={styles.footer}>
         <div className={styles.redesSociais}>
-          <a href="https://www.instagram.com/haypoficial/" target='_blank'>
+          <Link href="https://www.instagram.com/haypoficial/" target='_blank'>
             <div>
-              <img className={styles.imgRedes} src="assets/images/icons/assets_instagram.svg" alt='Nosso perfil no Istagram'/>
+              <img className={styles.imgRedes} src="https://hayp.imgix.net/assets/images/icons/assets_instagram.svg" alt='Nosso perfil no Istagram'/>
               Instagram
             </div>
-          </a>
+          </Link>
 
-          <a href="https://www.facebook.com/HaypTelecom/" target='_blank'>
+          <Link href="https://www.facebook.com/HaypTelecom/" target='_blank'>
             <div>
-              <img className={styles.imgRedes} src="assets/images/icons/assets_facebook.svg" alt='Nosso perfil no Facebook' />
+              <img className={styles.imgRedes} src="https://hayp.imgix.net/assets/images/icons/assets_facebook.svg" alt='Nosso perfil no Facebook' />
               Facebook
             </div>
-          </a>
+          </Link>
 
-          <a href="https://br.linkedin.com/company/hayp-telecom" target='_blank'>
+          <Link href="https://br.linkedin.com/company/hayp-telecom" target='_blank'>
             <div>
-              <img className={styles.imgRedes} src="assets/images/icons/assets_linkedin.svg" alt='Nosso perfil no Linkedin'/>
+              <img className={styles.imgRedes} src="https://hayp.imgix.net/assets/images/icons/assets_linkedin.svg" alt='Nosso perfil no Linkedin'/>
               Linkedin
             </div>
-          </a>
+          </Link>
         </div>
 
         <div hidden>

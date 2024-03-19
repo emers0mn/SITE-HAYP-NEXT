@@ -5,7 +5,7 @@ import React from "react";
 import './benefits.css';
 import Perguntas_Frequentes from "./Perguntas_Frequentes"
 import Telefone from "../telefone/telefone";
-import {TvAberta, TvFechada} from "../../../tv/Tvs"
+import {TvAberta, TvFechada} from "../tv/Tvs"
 import Link from "next/link";
 
 function IconBeneficios({ textBeneficios, beneficio, altBeneficio, imgBeneficios }) {

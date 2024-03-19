@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
     <html lang="Pt-br">
       <body className={inter.className}>
         <HeaderLayout />
-        {/* <Hotjar /> */}
+        <Hotjar />
         {children}
         
 

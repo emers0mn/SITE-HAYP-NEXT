@@ -19,7 +19,7 @@ export default function Home() {
     <div className={styles.containerMaster}>
       <div className={styles.container}>
         <header className={styles.header}>
-          <img className={styles.logo} src='assets/images/logo.svg' alt='Logo da HAYP' />
+          <img className={styles.logo} src='https://hayp.imgix.net/assets/images/logo.svg' alt='Logo da HAYP' />
           <h1 className={styles.title}><strong>Internet para pessoas exigentes</strong></h1>
         </header>
         <nav className={styles.containerGrid}>
