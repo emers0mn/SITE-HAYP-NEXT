@@ -10,7 +10,7 @@ export function Tvs({ canal }) {
                     width={300}
                     height={500}
                     className={style.imagen}
-                    src={`/img/canais/${canal}.svg`}
+                    src={`https://haypteste1.imgix.net/img/canais/png/${canal}.png?fm=webp`}
                     alt={`Canal ${canal}`}
                 />
 
@@ -58,7 +58,7 @@ export function TvFechada() {
                     canal="Warner"
                 />
                 <Tvs
-                    canal="Animal-Planet"
+                    canal="Animal"
                 />
                 <Tvs
                     canal="Fox"

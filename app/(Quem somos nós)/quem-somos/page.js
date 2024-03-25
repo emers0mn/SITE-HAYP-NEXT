@@ -57,7 +57,7 @@ export default function QuemSomos() {
                         loading="lazy"
                     /> */}
 
-                    <video width="300" height="214" autoPlay muted loop>
+                    <video width="300" height="214" autoPlay muted>
                         <source src="/video/videoHAYP.mp4" type="video/mp4"></source>
                     </video>
                     <h2 className={styles.title2}>Quem somos</h2>
