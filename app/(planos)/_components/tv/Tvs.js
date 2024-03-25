@@ -16,7 +16,7 @@ export function Tvs({ canal }) {
 
                 <img
                     className={style.logo}
-                    src={`/img/canais/logo-${canal}.svg`}
+                    src={`https://haypteste1.imgix.net/img/canais/png/logo/logo-${canal}.png?fm=webp`}
                     alt={`logo ${canal}`}
                 />
 
