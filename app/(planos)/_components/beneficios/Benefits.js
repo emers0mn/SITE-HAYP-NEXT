@@ -17,7 +17,7 @@ function IconBeneficios({ textBeneficios, beneficio, altBeneficio, imgBeneficios
           height={100}
           quality={50}
           loading="lazy"
-          src={`/img/${imgBeneficios}`}
+          src={`https://hayp.imgix.net/links/images/beneficios/${imgBeneficios}`}
           alt={`Beneficio: ${beneficio}`} />
         <h3>{beneficio}</h3>
         <p>{textBeneficios}</p>
@@ -135,7 +135,7 @@ function Benefits(props) {
         <div>
           <div>
             <h3 className="combo-assinando">Assinando</h3>
-            <img width={340} height={107} src={"/img/combo-simples.svg"} alt='Combo simples' quality={60} loading="lazy" />
+            <img width={340} height={107} src={"http://hayp.imgix.net/links/img/combo-simples.svg"} alt='Combo simples' quality={60} loading="lazy" />
             <h4>
               Você ganha mais <spam className="name-marca-destaque">100 Mega</spam> de bônus
             </h4>
@@ -143,7 +143,7 @@ function Benefits(props) {
 
           <div>
             <h4 className="combo-assinando">Assinando o <br /> <spam className="name-marca-destaque" >combo completo</spam></h4>
-            <img width={300} height={160} src={"/img/combo-completo.svg"} alt='Combo Completo' quality={60} loading="lazy" />
+            <img width={300} height={160} src={"http://hayp.imgix.net/links/img/combo-completo.svg"} alt='Combo Completo' quality={60} loading="lazy" />
             <h4>
               Você ganha <spam className="name-marca-destaque">200 Mega</spam> de bônus
             </h4>

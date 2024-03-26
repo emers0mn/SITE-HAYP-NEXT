@@ -65,6 +65,14 @@
     margin: 30px auto ;
 }
 
+.imagem1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
 .link{
     color: #fff;
     font-weight: 500;
@@ -100,3 +108,14 @@
     background: var(--cor-3);
     border: solid var(--cor-2);
 }
+
+@media screen and  (min-width: 720px){
+
+    .content {
+        
+        margin: 20px 35%;
+
+        
+    }
+    
+  }

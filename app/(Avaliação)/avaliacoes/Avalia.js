@@ -130,6 +130,7 @@ const ComentPage = () => {
                             </div>
                         ))
                         :
+                        
                         <LoadingSpinner />
                     }
                 </div>

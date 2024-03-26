@@ -90,7 +90,7 @@ export default function PlanosPC() {
                             <img
                                 width={20}
                                 height={30}
-                                src="/images/plans/Seta-esquerda.png"
+                                src="https://hayp.imgix.net/links/images/plans/Seta-esquerda.png"
                                 alt="seta para ver planos entre 100 a 400 Mega"
                                 className="seta-white"
                             />
@@ -98,7 +98,7 @@ export default function PlanosPC() {
                             <img
                                 width={20}
                                 height={30}
-                                src="/images/plans/Seta-esquerda-dark.png"
+                                src="https://hayp.imgix.net/links/images/plans/Seta-esquerda-dark.png"
                                 alt="seta para ver planos entre 100 a 400 Mega"
                                 className="seta-dark"
                             />
@@ -118,7 +118,7 @@ export default function PlanosPC() {
                                         loading="lazy"
                                         className="icon-velocidad"
                                         alt="Icone de velocidade"
-                                        src={`images/another/${item.icon}`}
+                                        src={`https://hayp.imgix.net/links/images/another/${item.icon}`}
                                     />
 
                                 </span>
@@ -231,7 +231,7 @@ export default function PlanosPC() {
                         }} ><img
                                 width={20}
                                 height={30}
-                                src="/images/plans/Seta-direita.png"
+                                src="https://hayp.imgix.net/links/images/plans/Seta-direita.png"
                                 alt="seta para ver planos entre 500 a 900 Mega"
                                 className="seta-white"
                             />
@@ -239,7 +239,7 @@ export default function PlanosPC() {
                             <img
                                 width={20}
                                 height={30}
-                                src="/images/plans/Seta-direita-dark.png"
+                                src="https://hayp.imgix.net/links/images/plans/Seta-direita-dark.png"
                                 alt="seta para ver planos entre 500 a 900 Mega"
                                 className="seta-dark"
                             />

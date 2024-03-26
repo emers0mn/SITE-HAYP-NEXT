@@ -42,15 +42,6 @@
   width: 50px;
 }
 
-@media screen and  (min-width: 430px){
-
-  .content {
-      
-      width: 500px;
-      
-  }
-  
-}
 
 .Newcontent{
   margin: 20px auto auto auto ;
@@ -63,11 +54,13 @@
 
 .contentdocontent{
   position: relative;
-  left: 40px;
 }
 
 .Newheader{
-  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
 }
 
@@ -101,10 +94,11 @@
 
 .HeaderpersonaStars{
   display: flex;
-  width: 200%;
+  width: 290px;
   height: 20px;
   align-items: center;
   gap: 10px;
+  justify-content: center;
 }
 
 
@@ -113,8 +107,6 @@
   scale: 0.89;
   display: flex;
   justify-content: center;
-  position: relative;
-  left: -35px;
   gap: 5px;
   color: var(--cor-3);
   width: 300px;
@@ -159,4 +151,14 @@
   gap: 10px;
   align-items: center;
   color: var(--cor-3);
+}
+
+@media screen and  (min-width: 720px){
+
+  .Newcomentarios {
+      
+      width: 600px;
+      
+  }
+  
 }

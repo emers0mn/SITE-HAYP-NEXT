@@ -10,13 +10,13 @@ export function Tvs({ canal }) {
                     width={300}
                     height={500}
                     className={style.imagen}
-                    src={`https://haypteste1.imgix.net/img/canais/png/${canal}.png?fm=webp`}
+                    src={`https://hayp.imgix.net/links/img/canais/${canal}.png?fm=webp`}
                     alt={`Canal ${canal}`}
                 />
 
                 <img
                     className={style.logo}
-                    src={`https://haypteste1.imgix.net/img/canais/png/logo/logo-${canal}.png?fm=webp`}
+                    src={`https://hayp.imgix.net/links/img/canais/logo/logo-${canal}.png?fm=webp`}
                     alt={`logo ${canal}`}
                 />
 

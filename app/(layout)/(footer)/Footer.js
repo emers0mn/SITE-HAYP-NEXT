@@ -10,7 +10,7 @@ export default function Footer() {
 
                 <Link href={"/"}>
                     <img 
-                        src={"/images/logo-animado.gif"}
+                        src={"images/logo-animado.gif"}
                         width={120}
                         height={120}
                         loading="lazy"
@@ -46,7 +46,7 @@ export default function Footer() {
                     <ul>
                         <li>
                             <img
-                                src={"/images/footer/telefone-8.png"}
+                                src={"https://hayp.imgix.net/images/footer/telefone-8.png?fm=webp"}
                                 width={39}
                                 height={39}
                                 loading="lazy"
@@ -62,7 +62,7 @@ export default function Footer() {
                         </li>
                         <li>
                             <img
-                                src={"/images/footer/whatsapp-8.png"}
+                                src={"https://hayp.imgix.net/images/footer/whatsapp-8.png?fm=webp"}
                                 width={39}
                                 height={39}
                                 loading="lazy"
@@ -78,7 +78,7 @@ export default function Footer() {
                         </li>
                         <li>
                             <img
-                                src={"/images/footer/email-8.png"}
+                                src={"https://hayp.imgix.net/images/footer/email-8.png?fm=webp"}
                                 width={39}
                                 height={39}
                                 loading="lazy"
@@ -100,7 +100,7 @@ export default function Footer() {
                         <li>
                             <Link href={"https://www.google.com/maps/dir//Hayp+Av.+Manuel+Alves+Soares,+638+-+Sala+3+-+Parque+Colonial+S%C3%A3o+Paulo+-+SP+04821-270,+Brasil/@-23.7263319,-46.6862102,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x94ce4f1a16fe3451:0x2ceb01894481701d"} className={style.localiza} target="_blank">
                                 <img
-                                    src={"/images/footer/localiza-8.png"}
+                                    src={"https://hayp.imgix.net/images/footer/localiza-8.png?fm=webp"}
                                     width={39}
                                     height={39}
                                     loading="lazy"
@@ -120,7 +120,7 @@ export default function Footer() {
 
                     <a href={"https://www.facebook.com/HaypTelecom"} target="_blank">
                         <img
-                            src={"/images/footer/facebook-8.png"}
+                            src={"https://hayp.imgix.net/images/footer/facebook-8.png?fm=webp"}
                             width={45}
                             height={45}
                             loading="lazy"
@@ -131,7 +131,7 @@ export default function Footer() {
 
                     <a href="https://www.instagram.com/haypoficial/" target="_blank">
                         <img
-                            src={"/images/footer/instagram-8.png"}
+                            src={"https://hayp.imgix.net/images/footer/instagram-8.png?fm=webp"}
                             width={45}
                             height={45}
                             loading="lazy"
@@ -142,7 +142,7 @@ export default function Footer() {
 
                     <a href={"https://www.linkedin.com/company/hayp-telecom"} target="_blank">
                         <img
-                            src={"/images/footer/linkedin-8.png"}
+                            src={"https://hayp.imgix.net/images/footer/linkedin-8.png?fm=webp"}
                             width={45}
                             height={45}
                             loading="lazy"

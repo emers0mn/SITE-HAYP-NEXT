@@ -11,8 +11,10 @@ function Beneficio({ title1, titleStrong, title2, text1, text2, image, subInfo1,
                 <small>{subInfo1}</small>
                 <p>{text1}</p>
             </div>            
-            <img src={`./assets/images/${image}`} />
-            <small>{subInfo2}</small>
+            <div className={styles.imagem1}>
+                <img src={`/assets/images/${image}`} alt={`Beneficio: ${title1}`} />
+                <small>{subInfo2}</small>
+            </div>
 
             <h2>{title2}</h2>
             <p>{text2}</p>
@@ -59,7 +61,7 @@ export default function Beneficios() {
                         title1="Clube de desconto"
                         titleStrong="HAYP"
                         text1="Clientes da Hayp podem ganhar descontos exclusivos em vários estabelecimentos, cinemas, farmácias, lojas online e muitos outros."
-                        image="marcas.png"
+                        image="marcas2.png"
                         subInfo2=""
                         title2="Como funciona o clube de descontos ?"
                         text2="Simples, faremos um cadastro com seu CPF e você terá acesso a nossa página de descontos exclusivos."

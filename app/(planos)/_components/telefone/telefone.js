@@ -11,13 +11,13 @@ function Telefone() {
                     <ul>
 
                         <li>
-                            <img src={"/img/icone-telefone.png"} alt='Sua casa com Telefone' />
+                            <img src={"http://hayp.imgix.net/links/img/icone-telefone.png"} alt='Sua casa com Telefone' />
                             Portabilidade gratuita</li>
                         <li>
-                            <img src={"/img/icone-telefone.png"} alt='Sua casa com Telefone' />
+                            <img src={"http://hayp.imgix.net/links/img/icone-telefone.png"} alt='Sua casa com Telefone' />
                             Ligações ilimitada para fixo<br />e móvel em todo brasil</li>
                         <li>
-                            <img src={"/img/plus-telefone.png"} alt='Sua casa com Telefone' />
+                            <img src={"http://hayp.imgix.net/links/img/plus-telefone.png"} alt='Sua casa com Telefone' />
                             100 Mega de Bônus
                         </li>
 
@@ -33,7 +33,7 @@ function Telefone() {
                         width={500}
                         height={282}
                         className='imgTelefone'
-                        src={"/img/telefone.svg"}
+                        src={"http://hayp.imgix.net/links/img/telefone.svg"}
                         alt='Usando o telefone HAYP'
                         quality={30}
                         loading="lazy"
@@ -43,11 +43,11 @@ function Telefone() {
                 <div className="icones-telefone">
                     <ul>
                         <li>
-                            <img className='iconTelefone' src={"/img/casa-telefone.svg"} alt='Sua casa com Telefone' />
+                            <img className='iconTelefone' src={"http://hayp.imgix.net/links/img/casa-telefone.svg"} alt='Sua casa com Telefone' />
                             <p>Para sua casa</p>
                         </li>
                         <li>
-                            <img className='iconTelefone' src={"/img/negocio-telefone.svg"} alt='Sua casa com Telefone' />
+                            <img className='iconTelefone' src={"http://hayp.imgix.net/links/img/negocio-telefone.svg"} alt='Sua casa com Telefone' />
                             <p>Para seu negócio</p>
                         </li>
                     </ul>
