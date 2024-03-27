@@ -12,12 +12,14 @@ export function Tvs({ canal }) {
                     className={style.imagen}
                     src={`https://hayp.imgix.net/links/img/canais/${canal}.png?fm=webp`}
                     alt={`Canal ${canal}`}
+                    loading='lazy'
                 />
 
                 <img
                     className={style.logo}
                     src={`https://hayp.imgix.net/links/img/canais/logo/logo-${canal}.png?fm=webp`}
                     alt={`logo ${canal}`}
+                    loading='lazy'
                 />
 
             </div>
@@ -42,6 +44,7 @@ export function TvAberta() {
                 <Tvs
                     canal="Record"
                 />
+                
             </div>
         </div>
     )

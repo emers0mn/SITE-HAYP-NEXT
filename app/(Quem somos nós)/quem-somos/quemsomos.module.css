@@ -50,22 +50,27 @@
     display: flex;
     gap: 10px;
     
-    animation: fotoHayp 10s forwards infinite;
+    animation: fotoHayp 15s forwards infinite;
 }
 
 @keyframes fotoHayp{
-    0%, 25% {
+    0%, 10% {
         transform: translateX(0%);
     
       }
     
-      30%, 50% {
+      20%, 30% {
         transform: translateX(-88%);
     
       }
 
-      60%, 90% {
+      40%, 50% {
         transform: translateX(-178%);
+    
+      }
+
+      60%, 70% {
+        transform: translateX(-265%);
     
       }
 

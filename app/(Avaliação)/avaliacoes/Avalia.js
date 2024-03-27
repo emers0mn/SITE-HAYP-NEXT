@@ -11,31 +11,86 @@ const ComentPage = () => {
     const [reviews, setReviews] = useState(null);
     const [userRatingsTotal, setUserRatingsTotal] = useState(null);
 
-    useEffect(() => {
-        async function Get() {
-            if (reviews == null) {
-                await Api.get("/Web/GetGoogleComents")
-                    .then((response) => {
-                        setReviews(response.data.result.reviews)
-                    }).catch((err) => {
-                    })
-            }
-        }
-        Get()
-    }, [])
+    //  useEffect(() => {
+    //      async function Get() {
+    //          if (reviews == null) {
+    //              await Api.get("/Web/GetGoogleComents")
+    //                  .then((response) => {
+    //                      setReviews(response.data.result.reviews)
+    //                  }).catch((err) => {
+    //                  })
+    //          }
+    //      }
+    //      Get()
+    //  }, [])
+
+
+    //     useEffect(() => {
+    //         async function Get() {
+    //             if (userRatingsTotal == null) {
+    //                 await Api.get("/Web/GetGoogleComents")
+    //                     .then((response) => {
+    //                         setUserRatingsTotal(response.data.result.user_ratings_total)
+    //                     }).catch((err) => {
+    //                     })
+    //             }
+    //         }
+    //         Get()
+    //     }, [])
 
     useEffect(() => {
-        async function Get() {
-            if (userRatingsTotal == null) {
-                await Api.get("/Web/GetGoogleComents")
-                    .then((response) => {
-                        setUserRatingsTotal(response.data.result.user_ratings_total)
-                    }).catch((err) => {
-                    })
+        // Atualizar as avaliações a cada 30 dias
+        const thirtyDaysInMs = 30 * 24 * 60 * 60 * 1000;
+        const lastReviewsFetchDate = localStorage.getItem('lastReviewsFetchDate');
+        const now = new Date();
+
+        if (!lastReviewsFetchDate || now - new Date(lastReviewsFetchDate) >= thirtyDaysInMs) {
+            getReviews();
+            localStorage.setItem('lastReviewsFetchDate', now.toISOString());
+        } else {
+            const storedReviews = localStorage.getItem('reviews');
+            if (storedReviews) {
+                setReviews(JSON.parse(storedReviews));
             }
         }
-        Get()
-    }, [])
+
+        // Atualizar o total de avaliações a cada 48 horas
+        const lastUserRatingsTotalFetchDate = localStorage.getItem('lastUserRatingsTotalFetchDate');
+        const fortyEightHoursInMs = 48 * 60 * 60 * 1000;
+        const fortyEightHoursAgo = new Date(now - fortyEightHoursInMs);
+
+        if (!lastUserRatingsTotalFetchDate || new Date(lastUserRatingsTotalFetchDate) <= fortyEightHoursAgo) {
+            getUserRatingsTotal();
+            localStorage.setItem('lastUserRatingsTotalFetchDate', now.toISOString());
+        } else {
+            const storedUserRatingsTotal = localStorage.getItem('userRatingsTotal');
+            if (storedUserRatingsTotal) {
+                setUserRatingsTotal(JSON.parse(storedUserRatingsTotal));
+            }
+        }
+    }, []);
+
+    async function getReviews() {
+        try {
+            const response = await Api.get('/Web/GetGoogleComents');
+            const fetchedReviews = response.data.result.reviews;
+            setReviews(fetchedReviews);
+            localStorage.setItem('reviews', JSON.stringify(fetchedReviews));
+        } catch (error) {
+            console.error('Erro ao buscar avaliações:', error);
+        }
+    }
+
+    async function getUserRatingsTotal() {
+        try {
+            const response = await Api.get('/Web/GetGoogleComents');
+            const fetchedUserRatingsTotal = response.data.result.user_ratings_total;
+            setUserRatingsTotal(fetchedUserRatingsTotal);
+            localStorage.setItem('userRatingsTotal', fetchedUserRatingsTotal);
+        } catch (error) {
+            console.error('Erro ao buscar total de avaliações:', error);
+        }
+    }
 
     return (
         <>
@@ -88,7 +143,7 @@ const ComentPage = () => {
                     <div className={styles.Newheader}>
                         <div className={styles.Newgoogle}>
                             <img
-                            className={styles.Google}
+                                className={styles.Google}
                                 src="./assets/images/google-logo.png"
                                 alt="google"
                             />
@@ -130,7 +185,7 @@ const ComentPage = () => {
                             </div>
                         ))
                         :
-                        
+
                         <LoadingSpinner />
                     }
                 </div>

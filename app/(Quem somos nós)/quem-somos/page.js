@@ -70,7 +70,7 @@ export default function QuemSomos() {
                         Porque somos HAYP Telecom</h2>
 
                     <p>
-                        Levamos conexão acessível, de qualidade com grande velocidade e atendimento excelente àqueles que não tem. Conexão que leva inclusão social e digital para milhares de pessoas. E queremos fazer a diferença na vida delas! Queremos enaltecer o lado humano, a atenção aos detalhes, o envolvimento com cada serviço e a compreensão das diversas necessidades. Esses sim, são frutos de uma empresa que pensa em pessoas. E só assim proporcionaremos uma realidade diferente. Porque acreditamos em um mundo conectado e que fazemos parte dele. Reconhecemos o poder da conexão. Bem-vindo ao universo HAYP.
+                        Levamos conexão acessível, de qualidade com grande velocidade e atendimento excelente àqueles que não tem. Conexão que leva inclusão social e digital para milhares de pessoas. E queremos fazer a diferença na vida delas! Queremos enaltecer o lado humano, a atenção aos detalhes, o envolvimento com cada serviço e a compreensão das diversas necessidades. Esses sim, são frutos de uma empresa que pensa em pessoas. E só assim proporcionaremos uma realidade diferente. Porque acreditamos em um mundo conectado e que fazemos parte dele. Reconhecemos o poder da conexão. <strong>Bem-vindo ao universo HAYP</strong>.
                     </p>
 
                     <Imagem
