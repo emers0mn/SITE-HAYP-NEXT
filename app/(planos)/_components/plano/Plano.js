@@ -5,6 +5,30 @@ import Api from "../../../../service/Api";
 import LoadingSpinner from "../../../../components/spinner/LoadingSpinner";
 import "../../_components/plans.css";
 
+export function Links() {
+    const [page, setPage] = useState('planos')
+    useEffect(() => {
+        function handleResize() {
+            var width = window.innerWidth;
+            //console.log("My screen resolution is: " + width);
+            
+            if(width >= 1380){
+                window.location.href = `https://hayp.com.br/${page}`;
+            }
+        }
+
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+
+    }, []);
+
+  return null;
+}
+
 export default function Planos() {
 
     var settings = {
@@ -59,7 +83,7 @@ export default function Planos() {
     useEffect(() => {
         // setIsLoading(true);
         async function Get() {
-            await Api.get("/Web/GetNewPlans")
+            await Api.get("Web/GetNewPlans")
                 .then((response) => {
                     setPlans(response.data.prices);
                     setPlansAdd(response.data.pricesAdd);
@@ -239,9 +263,10 @@ export default function Planos() {
 
     return (
         <>
+            <Links />
             <main className="content">
 
-            <div className="heading-title" hidden>
+                <div className="heading-title" hidden>
                     <h3>Internet <span>100%</span> Fibra Óptica</h3>
                     <div className="line-divisor1"></div>
                     <p>
@@ -379,7 +404,7 @@ export default function Planos() {
 
                                                 {plansAdd.map((item) => (
                                                     plan.addPlanIsShow === 1 ?
-                                                        
+
                                                         <li key={item.Id}>
                                                             <div className="list-bt" style={{ fontFamily: "Gordita", fontWeight: "500" }}>
                                                                 <label for="checkBoxPlanosAdicinais">

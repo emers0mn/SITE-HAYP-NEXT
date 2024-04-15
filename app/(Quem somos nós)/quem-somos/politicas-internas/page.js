@@ -1,5 +1,15 @@
 import style from './politicas.module.css'
 
+export const metadata = {
+    title: 'Quem somos',
+    alternates: {
+        canonical: 'https://hayp.com.br/quem-somos/politicas-internas',
+        media: {
+            'only screen and (max-width: 1380px)': 'https://links.hayp.com.br/quem-somos/politicas-internas',
+          },
+      },
+}
+
 export default function Politicas() {
     return (
         <main className={style.container}>

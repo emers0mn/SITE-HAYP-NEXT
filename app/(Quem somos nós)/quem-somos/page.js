@@ -1,7 +1,13 @@
 import styles from "./quemsomos.module.css"
 
 export const metadata = {
-    title: 'Quem somos'
+    title: 'Quem somos',
+    alternates: {
+        canonical: 'https://hayp.com.br/quem-somos',
+        media: {
+            'only screen and (max-width: 1380px)': 'https://links.hayp.com.br/quem-somos',
+          },
+      },
 }
 
 export function InfoText({ title, text }) {
