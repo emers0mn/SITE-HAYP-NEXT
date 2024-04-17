@@ -11,8 +11,8 @@ export function Links() {
             var width = window.innerWidth;
             //console.log("My screen resolution is: " + width);
             
-            if(width >= 1380){
-                window.location.href = `https://hayp.com.br/${page}`;
+            if(width >= 600){
+                window.location.href = `https://site-pc-hayp-next.vercel.app/${page}`;
             }
         }
 
