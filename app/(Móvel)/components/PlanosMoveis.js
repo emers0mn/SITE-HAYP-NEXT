@@ -201,7 +201,7 @@ export default function PlanosMoveis() {
                                                 <h3 className={style.haypMovel}>HAYP Móvel</h3>
                                                 <div className={style.contentGiga}>
                                                     <div className={(plan.downSpeed == 100) ? style.buttonActionOpacity : style.buttonAction} onClick={() => setIndex(index - 1)}><span>-</span></div>
-                                                    <h2 className={style.giga}>{plan.downSpeed}GB</h2>
+                                                    <h2 className={style.giga}>{plan.downSpeed - 88}GB</h2>
                                                     <div className={(plan.downSpeed == 900) ? style.buttonActionOpacity : style.buttonAction} onClick={() => setIndex(index + 1)}><span>+</span></div>
                                                     {/* <img width={55} height={55} quality={50} loading="lazy" className="plus" onClick={() => setIndex(index + 1)} src="./assets/images/icons/plus.svg"
                                                         alt="adicionais mais megas" /> */}
