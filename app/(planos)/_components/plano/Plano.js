@@ -5,30 +5,6 @@ import Api from "../../../../service/Api";
 import LoadingSpinner from "../../../../components/spinner/LoadingSpinner";
 import "../../_components/plans.css";
 
-export function Links() {
-    const [page, setPage] = useState('planos')
-    useEffect(() => {
-        function handleResize() {
-            var width = window.innerWidth;
-            //console.log("My screen resolution is: " + width);
-            
-            if(width >= 600){
-                window.location.href = `https://site-pc-hayp-next.vercel.app/${page}`;
-            }
-        }
-
-        handleResize();
-
-        window.addEventListener('resize', handleResize);
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-
-    }, []);
-
-  return null;
-}
-
 export default function Planos() {
 
     var settings = {
@@ -263,7 +239,6 @@ export default function Planos() {
 
     return (
         <>
-            <Links />
             <main className="content">
 
                 <div className="heading-title" hidden>

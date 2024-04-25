@@ -4,29 +4,6 @@ import styles from '../../page.module.css';
 import Link from 'next/link';
 import { HomeCepCheck } from './homeCepCheck';
 
-export function Links() {
-    const [page, setPage] = useState('')
-    useEffect(() => {
-        function handleResize() {
-            var width = window.innerWidth;
-            //console.log("My screen resolution is: " + width);
-            
-            if(width >= 600){
-                window.location.href = `https://site-pc-hayp-next.vercel.app/${page}`;
-            }
-        }
-
-        handleResize();
-
-        window.addEventListener('resize', handleResize);
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-
-    }, []);
-
-  return null;
-}
 
 export default function PageHome() {
 
@@ -37,7 +14,7 @@ export default function PageHome() {
   }
   return (
     <div className={styles.containerMaster}>
-        <Links />
+
       <div className={styles.container}>
         <header className={styles.header}>
           <img className={styles.logo} src='https://hayp.imgix.net/assets/images/logo.svg?auto=true' alt='Logo da HAYP' />

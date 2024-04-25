@@ -2,14 +2,14 @@
 
 import { useEffect } from 'react';
 
-export default function Links() {
+export default function Links({pagina}) {
     useEffect(() => {
         function handleResize() {
             var width = window.innerWidth;
             //console.log("My screen resolution is: " + width);
             
-            if(width <= 1380){
-                window.location.href = 'https://links.hayp.com.br/';
+            if(width >= 600){
+                window.location.href = `https://site-pc-hayp-next.vercel.app/${pagina}`;
             }
         }
 

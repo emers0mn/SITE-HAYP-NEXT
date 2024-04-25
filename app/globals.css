@@ -131,7 +131,8 @@
     --cor-2: #4AD62B;
     --cor-3: #333333;
     --cor-4: #33333328;
-    --cor-5: linear-gradient(50deg, #008D1E 0%, #4AD62B 59%);
+    --cor-5: linear-gradient(20deg, #008D1E 10%, #4AD62B 80%);
+    --cor-6: #5E5E5E;
     /* padding: 0;
     margin: 0; */
     list-style: none;  

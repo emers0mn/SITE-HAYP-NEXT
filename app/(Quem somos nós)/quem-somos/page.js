@@ -1,3 +1,4 @@
+import Links from "@/app/components/(links)/Links"
 import PageQuemSomos from "./quem-somos"
 import styles from "./quemsomos.module.css"
 
@@ -21,6 +22,11 @@ export function InfoText({ title, text }) {
 }
 export default function QuemSomos() {
     return (
-        <PageQuemSomos />
+        <div>
+                        <Links
+                pagina="planos"
+            />
+            <PageQuemSomos />
+        </div>
     )
 }

@@ -3,32 +3,6 @@
 import styles from "./quemsomos.module.css"
 import { useState, useEffect } from "react"
 
-export function Links() {
-    const [page, setPage] = useState('quem-somos')
-    useEffect(() => {
-        
-
-        function handleResize() {
-            var width = window.innerWidth;
-            //console.log("My screen resolution is: " + width);
-            
-            if(width >= 600){
-                window.location.href = `https://site-pc-hayp-next.vercel.app/${page}`;
-            }
-        }
-
-        handleResize();
-
-        window.addEventListener('resize', handleResize);
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-
-    }, []);
-
-  return null;
-}
-
 export function InfoText({ title, text }) {
     return (
         <p className={styles.textValores}>
@@ -71,7 +45,6 @@ export function Imagem() {
 export default function PageQuemSomos() {
     return (
         <>
-            <Links />
             <main className={styles.content}>
                 <div >
                     <h1 className={styles.title1}>Bem vindo ao universo <strong>HAYP</strong></h1>
@@ -167,12 +140,12 @@ export default function PageQuemSomos() {
                         <p>Av. Manuel Alves Soares, 638 - Sala 3 - Parque Colonial, São Paulo - SP, 04821-270, Brasil</p>
 
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.5901174074565!2d-46.68878512387909!3d-23.726326967675035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4f1a16fe3451%3A0x2ceb01894481701d!2sHayp!5e0!3m2!1ses-419!2sar!4v1705522750089!5m2!1ses-419!2sar"
-                        width="100%"
-                        height="300"
-                        style={{ border: "none", borderRadius: "5px", margin: "10px auto 20px auto" }}
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            width="100%"
+                            height="300"
+                            style={{ border: "none", borderRadius: "5px", margin: "10px auto 20px auto" }}
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                     </div>
 
