@@ -1,0 +1,100 @@
+.content {
+    margin: auto;
+    width: 80%;
+    font-family: gordita;
+    font-weight: 800;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 280px;
+}
+
+.title h2 {
+    margin: 0;
+}
+
+.title p {
+    margin: 0 0 15px 0;
+    font-weight: 400;
+    width: 232px;
+}
+
+.title strong{
+    color: var(--cor-2);
+}
+
+
+.button{
+    display: block;
+    
+    width: 40%;
+    text-align: center;
+    margin: 8px 0 20px 0;
+    padding: 0.8rem;
+    font-size: 14px;
+    border-radius: 15px;
+    box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.479);
+    color: #ffffff;
+    font-weight: 500;
+
+    background: var(--cor-5);
+}
+
+.beneficios1{
+    position: relative;
+    
+}
+
+.beneficios1 img{
+    display: block;
+    position: relative;
+    top: -30px;
+}
+
+.beneficios1 .button{
+    position: relative;
+    top: -40px;
+}
+
+
+.list{
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    position: relative;
+    top: -50px;
+    padding-left: 10px;
+}
+
+.list li{
+    list-style-type: disc;
+
+}
+
+.beneficios2 h2{
+    margin: 0;
+}
+
+.beneficios2 strong{
+    color: var(--cor-2);
+}
+
+.beneficios2 img {
+    margin: 17px 0;
+}
+
+.beneficios3 span{
+    color: var(--cor-2);
+}
+
+.apps{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
