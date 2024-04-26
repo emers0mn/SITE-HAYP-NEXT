@@ -2,7 +2,7 @@ import PlanosMoveis from "../components/PlanosMoveis";
 import BeneficiosMovel from "../components/Beneficios";
 
 export const metadata = {
-    title: '5G',
+    title: 'Planos 5G',
     alternates: {
         canonical: 'https://hayp.com.br/5g',
         media: {

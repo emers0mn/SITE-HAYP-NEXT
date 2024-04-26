@@ -4,8 +4,15 @@ import React, { useEffect, useState } from "react";
 import Api from "../../../service/Api";
 import LoadingSpinner from "../../../components/spinner/LoadingSpinner";
 import style from './movel.module.css'
+import { Popup } from "./popup/Popup";
 
 export default function PlanosMoveis() {
+
+    const [showCep, setShowCep] = useState(false);
+
+    const toggleSignin = () => {
+        setShowCep(!showCep);
+    }
 
     var settings = {
         slidesToShow: 1,
@@ -178,6 +185,10 @@ export default function PlanosMoveis() {
 
     return (
         <>
+            <Popup
+                isOpen={showCep}
+                toggle={toggleSignin}
+            />
             <main className={style.content}>
 
                 <div className={style.contentTitle}>
@@ -221,13 +232,23 @@ export default function PlanosMoveis() {
                                                 </div>
                                                 <h3 className={style.haypMovel}>11GB + 1 GB de Portabilidade</h3>
                                                 <div className={style.prices}>
-                                                    <h4 className={style.price}>R$40,00</h4>
-                                                    <small>/mês</small>
+
+                                                    <small className={style.priceOld}>De: <span>R$59,90</span></small>
+
+                                                    <div className={style.price}>
+                                                        <h4><span>Por: </span>R$40,00</h4>
+                                                        <small>/mês</small>
+
+                                                    </div>
+
+                                                    <p>(Oferta exclusiva na assinatura de <strong>Internet Fixa</strong> + <strong>Móvel</strong> )</p>
                                                 </div>
                                             </div>
-                                            <a href={contact()} target="_blank" className={style.button} rel="noreferrer">
-                                                Assine Já
-                                            </a>
+                                            <div>
+                                                <button onClick={toggleSignin} target="_blank" className={style.button} rel="noreferrer">
+                                                    Assine Já
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 }

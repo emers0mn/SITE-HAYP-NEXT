@@ -22,7 +22,6 @@
 
     margin: auto;
     background-color: var(--cor-3);
-    color: var(--cor-3);
     border-radius: 20px;
     box-shadow: 0px 0px 5px #333;
     padding-bottom: 50px;
@@ -136,25 +135,58 @@
 
 .prices{
     display: flex;
-    align-items:flex-end;
+    flex-direction: column;
     justify-content: center;
-    margin: 10px auto 5px auto;
+    align-items: center;
+}
+
+.prices p {
+    text-align: center;
+    font-size: 10px;
+    font-weight: 400;
+    margin: 5px;
+}
+
+.prices p strong{
+    color: var(--cor-2);
 }
 
 .price{
+    display: flex;
+    align-items:flex-end;
+    justify-content: center;
+    margin: 0;
+}
+
+.price small{
+    position: relative;
+    top: -10px;
+    opacity: 0.50;
+}
+
+.price span{
+    font-size: 14px;
+    
+}
+
+.price h4{
     font-size: 35px;
     text-align: center;
     color: var(--cor-2);
     margin: 0;
 }
 
-.prices small {
-    font-size: 12px;
-    text-align: center;
-    color: #fff;
+.priceOld {
     position: relative;
-    bottom: 10px;
-    opacity: 0.6;
+    bottom: -10px;
+    color: #5C5E5C;
+    
+}
+
+.priceOld span{
+    font-size: 16px;
+    text-decoration: line-through;
+    text-decoration-color: var(--cor-2);
 }
 
 .button{
@@ -166,11 +198,14 @@
     padding: 0.8rem;
     font-size: 14px;
     border-radius: 15px;
-    box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.479);
+    filter: drop-shadow(0 1mm 2mm rgba(0, 0, 0, 0.11));
     color: #ffffff;
     font-weight: 500;
+    font-family: gordita;
 
     background: var(--cor-5);
+    border: none;
+    cursor: pointer;
 }
 
 /* Inicio dos beneficios */
@@ -178,7 +213,7 @@
 .containerBeneficios{
     position: relative;
     top: -50px;
-    padding: 10px 35px 15px 35px;
+    padding: 20px 35px 20px 35px;
     
     display: flex;
     flex-direction: column;
@@ -187,7 +222,6 @@
 
     margin: auto;
     background-color: var(--cor-6);
-    color: var(--cor-3);
     border-radius: 20px;
     box-shadow: 0px 0px 5px #333;
 }
@@ -256,4 +290,16 @@
     font-weight: 500;
     margin: 15px auto;
 
+}
+
+@media screen and (min-width: 360px) {
+    .contentTitle h1{
+        width: auto;
+    }
+
+    .experiencia p {
+        font-size: 16px;
+    }
+    
+    
 }
