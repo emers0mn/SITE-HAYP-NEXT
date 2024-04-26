@@ -200,9 +200,9 @@ export default function PlanosMoveis() {
                                             <div >
                                                 <h3 className={style.haypMovel}>HAYP Móvel</h3>
                                                 <div className={style.contentGiga}>
-                                                    <div className={(plan.downSpeed == 100) ? style.buttonActionOpacity : style.buttonAction} onClick={() => setIndex(index - 1)}><span>-</span></div>
+                                                    <button className={(plan.downSpeed == 100) ? style.buttonActionOpacity : style.buttonAction} onClick={() => setIndex(index - 1)}><img src="/img/movel/buttonMinus.svg" /></button>
                                                     <h2 className={style.giga}>{plan.downSpeed - 88}GB</h2>
-                                                    <div className={(plan.downSpeed == 900) ? style.buttonActionOpacity : style.buttonAction} onClick={() => setIndex(index + 1)}><span>+</span></div>
+                                                    <button className={(plan.downSpeed == 900) ? style.buttonActionOpacity : style.buttonAction} onClick={() => setIndex(index + 1)}><img src="/img/movel/buttonPlus.svg" /></button>
                                                     {/* <img width={55} height={55} quality={50} loading="lazy" className="plus" onClick={() => setIndex(index + 1)} src="./assets/images/icons/plus.svg"
                                                         alt="adicionais mais megas" /> */}
                                                 </div>
@@ -226,13 +226,13 @@ export default function PlanosMoveis() {
                     
                     </div>
                     <div className={style.containerBeneficios}>
-                        <h5 className={style.haypMovel}>Apps <strong>ilimitados</strong></h5>
+                        <h5>Apps <strong>ilimitados</strong></h5>
                         <p>Sem consumir da internet</p>
                         <div className={style.imgBeneficios}>
                             <img src="/img/movel/Skeelo.svg" />
                             <img src="/img/movel/WhatsApp.svg"  />
                         </div>
-                        <h5 className={style.haypMovel}>Ligações e SMS <strong>ilimitados</strong>:</h5>
+                        <h5>Ligações e SMS <strong>ilimitados</strong>:</h5>
                         <p>Não tenha limites para poder se comunicar com quem você quiser.</p>
                     </div>
                 </div>

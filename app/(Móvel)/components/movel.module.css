@@ -56,13 +56,17 @@
     
 }
 .experiencia img {
-    width: 80px;
+    width: 48px;
     height: 74px;
     
 }
 
+.experiencia p{
+    font-size: 14px;
+}
+
 .haypMovel {
-    font-size: 16px;
+    font-size: 14px;
     color: #fff;
     margin: 10px;
     font-weight: 400;
@@ -70,27 +74,32 @@
     margin: auto 0;
 }
 
+.containerBeneficios h5{
+    font-size: 16px;
+    color: #fff;
+    margin: 10px;
+    font-weight: 400;
+    margin: auto 0;
+}
+
 .buttonAction{
-    background: #cbcbcb8e;
+    background-color: transparent;
+    border: none;
     width: 50px;
     height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
     cursor: pointer;
+    filter: drop-shadow(0 1mm 2mm rgba(0, 0, 0, 0.76));
 }
 
 .buttonActionOpacity{
-    background: #cbcbcb8e;
+    
     width: 50px;
     height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
+    background-color: transparent;
+    border: none;
     cursor: pointer;
     opacity: 0.5;
+    filter: drop-shadow(0 1mm 2mm rgba(0, 0, 0, 0.76));
 }
 .buttonActionOpacity span{
     font-size: 35px;
@@ -112,9 +121,9 @@
 }
 
 .giga {
-    font-size: 50px;
+    font-size: 45px;
     color: #fff;
-    margin: 0 10px;
+    margin: 0 0;
 
 }
 
@@ -130,7 +139,6 @@
     align-items:flex-end;
     justify-content: center;
     margin: 10px auto 5px auto;
-    gap: 5px;
 }
 
 .price{
@@ -169,7 +177,7 @@
 
 .containerBeneficios{
     position: relative;
-    top: -30px;
+    top: -50px;
     padding: 10px 35px;
     
     display: flex;
