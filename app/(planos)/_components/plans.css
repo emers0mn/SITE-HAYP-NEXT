@@ -1,4 +1,4 @@
-.index-planos{
+.index-planos {
     display: none;
     gap: 10px;
     justify-content: center;
@@ -6,12 +6,11 @@
     margin-bottom: 20px;
 }
 
-.heading-title {
-    display: none;
-  }
-  
+
+
+
 /*Começo planos anual, semestral, mensal*/
-.index-planos button{
+.index-planos button {
     background: white;
     opacity: 0.4;
     color: black;
@@ -36,20 +35,80 @@
 /*Começo dos planos*/
 
 .content {
-    margin-top: 1rem;
+    margin: auto;
+    width: 100%;
+    font-family: gordita;
 }
 
-.listCompleta{
+.heading-title {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 30px 5px auto;
+    text-align: left;
+    scale: 0.9;
+}
+
+.heading-title h1 {
+    font-size: 35px;
+    margin: 5px auto;
+    line-height: 35px;
+
+}
+
+.heading-title p {
+    margin: 5px 0px;
+    font-size: 17px;
+}
+
+.heading-title strong {
+    color: var(--cor-2);
+}
+
+
+.heading-title a {
+    font-weight: 500;
+    color: var(--cor-2);
+    text-decoration: underline;
+}
+
+.line-divisor1 {
+    margin: 20px auto 20px auto;
+    width: 100px;
+    height: 5px;
+    border-radius: 20px;
+    background: linear-gradient(82deg, var(--cor-1) 4.34%, #04CB3A 97.83%);
+}
+
+/* lista de planos */
+
+.listCompleta {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    font-family: gordita;
 }
+
+.listCompleta h2 {
+    font-size: 14px;
+    color: #fff;
+}
+
+.listCompleta p {
+    font-weight: 300;
+    font-size: 12px;
+    color: var(--cor-2);
+    margin: 0;
+}
+
 .content .container .packages .package-list {
     padding: 10px;
-    width: 80%;
+    width: 85%;
     margin: auto;
-    background-color: #ffffff;
-    color: var(--cor-3);
+    background-color: var(--cor-3);
+    color: #fff;
     border-radius: 8px;
     box-shadow: 0px 0px 5px #333;
 }
@@ -63,7 +122,7 @@
 }
 
 .content .container .packages .package-list .package-icon {
-    display: block;
+    display: none;
     text-align: center;
     font-size: 2em;
     background: white;
@@ -80,42 +139,69 @@
     flex-direction: column;
 }
 
-.price-plan h1{
+/* destaque */
+.containerDestaque{
+    display: none;
+}
+
+.containerDestaqueAtiva{
+    
+    position: absolute;
+    top: 155px; 
+    width: 275px;
+    height: 150px;
+
+    
+    background: linear-gradient(20deg, #008D1E 10%, #4AD62B 80%);
+
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px #333;
+    z-index: -1;
+}
+
+
+
+.destaque{
+    text-align: center;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 15px auto;
+
+}
+
+/* fim do destaque */
+
+.price-plan h1 {
     font-size: 45px;
     font-family: gordita;
     line-height: 45px;
     margin: 10px;
-    margin-top: -20px;
+    
     z-index: 1;
 }
 
-.content .container .packages .package-list .package-info .desc {
-    margin: 1rem auto 1.5rem auto;
-    text-align: center;
-    font-size: 1rem;
-}
 
 
-
-.minus{
+.minus {
     position: relative;
     left: 10px;
     bottom: 10px;
 }
 
-.plus{
+.plus {
     position: relative;
     right: 10px;
     bottom: 10px;
 }
 
-.desc{
+.desc {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.lista1{
+.lista1 {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -125,46 +211,46 @@
     align-items: center;
 }
 
-.lista1 li{
+.lista1 li {
     display: flex;
     gap: 5px;
     align-items: center;
     justify-content: center;
-    
+
 }
 
-.listaBeneficios{
+.listaBeneficios {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
 }
 
-.download{
+.download {
     font-family: gordita;
     font-weight: 600;
 }
 
-.listBeneficios{
+.listBeneficios {
     font-family: gordita;
     font-weight: 500;
 }
 
-.downloadUpload{
+.downloadUpload {
     width: 15px;
     height: 15px;
-    margin-right: 5px ;
+    margin-right: 5px;
     font-family: gordita;
     font-weight: 600;
 }
 
 
 
-.content .container .packages .package-list .package-info p {
-    font-size: 14px;
+/* .content .container .packages .package-list .package-info p {
+    font-size: 12px;
     font-weight: 600;
-    margin: 20px 0 05px 0;
-}
+    margin: 20px 0 5px 0;
+} */
 
 .content .container .packages .package-list .package-price {
     display: block;
@@ -174,13 +260,13 @@
 .package-price .sale {
     display: block;
     text-align: center;
-    color: hsla(0,0%,50%,.356);
+    color: hsla(0, 0%, 50%, .356);
     font-family: Gordita;
     font-weight: 800;
     font-size: 20px;
 }
 
-.package-price p{
+.package-price p {
     margin: 5px auto;
 }
 
@@ -212,10 +298,11 @@
 
 .line-divisor {
     background: linear-gradient(270deg, var(--cor-2) 0%, var(--cor-1) 100%);
-    width: 90%;
+    width: 40%;
     height: 5px;
-    margin: auto;
     align-self: center;
+    margin-top: 30px;
+    border-radius: 10px;
 }
 
 ul {
@@ -227,7 +314,7 @@ ul {
 .list-service {
     display: flex;
     flex-direction: column;
-    
+
     margin: 0 0 10px 0;
 }
 
@@ -241,7 +328,6 @@ ul {
     position: relative;
     left: -20px;
     gap: 10px;
-    color: #000;
 }
 
 .bonus {
@@ -329,7 +415,7 @@ input:checked[type="checkbox"]:before {
     margin: 10px 0px;
 }
 
-.bonusMega h3{
+.bonusMega h3 {
     font-size: 20px;
     font-weight: 800;
     font-family: gordita;
@@ -348,63 +434,25 @@ input:checked[type="checkbox"]:before {
 
 /*Barra de contato*/
 
-@media screen and  (min-width: 430px){
+@media screen and (min-width: 430px) {
 
-    .index-planos button{
+    .index-planos button {
         font-size: 100%;
     }
-    
+
     .content .container .packages .package-list {
-        
+
         width: 80%;
-        
+
     }
-    
+
 }
 
-@media screen and  (min-width: 810px){
+@media screen and (min-width: 810px) {
 
     .content .container .packages .package-list {
-        
+
         width: 450px;
-        
+
     }
-    
-    .heading-title h3 {
-        display: block;
-        font-size: 40px;
-        margin: 5px auto;
-      }
-
-      .heading-title {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 20px auto 20px auto;
-        text-align: center;
-      }
-
-      .heading-title p {
-        margin: 2px;
-      }
-      
-      .heading-title span {
-        color: var(--cor-2);
-      }
-      
-      
-      .heading-title a {
-        font-weight: 500;
-        color: var(--cor-2);
-        text-decoration: underline;
-      }
-    
-      .line-divisor1 {
-        margin: 10px auto 20px auto;
-        width: 100px;
-        height: 5px;
-        border-radius: 10px;
-        background: linear-gradient(82deg, var(--cor-1) 4.34%, #04CB3A 97.83%);
-      }
 }

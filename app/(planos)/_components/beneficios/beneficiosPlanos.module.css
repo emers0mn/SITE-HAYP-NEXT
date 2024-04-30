@@ -1,0 +1,30 @@
+.title{
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.content{    
+    position: relative;
+    top: -10px;
+    height: 5px;
+    margin: 20px 0 -10px 0;
+
+}
+
+.beneficios{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.beneficios p{
+    margin: 0;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.beneficios img{
+    display: flex;
+    position: relative;
+}

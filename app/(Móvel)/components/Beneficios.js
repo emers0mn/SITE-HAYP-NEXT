@@ -1,5 +1,4 @@
 import style from './beneficiosMovel.module.css'
-
 export default function BeneficiosMovel() {
     return (
         <div className={style.content}>

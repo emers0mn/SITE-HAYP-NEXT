@@ -9,6 +9,7 @@
 }
 
 .modal{
+    width: 80%;
     position: relative;
     top: 180px;
     background-color: #1f1f1f;
@@ -16,7 +17,6 @@
     margin: auto;
     z-index: 5;
     font-family: gordita;
-    
 }
 
 .open{
@@ -71,6 +71,25 @@
 .subtitle{
     color:#fff;
     font-size: 10px;
+}
+
+.button{
+    display: block;
+    
+    width: 40%;
+    text-align: center;
+    margin: 8px auto 20px auto;
+    padding: 0.8rem;
+    font-size: 14px;
+    border-radius: 15px;
+    filter: drop-shadow(0 1mm 2mm rgba(0, 0, 0, 0.11));
+    color: #ffffff;
+    font-weight: 500;
+    font-family: gordita;
+
+    background: var(--cor-5);
+    border: none;
+    cursor: pointer;
 }
 
 

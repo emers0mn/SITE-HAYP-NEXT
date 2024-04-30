@@ -267,7 +267,7 @@
 }
 
 .containerDestaqueAtiva{
-    
+    display: flex;
     position: absolute;
     top: -50px; 
     width: 100%;
@@ -292,7 +292,33 @@
 
 }
 
-@media screen and (min-width: 360px) {
+@media screen and (min-width: 745px) {
+    .content {
+        margin: auto;
+        width: 45%;
+        font-family: gordita;
+        font-weight: 800;
+    }
+
+    .contentTitle h1{
+        width: auto;
+    }
+
+    .experiencia p {
+        font-size: 16px;
+    }
+    
+    
+}
+
+@media screen and (min-width: 1023px) {
+    .content {
+        margin: auto;
+        width: 25%;
+        font-family: gordita;
+        font-weight: 800;
+    }
+
     .contentTitle h1{
         width: auto;
     }

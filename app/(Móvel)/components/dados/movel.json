@@ -1,0 +1,75 @@
+{
+    "moveis": [
+      {
+        "id": 1,
+        "plano": 5,
+        "portabilidade": 0,
+        "revenda": 25.00,
+        "revenda2": 44.90,
+        "ligacoes": "60min",
+        "sms": "60",
+        "bonus": ["Skeelo", "Whatsapp"]
+      },
+      {
+        "id": 2,
+        "plano": 7,
+        "portabilidade": 1,
+        "revenda": 30.00,
+        "revenda2": 49.90,
+        "ligacoes": "60min",
+        "sms": "60",
+        "bonus": ["Skeelo", "Whatsapp"]
+      },
+      {
+        "id": 3,
+        "plano": 11,
+        "portabilidade": 1,
+        "revenda": 40.00,
+        "revenda2": 59.90,
+        "ligacoes": "60min",
+        "sms": "60",
+        "bonus": ["Skeelo", "Whatsapp"]
+      },
+      {
+        "id": 4,
+        "plano": 17,
+        "portabilidade": 2,
+        "revenda": 45.00,
+        "revenda2": 69.90,
+        "ligacoes": "ilimitado",
+        "sms": "100",
+        "bonus": ["Skeelo", "Whatsapp"]
+      },
+      {
+        "id": 5,
+        "plano": 27,
+        "portabilidade": 3,
+        "revenda": 60.00,
+        "revenda2": 79.90,
+        "ligacoes": "ilimitado",
+        "sms": "100",
+        "bonus": ["Skeelo", "Whatsapp", "Waze"]
+      },
+      {
+        "id": 6,
+        "plano": 35,
+        "portabilidade": 5,
+        "revenda": 70.00,
+        "revenda2": 89.90,
+        "ligacoes": "ilimitado",
+        "sms": "100",
+        "bonus": ["Skeelo", "Whatsapp", "Waze"]
+      },
+      {
+        "id": 7,
+        "plano": 35,
+        "portabilidade": 10,
+        "revenda": 75.00,
+        "revenda2": 99.90,
+        "ligacoes": "ilimitado",
+        "sms": "100",
+        "bonus": ["Skeelo", "Whatsapp", "Waze"]
+      }
+    ]
+  }
+  

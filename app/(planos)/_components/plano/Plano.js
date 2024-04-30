@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Api from "../../../../service/Api";
 import LoadingSpinner from "../../../../components/spinner/LoadingSpinner";
 import "../../_components/plans.css";
+import BeneficiosPlanos from "../beneficios/BeneficiosPlanos";
 
 export default function Planos() {
 
@@ -231,58 +232,27 @@ export default function Planos() {
         return planContact;
     }
 
-    const [stylePlanosTotal1, setStylePlanosTotal1] = useState(true);
-    const [stylePlanosTotal2, setStylePlanosTotal2] = useState();
-    const [stylePlanosTotal3, setStylePlanosTotal3] = useState();
-
 
 
     return (
         <>
             <main className="content">
 
-                <div className="heading-title" hidden>
-                    <h3>Internet <span>100%</span> Fibra Óptica</h3>
-                    <div className="line-divisor1"></div>
+                <div className="heading-title">
+                    <h1>Monte o seu plano completo</h1>
+
                     <p>
-                        Não sabe qual é o melhor plano para sua casa?<br />Tem dúvidas de qual possa atender melhor a demanda da sua empresa?
+                        <strong>Internet 100% fibra óptica</strong>, TV, Telefone Fixo e <strong>Chip 5G</strong>.
                     </p>
-                    <p><a target="_blank" rel="noreferrer" href="https://wa.me/551128762641?text=Ol%C3%A1%2C+estou+em+dúvida+de+qual+plano+escolher,+preciso+de+uma+ajuda">Mande uma mensagem</a> que vamos te ajudar a escolher o melhor plano com base no seu perfil.</p>
                 </div>
 
                 <div className="container text-center">
                     <div className="packages">
-                        <ul className="index-planos">
-                            <li ><button className={stylePlanosTotal1 ? `verde` : ``} onClick={() => {
-
-                                setStylePlanosTotal1("verde");
-                                setStylePlanosTotal2("");
-                                setStylePlanosTotal3("");
-
-
-                            }}>Planos Mensal</button></li>
-
-                            <li><button className={stylePlanosTotal2} onClick={() => {
-                                setDescontoAntecipado(!descontoAntecipado);
-                                setStylePlanosTotal1("");
-                                setStylePlanosTotal3("")
-                                setStylePlanosTotal2("verde")
-
-                            }}>Planos Semestral</button></li>
-
-                            <li><button className={stylePlanosTotal3} onClick={() => {
-
-                                setStylePlanosTotal1("");
-                                setStylePlanosTotal2("");
-                                setStylePlanosTotal3("verde")
-
-                            }} >Planos Anual</button></li>
-                        </ul>
 
                         <div>
                             {isLoading ? <LoadingSpinner /> :
                                 <div key="plan" className="package-list center">
-                                    <div className="package-icon" >
+                                    {/* <div className="package-icon" >
                                         <img
                                             width={80}
                                             height={80}
@@ -292,72 +262,23 @@ export default function Planos() {
                                             alt="Velocimetro"
                                             className="img-fluid"
                                         />
-                                    </div>
+                                    </div> */}
+
                                     <div className="package-info">
                                         <div className="price-plan">
-                                            <img width={55} height={55} quality={50} loading="lazy" className="minus" onClick={() => setIndex(index - 1)} src="./assets/images/icons/minus.svg"
+                                            <img width={45} height={45} quality={50} loading="lazy" className="minus" onClick={() => setIndex(index - 1)} src="/img/movel/buttonMinus.svg"
                                                 alt="dminuir a quantidade de megas" />
 
                                             <h1>{plan.downSpeed} Mega</h1>
 
-                                            <img width={55} height={55} quality={50} loading="lazy" className="plus" onClick={() => setIndex(index + 1)} src="./assets/images/icons/plus.svg"
+                                            <img width={45} height={45} quality={50} loading="lazy" className="plus" onClick={() => setIndex(index + 1)} src="/img/movel/buttonPlus.svg"
                                                 alt="adicionais mais megas" />
                                         </div>
-                                        <div className="desc">
-
-                                            {/* <lu className="lista1">
-                                                <li>
-                                                    <img width={15} height={15} quality={50} loading="lazy" className="downloadUpload" src="./img/download.svg" alt="icone de download" />
-                                                    <strong className="download">Download {plan.downSpeed} Mbps</strong>
-                                                </li>
-
-                                                <li>
-                                                    <img width={15} height={15} quality={50} loading="lazy" className="downloadUpload" src="./img/upload.svg" alt="icone de upload" />
-                                                    Upload {plan.upSpeed} Mbps
-                                                </li>
-                                            </lu> */}
-
-                                            <lu className="lista1">
-                                                <li className="listaBeneficios">
-                                                    <img
-                                                        width={20}
-                                                        height={20}
-                                                        quality={50}
-                                                        loading="lazy"
-                                                        className="imgBeneficios"
-                                                        src="/assets/images/sem-fidelidade.svg"
-                                                        alt="Não temos fidelidade" />
-                                                    <strong className="listBeneficios">{plan.firstDescription}</strong>
-                                                </li>
-
-                                                <li style={plan.downSpeed === 300 ? { display: "none" } : (plan.downSpeed && variants.downSpeed >= 500 ? { display: "flex" } : { display: "none" })}>
-                                                    <img
-                                                        className="plan365"
-                                                        width={20}
-                                                        height={20}
-                                                        quality={50}
-                                                        loading="lazy"
-                                                        src="/assets/images/365.svg"
-                                                        alt="Pacote Microsft 365 Completo"
-                                                    />
-                                                    <strong className="listBeneficios">{plan.thirdDescription}</strong>
-                                                </li>
-
-
-                                                <li className="listaBeneficios">
-                                                    <img
-                                                        width={20}
-                                                        height={20}
-                                                        quality={50}
-                                                        loading="lazy"
-                                                        className="imgBeneficios"
-                                                        src="/assets/images/card-1.svg"
-                                                        alt="Clube de desconto" />
-                                                    <strong className="listBeneficios">{plan.fourthDescription}</strong>
-                                                </li>
-                                            </lu>
-
+                                        <div className={(plan.downSpeed == 400) ? `containerDestaqueAtiva` : `containerDestaque`}>
+                                            <h5 className="destaque">Plano mais vendido</h5>
                                         </div>
+                                        <BeneficiosPlanos />
+
                                         <div className="line-divisor"></div>
 
                                         <div className="container-new-list">
@@ -365,7 +286,7 @@ export default function Planos() {
                                             </div>
                                             <ul className="listCompleta">
                                                 <li>
-                                                    <div className="list-bt" style={{ fontFamily: "Gordita", fontWeight: "500" }}>
+                                                    <div className="list-bt">
                                                         <label for="checkBoxApenasInternet">
                                                             <input id="isInternetOnly" type="checkbox" name="interNetOnly"
                                                                 onChange={handleInternetCheckboxChange}
@@ -373,7 +294,32 @@ export default function Planos() {
                                                                 value="true">
                                                             </input>
                                                         </label>
-                                                        Apenas internet
+                                                        <div>
+                                                            <h2>Wi-Fi Premium</h2>
+                                                            <p>(Ganhe + 100 Mega)</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+                                                    <div className="list-bt">
+                                                        <label for="checkBoxApenasInternet">
+                                                            <input id="isInternetOnly" type="checkbox" name="interNetOnly"
+                                                                onChange={handleInternetCheckboxChange}
+                                                                defaultChecked={isInternetOnly}
+                                                                value="true">
+                                                            </input>
+                                                        </label>
+                                                        <div>
+                                                            <h2>HAYP Móvel</h2>
+                                                            <p>(+100 Mega)</p>
+                                                        </div>
+                                                        <img
+                                                            src="/img/movel/5g.svg"
+                                                            width={40}
+                                                            height={40}
+                                                            alt=""
+                                                        />
                                                     </div>
                                                 </li>
 
@@ -381,16 +327,16 @@ export default function Planos() {
                                                     plan.addPlanIsShow === 1 ?
 
                                                         <li key={item.Id}>
-                                                            <div className="list-bt" style={{ fontFamily: "Gordita", fontWeight: "500" }}>
+                                                            <div className="list-bt">
                                                                 <label for="checkBoxPlanosAdicinais">
                                                                     <input id={item.Id} type="checkbox" name={item.Id} value="false"
                                                                         onChange={handleChange}
                                                                     ></input>
                                                                 </label>
-                                                                {item.name}
+                                                                <h2>{item.name}</h2>
                                                             </div>
                                                             {item.downSpeedBonus > 0 && plan.addPlanAddPackage === 1 ?
-                                                                <span className="bonus">(Ganhe + {item.downSpeedBonus} Mega)</span>
+                                                                <p>(Ganhe + {item.downSpeedBonus} Mega)</p>
                                                                 : <></>}
                                                         </li>
                                                         : <></>
@@ -405,7 +351,7 @@ export default function Planos() {
                                     {isInternetOnly === false ?
                                         <div className="bonusMega">
                                             <h3>Você irá receber</h3>
-                                            <span style={{ fontFamily: "Gordita", fontWeight: "900", color: "var(--cor-2)", fontSize: "20px" }} className="price">{variants.downSpeed} Mega</span>
+                                            <span style={{ fontWeight: "900", color: "var(--cor-2)", fontSize: "20px" }} className="price">{variants.downSpeed} Mega</span>
                                         </div>
                                         : <></>
                                     }
@@ -413,7 +359,7 @@ export default function Planos() {
                                     <div className="package-price">
                                         <span className="sale">R$ {(variants.price - 0).toFixed(2).replace('.', ',')}</span>
 
-                                        <p hidden={descontoAntecipado} style={{ fontFamily: "Gordita", fontWeight: "500", fontSize: "14px" }}>Pagando até o vencimento <br />  você ganha R$10 de desconto
+                                        <p hidden={descontoAntecipado} style={{ fontWeight: "500", fontSize: "12px" }}>Pagando até o vencimento <br />  você ganha R$10 de desconto
                                         </p>
 
                                         <span style={{ fontFamily: "Gordita", fontWeight: "900", color: "#008D1E", fontSize: "40px" }} className="price">

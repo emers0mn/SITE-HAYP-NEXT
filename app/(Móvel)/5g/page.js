@@ -16,6 +16,7 @@ export default function Page5G(){
         <div>
             <PlanosMoveis/>
             <BeneficiosMovel />
+            
         </div>
     )
 }
