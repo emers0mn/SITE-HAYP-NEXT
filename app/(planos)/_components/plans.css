@@ -7,32 +7,11 @@
 }
 
 
-
-
-/*Começo planos anual, semestral, mensal*/
-.index-planos button {
-    background: white;
-    opacity: 0.4;
-    color: black;
-    padding: 6px;
-    font-family: Gordita;
-    font-weight: 500;
-    font-size: 77%;
-    border-radius: 3px;
-    border: none;
-    cursor: pointer;
-
-    transition: 250ms;
-}
-
-.index-planos .verde {
-    opacity: 1;
-    color: #fff;
-    background-color: var(--cor-2);
-}
-
-
 /*Começo dos planos*/
+
+.container{
+    margin-top: 40px;
+}
 
 .content {
     margin: auto;
@@ -94,16 +73,37 @@
 .listCompleta h2 {
     font-size: 14px;
     color: #fff;
+    margin-bottom: 0;
 }
 
 .listCompleta p {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 12px;
     color: var(--cor-2);
     margin: 0;
 }
 
-.content .container .packages .package-list {
+.list-bt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 25px;
+    gap: 10px;
+}
+
+.list-bt-movel{
+    display: flex;
+    position: relative;
+    left: 20px;
+}
+
+.list-bt-movel img{
+    position: relative;
+    left :10px ;
+}
+
+.package-list {
     padding: 10px;
     width: 85%;
     margin: auto;
@@ -113,7 +113,7 @@
     box-shadow: 0px 0px 5px #333;
 }
 
-.content .container .packages {
+.packages {
     display: block;
     margin: 0 auto;
     text-align: center;
@@ -121,7 +121,7 @@
     overflow: hidden;
 }
 
-.content .container .packages .package-list .package-icon {
+.package-icon {
     display: none;
     text-align: center;
     font-size: 2em;
@@ -134,7 +134,7 @@
     top: -20px;
 }
 
-.content .container .packages .package-list .package-info {
+.package-info {
     display: flex;
     flex-direction: column;
 }
@@ -148,9 +148,9 @@
     
     position: absolute;
     top: 155px; 
-    width: 275px;
-    height: 150px;
-
+    width: 82%;
+    height: 75px;
+    margin: 35px auto auto -9px;
     
     background: linear-gradient(20deg, #008D1E 10%, #4AD62B 80%);
 
@@ -172,13 +172,18 @@
 
 /* fim do destaque */
 
-.price-plan h1 {
-    font-size: 45px;
+.price-plan h2 {
+    font-size: 40px;
     font-family: gordita;
     line-height: 45px;
     margin: 10px;
     
     z-index: 1;
+}
+
+.price-plan img{
+    position: relative;
+    top: 5px;
 }
 
 
@@ -244,16 +249,7 @@
     font-weight: 600;
 }
 
-
-
-/* .content .container .packages .package-list .package-info p {
-    font-size: 12px;
-    font-weight: 600;
-    margin: 20px 0 5px 0;
-} */
-
-.content .container .packages .package-list .package-price {
-    display: block;
+.package-price {
     margin: 0 0 20px 0;
 }
 
@@ -270,16 +266,25 @@
     margin: 5px auto;
 }
 
-
-.content .container .packages .package-list .package-price .price {
-    text-align: auto;
-    font-size: 1.5em;
-    font-weight: 500;
+.package-price .price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.content .container .packages .package-list .package-price .price span {
-    font-size: 0.5em;
-    font-weight: normal;
+.package-price .price h2{
+    font-size: 40px;
+    color: var(--cor-2);
+    margin: 0;
+}
+
+.package-price .price small{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--cor-7);
+
+    position: relative;
+    bottom: -10px;
 }
 
 .price-plan {
@@ -287,13 +292,6 @@
     justify-content: center;
     align-items: center;
     gap: 15px;
-}
-
-.container-new-list {
-    margin-top: 20px;
-    font-size: 14px;
-    font-family: "Gordita";
-    font-weight: 500;
 }
 
 .line-divisor {
@@ -320,14 +318,6 @@ ul {
 
 .list-service li {
     padding: 5px;
-}
-
-.list-bt {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    left: -20px;
-    gap: 10px;
 }
 
 .bonus {
@@ -395,20 +385,23 @@ input:checked[type="checkbox"]:before {
     font-size: 14px;
 }
 
-.content .container .packages .package-list .button,
-.green-button {
+.button{
     display: block;
-    transition: 0.2s all ease;
+    
     width: 40%;
     text-align: center;
-    margin: 0 auto 20px auto;
-    padding: 0.5rem;
+    margin: 8px auto 20px auto;
+    padding: 0.8rem;
     font-size: 14px;
     border-radius: 15px;
-    box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.479);
-    color: white;
+    filter: drop-shadow(0 1mm 2mm rgba(0, 0, 0, 0.11));
+    color: #ffffff;
+    font-weight: 500;
+    font-family: gordita;
 
-    background: var(--cor-1);
+    background: var(--cor-5);
+    border: none;
+    cursor: pointer;
 }
 
 .bonusMega {
@@ -434,23 +427,23 @@ input:checked[type="checkbox"]:before {
 
 /*Barra de contato*/
 
-@media screen and (min-width: 430px) {
+@media screen and (max-width: 356px) {
 
-    .index-planos button {
-        font-size: 100%;
-    }
-
-    .content .container .packages .package-list {
-
-        width: 80%;
-
+    .heading-title h1 {
+        font-size: 25px;
+        
+    
     }
 
 }
 
 @media screen and (min-width: 810px) {
 
-    .content .container .packages .package-list {
+    .containerDestaqueAtiva{
+        width: 450px;
+    }
+
+    .package-list {
 
         width: 450px;
 

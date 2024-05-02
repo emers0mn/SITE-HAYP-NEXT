@@ -8,7 +8,7 @@
         "revenda2": 44.90,
         "ligacoes": "60min",
         "sms": "60",
-        "bonus": ["Skeelo", "Whatsapp"]
+        "bonus": ["Skeelo", "WhatsApp"]
       },
       {
         "id": 2,
@@ -18,7 +18,7 @@
         "revenda2": 49.90,
         "ligacoes": "60min",
         "sms": "60",
-        "bonus": ["Skeelo", "Whatsapp"]
+        "bonus": ["Skeelo", "WhatsApp"]
       },
       {
         "id": 3,
@@ -28,7 +28,7 @@
         "revenda2": 59.90,
         "ligacoes": "60min",
         "sms": "60",
-        "bonus": ["Skeelo", "Whatsapp"]
+        "bonus": ["Skeelo", "WhatsApp"]
       },
       {
         "id": 4,
@@ -38,7 +38,7 @@
         "revenda2": 69.90,
         "ligacoes": "ilimitado",
         "sms": "100",
-        "bonus": ["Skeelo", "Whatsapp"]
+        "bonus": ["Skeelo", "WhatsApp"]
       },
       {
         "id": 5,
@@ -48,7 +48,7 @@
         "revenda2": 79.90,
         "ligacoes": "ilimitado",
         "sms": "100",
-        "bonus": ["Skeelo", "Whatsapp", "Waze"]
+        "bonus": ["Skeelo", "WhatsApp", "Waze"]
       },
       {
         "id": 6,
@@ -58,7 +58,7 @@
         "revenda2": 89.90,
         "ligacoes": "ilimitado",
         "sms": "100",
-        "bonus": ["Skeelo", "Whatsapp", "Waze"]
+        "bonus": ["Skeelo", "WhatsApp", "Waze"]
       },
       {
         "id": 7,
@@ -68,7 +68,7 @@
         "revenda2": 99.90,
         "ligacoes": "ilimitado",
         "sms": "100",
-        "bonus": ["Skeelo", "Whatsapp", "Waze"]
+        "bonus": ["Skeelo", "WhatsApp", "Waze"]
       }
     ]
   }

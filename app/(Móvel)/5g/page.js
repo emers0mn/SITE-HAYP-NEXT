@@ -1,6 +1,7 @@
 import PlanosMoveis from "../components/PlanosMoveis";
 import BeneficiosMovel from "../components/Beneficios";
 
+
 export const metadata = {
     title: 'Planos 5G',
     alternates: {

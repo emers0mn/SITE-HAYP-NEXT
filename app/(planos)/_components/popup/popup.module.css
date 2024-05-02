@@ -8,15 +8,92 @@
     font-family: gordita;
 }
 
+.contentGiga {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.buttonAction{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow(0 1mm 2mm rgba(0, 0, 0, 0.76));
+}
+
+.buttonActionOpacity{
+    
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0.5;
+    filter: drop-shadow(0 1mm 2mm rgba(0, 0, 0, 0.76));
+}
+.buttonActionOpacity span{
+    font-size: 35px;
+    font-weight: 800;
+    color: var(--cor-2);
+    margin: 0;
+    position: relative;
+    bottom: 3px;
+}
+
+
+.buttonAction span{
+    font-size: 35px;
+    font-weight: 800;
+    color: var(--cor-2);
+    margin: 0;
+    position: relative;
+    bottom: 3px;
+}
+
+.giga {
+    font-size: 45px;
+    color: #fff;
+    margin: 0 0;
+
+}
+
+.price{
+    display: flex;
+    align-items:flex-end;
+    justify-content: center;
+    margin: 0;
+}
+
+.price small{
+    position: relative;
+    top: -18px;
+    opacity: 0.50;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.price span{
+    font-size: 14px;
+    
+}
+
+.price h4{
+    font-size: 35px;
+    text-align: center;
+    color: var(--cor-2);
+    margin: 0;
+}
+
 .modal{
     width: 80%;
     position: relative;
     top: 180px;
     background-color: transparent;
     border-radius: 15px ;
+    border: none;
     margin: auto;
     z-index: 5;
     font-family: gordita;
+    left: -8px;
 
 }
 
@@ -73,8 +150,8 @@
     color: white;
     font-family: gordita;
     font-weight: 400;
-
-    margin: 0 0 10px 0;
+    font-family: 12px;
+    margin: 0 0 0px 0;
 }
 
 .combo h3 strong{
@@ -90,10 +167,120 @@
 
     margin: 0 0 10px 0;
 }
+/* Beneficios */
+
+.activeBeneficios{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+}
+
+.activeBeneficios h2{
+    font-size: 16px;
+}
+
+.planos p {
+    margin: 0;
+    color: #fff;
+}
+
+.buttonBeneficios{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.verMaisBeneficios{
+    transform: rotate(180deg);
+    transition: 100ms;
+}
+
+.verMaisBeneficiosFechado{
+    transform: rotate(360deg);
+    transition: 100ms;
+    
+}
+
+/* Inicio dos beneficios */
+
+.containerBeneficios{
+    position: relative;
+    top: -5px;
+    padding: 20px 35px 20px 20px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: self-start;
+
+    width: 80%;
+    margin: auto;
+    background-color: var(--cor-6);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #333;
+    height: 0px;
+}
+
+.containerBeneficiosAberto{
+    position: relative;
+    top: -5px;
+    padding: 20px 35px 20px 20px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: self-start;
+
+    width: 80%;
+    margin: auto;
+    background-color: var(--cor-6);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #333;
+    height: auto;
+}
+
+.contentBeneficios{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: self-start;
+
+    text-align: left;
+}
+
+.contentBeneficiosFechado{
+    display: none;
+}
+
+.containerBeneficios h5, .containerBeneficiosAberto h5{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.containerBeneficios p, .containerBeneficiosAberto p{
+    margin: 0;
+    color: #fff;
+    font-weight: 400;
+    font-size: 10px;
+}
+
+.containerBeneficios strong, .containerBeneficiosAberto strong{
+    color: var(--cor-2);
+}
+
+.imgBeneficios{
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+
+}
 
 /* plano de internet +  plano móvel */
 
-.apenasChip{
+.adicionarChip{
     background-color: var(--cor-7);
     width: 100%;
     text-align: center;
@@ -111,12 +298,16 @@
     z-index: -1;
 }
 
-.apenasChip h2{
+.adicionarChip h2{
     color: #fff;
     margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    width: 130px;
+    margin: 10px auto;
 }
 
-.apenasChip h3{
+.adicionarChip h3{
     color: white;
     font-family: gordita;
     font-weight: 400;
@@ -124,18 +315,34 @@
     margin: 0 0 10px 0;
 }
 
-.apenasChip h3 strong{
+.adicionarChip h3 strong{
     color: var(--cor-2);
     font-weight: 400;
 }
 
-.apenasChip h4{
+.adicionarChip h4{
     color: var(--cor-2);
     font-size: 30px;
     font-family: gordita;
     font-weight: 600;
 
     margin: 0 0 10px 0;
+}
+
+.btAdicionarChip {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.chip{
+    transform: rotate(180deg);
+    transition: 500ms;
+}
+
+.removerChip{
+    transform: rotate(360deg);
+    transition: 500ms;
 }
 
 .title1{

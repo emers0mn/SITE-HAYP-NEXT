@@ -5,6 +5,7 @@ import Api from "../../../../service/Api";
 import LoadingSpinner from "../../../../components/spinner/LoadingSpinner";
 import "../../_components/plans.css";
 import BeneficiosPlanos from "../beneficios/BeneficiosPlanos";
+import { Popup } from "../popup/Popup";
 
 export default function Planos() {
 
@@ -232,10 +233,21 @@ export default function Planos() {
         return planContact;
     }
 
+    const [showCep, setShowCep] = useState(false);
+    const toggleSignin = () => {
+        setShowCep(!showCep);
+    }
+
 
 
     return (
         <>
+            <Popup
+                isOpen={showCep}
+                toggle={toggleSignin}
+                price1={''}
+                price2={''}
+            />
             <main className="content">
 
                 <div className="heading-title">
@@ -246,7 +258,7 @@ export default function Planos() {
                     </p>
                 </div>
 
-                <div className="container text-center">
+                <div className={plan.downSpeed == 400 ? "container" : ""}>
                     <div className="packages">
 
                         <div>
@@ -266,24 +278,40 @@ export default function Planos() {
 
                                     <div className="package-info">
                                         <div className="price-plan">
-                                            <img width={45} height={45} quality={50} loading="lazy" className="minus" onClick={() => setIndex(index - 1)} src="/img/movel/buttonMinus.svg"
-                                                alt="dminuir a quantidade de megas" />
 
-                                            <h1>{plan.downSpeed} Mega</h1>
+                                            <img
+                                                width={45}
+                                                height={45}
+                                                quality={50}
+                                                loading="lazy"
+                                                className="minus"
+                                                onClick={() => setIndex(index - 1)} src="/img/movel/buttonMinus.svg"
+                                                alt="dminuir a quantidade de megas"
+                                            />
 
-                                            <img width={45} height={45} quality={50} loading="lazy" className="plus" onClick={() => setIndex(index + 1)} src="/img/movel/buttonPlus.svg"
-                                                alt="adicionais mais megas" />
+                                            <h2>{plan.downSpeed} Mega</h2>
+
+                                            <img
+                                                width={45}
+                                                height={45}
+                                                loading="lazy"
+                                                className="plus"
+                                                onClick={() => setIndex(index + 1)}
+                                                src="/img/movel/buttonPlus.svg"
+                                                alt="adicionais mais megas"
+                                            />
+
                                         </div>
+
                                         <div className={(plan.downSpeed == 400) ? `containerDestaqueAtiva` : `containerDestaque`}>
                                             <h5 className="destaque">Plano mais vendido</h5>
                                         </div>
+
                                         <BeneficiosPlanos />
 
                                         <div className="line-divisor"></div>
 
-                                        <div className="container-new-list">
-                                            <div className="container-bt">
-                                            </div>
+                                        <div>
                                             <ul className="listCompleta">
                                                 <li>
                                                     <div className="list-bt">
@@ -305,21 +333,25 @@ export default function Planos() {
                                                     <div className="list-bt">
                                                         <label for="checkBoxApenasInternet">
                                                             <input id="isInternetOnly" type="checkbox" name="interNetOnly"
-                                                                onChange={handleInternetCheckboxChange}
+                                                                
+                                                                onChange={() => { toggleSignin(); handleInternetCheckboxChange() }}
                                                                 defaultChecked={isInternetOnly}
                                                                 value="true">
                                                             </input>
                                                         </label>
-                                                        <div>
-                                                            <h2>HAYP Móvel</h2>
-                                                            <p>(+100 Mega)</p>
+                                                        <div className="list-bt-movel">
+                                                            <div>
+                                                                <h2>HAYP Móvel</h2>
+                                                                <p>(+100 Mega)</p>
+                                                            </div>
+
+                                                            <img
+                                                                src="/img/movel/5g.svg"
+                                                                width={50}
+                                                                height={50}
+                                                                alt="Plano móvel com tecnologia 5G"
+                                                            />
                                                         </div>
-                                                        <img
-                                                            src="/img/movel/5g.svg"
-                                                            width={40}
-                                                            height={40}
-                                                            alt=""
-                                                        />
                                                     </div>
                                                 </li>
 
@@ -333,11 +365,14 @@ export default function Planos() {
                                                                         onChange={handleChange}
                                                                     ></input>
                                                                 </label>
-                                                                <h2>{item.name}</h2>
+                                                                <div>
+                                                                    <h2>{item.name}</h2>
+
+                                                                    {item.downSpeedBonus > 0 && plan.addPlanAddPackage === 1 ?
+                                                                        <p>(Ganhe + {item.downSpeedBonus} Mega)</p>
+                                                                        : <></>}
+                                                                </div>
                                                             </div>
-                                                            {item.downSpeedBonus > 0 && plan.addPlanAddPackage === 1 ?
-                                                                <p>(Ganhe + {item.downSpeedBonus} Mega)</p>
-                                                                : <></>}
                                                         </li>
                                                         : <></>
                                                 ))}
@@ -362,10 +397,12 @@ export default function Planos() {
                                         <p hidden={descontoAntecipado} style={{ fontWeight: "500", fontSize: "12px" }}>Pagando até o vencimento <br />  você ganha R$10 de desconto
                                         </p>
 
-                                        <span style={{ fontFamily: "Gordita", fontWeight: "900", color: "#008D1E", fontSize: "40px" }} className="price">
-
-                                            R${(variants.price - (variants.price > 0 ? plan.discount : 0)).toFixed(2).replace('.', ',')}<span style={{ color: "#000", fontWeight: "500" }}>/mês</span>
-                                        </span>
+                                        <div className="price">
+                                            <h2>
+                                                R${(variants.price - (variants.price > 0 ? plan.discount : 0)).toFixed(2).replace('.', ',')}
+                                            </h2>
+                                            <small>/mês</small>
+                                        </div>
                                     </div>
                                     <a href={contact()} target="_blank" className="button" rel="noreferrer">
                                         Assine Já
