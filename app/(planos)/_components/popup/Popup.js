@@ -3,8 +3,9 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 import style from "./popup.module.css"
 import { Apps } from "@/app/(Móvel)/components/PlanosMoveis"
+import Link from "next/link"
 
-export const Popup = ({ isOpen, toggle, price1, price2 }) => {
+export const Popup = ({ isOpen, toggle, price1, price2, plano }) => {
 
   const router = useRouter()
   const dadosPlanos = require("../../../(Móvel)/components/dados/movel.json");
@@ -111,9 +112,31 @@ export const Popup = ({ isOpen, toggle, price1, price2 }) => {
                 />
               </button>
               <h2>Adicionar mais um chip</h2>
-              <button type="button" className={style.button} onClick={() => router.push('/planos')}>
-                Confirmar
-              </button>
+              <article className={style.containerButtons}>
+                <Link href={{
+                  pathname:'/planos',
+                  query: {
+                    movel: `${movel.plano + movel.portabilidade}GB`,
+                    checkMovel: true
+                  }
+                }}>
+                  <button type="button" className={style.button} onClick={toggle}>
+                    Confirmar
+                  </button>
+                </Link>
+                
+                <Link href={{
+                  pathname:'/planos',
+                  query: {
+                
+                    checkMovel: false
+                  }
+                }}>
+                  <button type="button" className={style.buttonRemove} onClick={toggle}>
+                    Remover
+                  </button>
+                </Link>
+              </article>
             </section>
 
           </dialog>

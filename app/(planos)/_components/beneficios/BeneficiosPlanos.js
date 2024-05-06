@@ -3,9 +3,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import style from './beneficiosPlanos.module.css'
 
-export function Beneficios({ beneficio, imagem, alter }) {
+export function Beneficios({ beneficio, imagem, alter, planos }) {
     return (
-        <div className={style.beneficios}>
+        <div className={planos < 400 ? style.beneficiosHidden : style.beneficios}>
             <img
                 src={`/img/beneficios/planos/${imagem}.svg`}
                 width={20}
@@ -20,27 +20,27 @@ export function Beneficios({ beneficio, imagem, alter }) {
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
-      <div
-        className={className}
-        style={{ ...style, display: "none" }}
-        onClick={onClick}
-      />
+        <div
+            className={className}
+            style={{ ...style, display: "none" }}
+            onClick={onClick}
+        />
     );
-  }
-  
-  function SamplePrevArrow(props) {
+}
+
+function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
-      <div
-        className={className}
-        style={{ ...style, display: "none" }}
-        onClick={onClick}
-      />
+        <div
+            className={className}
+            style={{ ...style, display: "none" }}
+            onClick={onClick}
+        />
     );
-  }
+}
 
 
-export default function BeneficiosPlanos() {
+export default function BeneficiosPlanos({ plano }) {
     var settings = {
 
         infinite: true,
@@ -60,24 +60,42 @@ export default function BeneficiosPlanos() {
                 <Beneficios
                     imagem="card"
                     beneficio="Clube de desconto"
-                    alter= "Clube de beneficios exclusivo"
+                    alter="Clube de beneficios exclusivo"
                 />
                 <Beneficios
                     imagem="sem-fidelidade"
                     beneficio="Sem Fidelidade"
-                    alter= "Sem fidelidade"
+                    alter="Sem fidelidade"
                 />
-                <Beneficios
-                    imagem="wifi"
-                    beneficio="Wi-fi 5.8ghz"
-                    alter= "Wi-Fi na casa toda"
-                />
-                <Beneficios
-                    imagem="365"
-                    beneficio="Pacote Microsoft 365"
-                    alter= "Pacote Microsoft 365 Completo"
-                />
-                
+                {plano >= 500 ? (
+                    <Beneficios
+                        imagem="wifi"
+                        beneficio="Wi-fi 6ghz"
+                        alter="Wi-Fi na casa toda"
+                    />
+                ) : (
+
+                    <Beneficios
+                        imagem="wifi"
+                        beneficio="Wi-fi 5.8ghz"
+                        alter="Wi-Fi na casa toda"
+                    />
+
+                )
+                }
+
+                {plano >= 500 ? (
+                    <section>
+                        <Beneficios
+                            imagem="365"
+                            beneficio="Pacote Microsoft 365"
+                            alter="Pacote Microsoft 365 Completo"
+                        />
+                    </section>
+                ) : (
+                    ''
+                )
+                }
             </Slider >
         </section>
     )

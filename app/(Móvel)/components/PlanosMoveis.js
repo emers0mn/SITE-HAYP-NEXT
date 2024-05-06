@@ -37,12 +37,13 @@ export default function PlanosMoveis() {
                 .map(movel => (
                     <main key={movel.id}>
 
-<Popup
-                        isOpen={showCep}
-                        toggle={toggleSignin}
-                        price1={movel.revenda}
-                        price2={movel.revenda + 19}
-                    />
+                        <Popup
+                            isOpen={showCep}
+                            toggle={toggleSignin}
+                            price1={movel.revenda}
+                            price2={movel.revenda + 19}
+                            plano = {movel.plano + movel.portabilidade}
+                        />
 
                         <section className={style.content}>
 

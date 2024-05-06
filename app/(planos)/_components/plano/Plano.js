@@ -6,8 +6,20 @@ import LoadingSpinner from "../../../../components/spinner/LoadingSpinner";
 import "../../_components/plans.css";
 import BeneficiosPlanos from "../beneficios/BeneficiosPlanos";
 import { Popup } from "../popup/Popup";
+import { useSearchParams } from "next/navigation";
+import {PlanoMovel} from "../params/Params";
 
 export default function Planos() {
+
+    // utitilização de parametros da URL
+    const searchParams = useSearchParams()
+    const check = searchParams.get('checkMovel')
+
+    function CheckMovel(){
+        if (check === 'true'){
+            return true
+        } else return false
+    }
 
     var settings = {
         slidesToShow: 1,
@@ -215,7 +227,6 @@ export default function Planos() {
 
     const [indexPlano, setIndexPlano] = useState("ativo");
     const [descontoAntecipado, setDescontoAntecipado] = useState(false);
-    const [btAtivo, setBtAtivo] = useState("")
 
 
     function contact() {
@@ -247,6 +258,7 @@ export default function Planos() {
                 toggle={toggleSignin}
                 price1={''}
                 price2={''}
+                
             />
             <main className="content">
 
@@ -307,7 +319,9 @@ export default function Planos() {
                                             <h5 className="destaque">Plano mais vendido</h5>
                                         </div>
 
-                                        <BeneficiosPlanos />
+                                        <BeneficiosPlanos 
+                                            plano = {plan.downSpeed}
+                                        />
 
                                         <div className="line-divisor"></div>
 
@@ -318,13 +332,13 @@ export default function Planos() {
                                                         <label for="checkBoxApenasInternet">
                                                             <input id="isInternetOnly" type="checkbox" name="interNetOnly"
                                                                 onChange={handleInternetCheckboxChange}
-                                                                defaultChecked={isInternetOnly}
+                                                                
                                                                 value="true">
                                                             </input>
                                                         </label>
                                                         <div>
                                                             <h2>Wi-Fi Premium</h2>
-                                                            <p>(Ganhe + 100 Mega)</p>
+                                                            {plan.downSpeed >= 400 ? <p>(Ganhe + 100 Mega)</p> : ""}
                                                         </div>
                                                     </div>
                                                 </li>
@@ -335,14 +349,19 @@ export default function Planos() {
                                                             <input id="isInternetOnly" type="checkbox" name="interNetOnly"
                                                                 
                                                                 onChange={() => { toggleSignin(); handleInternetCheckboxChange() }}
-                                                                defaultChecked={isInternetOnly}
+                                                                checked= {CheckMovel()}
+                                                                defaultChecked={false}
                                                                 value="true">
                                                             </input>
                                                         </label>
                                                         <div className="list-bt-movel">
                                                             <div>
                                                                 <h2>HAYP Móvel</h2>
-                                                                <p>(+100 Mega)</p>
+                                                                
+                                                                <PlanoMovel 
+                                                                     plano = {plan.downSpeed}
+                                                                />
+                                                                
                                                             </div>
 
                                                             <img

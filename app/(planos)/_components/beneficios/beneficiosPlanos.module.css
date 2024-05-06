@@ -18,6 +18,10 @@
     gap: 5px;
 }
 
+.beneficiosHidden{
+    display: none;
+}
+
 .beneficios p{
     margin: 0;
     font-size: 12px;

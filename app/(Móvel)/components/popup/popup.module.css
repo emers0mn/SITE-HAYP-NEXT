@@ -181,7 +181,7 @@
 .button{
     display: block;
     
-    width: 40%;
+    width: 100%;
     text-align: center;
     margin: 8px auto 20px auto;
     padding: 0.8rem;

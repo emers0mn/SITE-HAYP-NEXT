@@ -1,8 +1,9 @@
 'use client'
 import { useRouter } from "next/navigation"
 import style from "./popup.module.css"
+import Link from "next/link"
 
-export const Popup = ({ isOpen, toggle, price1, price2}) => {
+export const Popup = ({ isOpen, toggle, price1, price2, plano}) => {
 
   const router = useRouter()
 
@@ -29,9 +30,17 @@ export const Popup = ({ isOpen, toggle, price1, price2}) => {
               <h4>R${price1},00</h4>
             </div>
 
-            <button type="button" className={style.button} onClick={() => router.push('/planos')}>
-              Monte seu plano
-            </button>
+            <Link href={{
+              pathname: '/planos',
+              query: {
+                movel: `${plano}GB`,
+                checkMovel: true
+              }
+            }}>
+              <button type="button" className={style.button}>
+                Monte seu plano
+              </button>
+            </Link>
           </section>
 
           <section className={style.apenasChip}>
