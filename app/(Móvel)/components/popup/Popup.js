@@ -34,7 +34,8 @@ export const Popup = ({ isOpen, toggle, price1, price2, plano}) => {
               pathname: '/planos',
               query: {
                 movel: `${plano}GB`,
-                checkMovel: true
+                checkMovel: true,
+                priceMovel: `${price1}`,
               }
             }}>
               <button type="button" className={style.button}>

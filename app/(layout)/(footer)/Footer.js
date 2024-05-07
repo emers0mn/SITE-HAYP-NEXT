@@ -36,8 +36,8 @@ export default function Footer() {
                         <li>- <Link href={"https://www.linkedin.com/company/hayp-telecom"} target="_blank">Trabalhe conosco</Link>
                         </li>
                         <li>- <Link href={"https://drive.google.com/file/d/13RW5zmQRpBEoEcxki59-x5B_Z4Ko11bN/view"} target="_blank">Contrato</Link></li>
-                        <li>- <Link href={"/Quemsomos/politicas-internas"}>Privacidade</Link></li>
-                        <li>- <Link href={"/Quemsomos"}>Quem somos</Link></li>
+                        <li>- <Link href={"/quem-somos/politicas-internas"}>Privacidade</Link></li>
+                        <li>- <Link href={"/quem-somos"}>Quem somos</Link></li>
                     </ul>
                 </div>
 

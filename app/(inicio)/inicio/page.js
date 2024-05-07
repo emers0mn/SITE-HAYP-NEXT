@@ -48,7 +48,7 @@ export default function Home() {
               Nosso <br /> WhatsApp</div>
           </a>
 
-          <Link href={"/Quemsomos"}>
+          <Link href={"/quem-somos"}>
             <div className={styles.menu}> <img className={styles.img} src="assets/images/icons/assets_quem-somos.svg" alt='Um pouco sobre a HAYP' />
               Quem <br /> somos
             </div>

@@ -7,16 +7,17 @@ import "../../_components/plans.css";
 import BeneficiosPlanos from "../beneficios/BeneficiosPlanos";
 import { Popup } from "../popup/Popup";
 import { useSearchParams } from "next/navigation";
-import {PlanoMovel} from "../params/Params";
+import { PlanoMovel } from "../params/Params";
 
 export default function Planos() {
 
     // utitilização de parametros da URL
     const searchParams = useSearchParams()
-    const check = searchParams.get('checkMovel')
+    const check = searchParams.get('checkMovel');
+    const priceMovel = parseInt(searchParams.get('priceMovel')) 
 
-    function CheckMovel(){
-        if (check === 'true'){
+    function CheckMovel() {
+        if (check === 'true') {
             return true
         } else return false
     }
@@ -88,8 +89,6 @@ export default function Planos() {
 
     useEffect(() => {
         toggle(false);
-        // setIsInternetOnly(!isInternetOnly);
-
         if (index < 0)
             setIndex(0);
 
@@ -108,34 +107,33 @@ export default function Planos() {
             }
         }
 
-        // document.getElementById("isInternetOnly").checked = true;
     }, [index, plans, plan])
 
 
 
     const handleChange = ({ target }) => {
-        if (document.getElementById("isInternetOnly").checked === true) {
-            setIsInternetOnly(false);
-            document.getElementById("isInternetOnly").checked = false;
-        } else {
-            var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
+        // if (document.getElementById("isInternetOnly").checked === true) {
+        //     setIsInternetOnly(false);
+        //     document.getElementById("isInternetOnly").checked = false;
+        // } else {
+        //     var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
 
-            let falseCount = 0;
+        //     let falseCount = 0;
 
-            for (var i = 0; i < checkboxes.length; i++) {
-                if (checkboxes[i].id !== "isInternetOnly") {
-                    if (checkboxes[i].checked === true) {
-                        falseCount++;
-                    }
+        //     for (var i = 0; i < checkboxes.length; i++) {
+        //         if (checkboxes[i].id !== "isInternetOnly") {
+        //             if (checkboxes[i].checked === true) {
+        //                 falseCount++;
+        //             }
 
-                }
-            }
+        //         }
+        //     }
 
-            if (falseCount === 0) {
-                setIsInternetOnly(true);
-                document.getElementById("isInternetOnly").checked = true;
-            }
-        }
+        //     if (falseCount === 0) {
+        //         setIsInternetOnly(true);
+        //         document.getElementById("isInternetOnly").checked = true;
+        //     }
+        // }
 
         if (target.checked) {
             target.removeAttribute('checked');
@@ -192,7 +190,6 @@ export default function Planos() {
         if (plan.addPlanIsShow === 1) {
             plansAdd.forEach(x => {
                 document.getElementById(x.Id).checked = status;
-                // ChangePlan(x.Id, status);
             })
         }
     }
@@ -225,8 +222,17 @@ export default function Planos() {
         });
     }
 
-    const [indexPlano, setIndexPlano] = useState("ativo");
-    const [descontoAntecipado, setDescontoAntecipado] = useState(false);
+
+    const [wifiPremium, setWifiPremium] = useState(0)
+    function handleChangeWiFi(){
+        
+        if (condition) {
+            setWifiPremium(20)
+        } else {
+            
+        }
+    }
+    
 
 
     function contact() {
@@ -258,7 +264,7 @@ export default function Planos() {
                 toggle={toggleSignin}
                 price1={''}
                 price2={''}
-                
+
             />
             <main className="content">
 
@@ -319,8 +325,8 @@ export default function Planos() {
                                             <h5 className="destaque">Plano mais vendido</h5>
                                         </div>
 
-                                        <BeneficiosPlanos 
-                                            plano = {plan.downSpeed}
+                                        <BeneficiosPlanos
+                                            plano={plan.downSpeed}
                                         />
 
                                         <div className="line-divisor"></div>
@@ -330,10 +336,15 @@ export default function Planos() {
                                                 <li>
                                                     <div className="list-bt">
                                                         <label for="checkBoxApenasInternet">
-                                                            <input id="isInternetOnly" type="checkbox" name="interNetOnly"
-                                                                onChange={handleInternetCheckboxChange}
-                                                                
-                                                                value="true">
+                                                            <input id="isWifiPremium" type="checkbox" name="interNetOnly"
+                                                                onChange={(event) => {
+                                                                    const newWifiPremium = event.target.checked ? 20 : 0;
+                                                                    setWifiPremium(newWifiPremium);
+                                                                    console.log(newWifiPremium); 
+                                                                }}
+
+                                                                value="true"
+                                                                >
                                                             </input>
                                                         </label>
                                                         <div>
@@ -347,9 +358,9 @@ export default function Planos() {
                                                     <div className="list-bt">
                                                         <label for="checkBoxApenasInternet">
                                                             <input id="isInternetOnly" type="checkbox" name="interNetOnly"
-                                                                
-                                                                onChange={() => { toggleSignin(); handleInternetCheckboxChange() }}
-                                                                checked= {CheckMovel()}
+
+                                                                onChange={() => { toggleSignin() }}
+                                                                checked={CheckMovel()}
                                                                 defaultChecked={false}
                                                                 value="true">
                                                             </input>
@@ -357,11 +368,11 @@ export default function Planos() {
                                                         <div className="list-bt-movel">
                                                             <div>
                                                                 <h2>HAYP Móvel</h2>
-                                                                
-                                                                <PlanoMovel 
-                                                                     plano = {plan.downSpeed}
+
+                                                                <PlanoMovel
+                                                                    plano={plan.downSpeed}
                                                                 />
-                                                                
+
                                                             </div>
 
                                                             <img
@@ -413,12 +424,12 @@ export default function Planos() {
                                     <div className="package-price">
                                         <span className="sale">R$ {(variants.price - 0).toFixed(2).replace('.', ',')}</span>
 
-                                        <p hidden={descontoAntecipado} style={{ fontWeight: "500", fontSize: "12px" }}>Pagando até o vencimento <br />  você ganha R$10 de desconto
+                                        <p style={{ fontWeight: "500", fontSize: "12px" }}>Pagando até o vencimento <br />  você ganha R$10 de desconto
                                         </p>
 
                                         <div className="price">
                                             <h2>
-                                                R${(variants.price - (variants.price > 0 ? plan.discount : 0)).toFixed(2).replace('.', ',')}
+                                                R${(variants.price - (variants.price > 0 ? plan.discount : 0) + wifiPremium + priceMovel ).toFixed(2).replace('.', ',')}
                                             </h2>
                                             <small>/mês</small>
                                         </div>

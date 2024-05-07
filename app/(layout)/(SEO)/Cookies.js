@@ -29,7 +29,7 @@ export default function Cookies() {
             
         >
             Esta página utiliza Cookies para poder garantir a melhor experência.{" "}
-            <Link href={"/Quemsomos/politicas-internas"} style={{ fontSize: "10px", color:"var(--cor-2)", marginLeft:"10px" }}>Políticas de privacidade</Link>
+            <Link href={"/quem-somos/politicas-internas"} style={{ fontSize: "10px", color:"var(--cor-2)", marginLeft:"10px" }}>Políticas de privacidade</Link>
         </CookieConsent>
     )
 }
