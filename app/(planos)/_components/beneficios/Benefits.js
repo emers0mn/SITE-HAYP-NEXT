@@ -82,7 +82,7 @@ function Benefits(props) {
       </div>
 
       <div id="canais">
-        <h2 className="tittle-benefits-2">De um <spam className="name-marca"> <br />HAYP</spam> na sua Tv</h2>
+        <h2 className="tittle-benefits-2">De um <span className="name-marca"> <br />HAYP</span> na sua Tv</h2>
         <div className="divisor"></div>
 
         <h3 className="tittle-benefits-1">Canais abertos</h3>
@@ -137,15 +137,15 @@ function Benefits(props) {
             <h3 className="combo-assinando">Assinando</h3>
             <img width={340} height={107} src={"http://hayp.imgix.net/links/img/combo-simples.svg"} alt='Combo simples' quality={60} loading="lazy" />
             <h4>
-              Você ganha mais <spam className="name-marca-destaque">100 Mega</spam> de bônus
+              Você ganha mais <span className="name-marca-destaque">100 Mega</span> de bônus
             </h4>
           </div>
 
           <div>
-            <h4 className="combo-assinando">Assinando o <br /> <spam className="name-marca-destaque" >combo completo</spam></h4>
+            <h4 className="combo-assinando">Assinando o <br /> <span className="name-marca-destaque" >combo completo</span></h4>
             <img width={300} height={160} src={"http://hayp.imgix.net/links/img/combo-completo.svg"} alt='Combo Completo' quality={60} loading="lazy" />
             <h4>
-              Você ganha <spam className="name-marca-destaque">200 Mega</spam> de bônus
+              Você ganha <span className="name-marca-destaque">200 Mega</span> de bônus
             </h4>
           </div>
         </div>

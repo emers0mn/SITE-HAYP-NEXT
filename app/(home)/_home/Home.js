@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import styles from '../../page.module.css';
 import Link from 'next/link';
 import { HomeCepCheck } from './homeCepCheck';
@@ -55,7 +55,8 @@ export default function PageHome() {
           <Link href={{
                   pathname: '/planos',
                   query: {
-                    priceMovel: "0",
+                    priceMovel: 0,
+                    quantidade: 0
                   }
                 }}>
             <div className={styles.menu}> <img className={styles.img} src="https://hayp.imgix.net/assets/images/icons/assets_planos.svg" alt='Nossos planos' />

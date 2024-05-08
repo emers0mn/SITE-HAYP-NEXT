@@ -36,6 +36,7 @@ export const Popup = ({ isOpen, toggle, price1, price2, plano}) => {
                 movel: `${plano}GB`,
                 checkMovel: true,
                 priceMovel: `${price1}`,
+                quantidade: `1`
               }
             }}>
               <button type="button" className={style.button}>

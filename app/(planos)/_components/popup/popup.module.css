@@ -281,7 +281,8 @@
 /* plano de internet +  plano móvel */
 
 .btRemoverChip{
-    margin-bottom: 20px;
+    width: 20%;
+    margin: auto auto 20px auto;
     border: solid 0.5px;
     border-radius: 10px;
     padding: 5px 10px;

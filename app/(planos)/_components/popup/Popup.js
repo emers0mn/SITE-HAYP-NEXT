@@ -1,15 +1,14 @@
 'use client'
 import { useState } from "react"
-import { useRouter } from "next/navigation"
 import style from "./popup.module.css"
 import { Apps } from "@/app/(Móvel)/components/PlanosMoveis"
 import Link from "next/link"
+import { useSearchParams } from "next/navigation";
 
-
-export const Popup = ({ isOpen, toggle, price1, price2, plano }) => {
-
-  const [adicionarChip, setAdicionarChip] = useState(false);
-  const [quantidadeChip, setQuantidadeChip] = useState(0)
+export const Popup = ({ isOpen, toggle }) => {
+  const searchParams = useSearchParams()
+  const [quantidadeChip, setQuantidadeChip] = useState(parseInt(searchParams.get('quantidade'))+1)
+  
   
   function PlanoChipAdicional() {
     const dadosPlanos = require("../../../(Móvel)/components/dados/movel.json");
@@ -49,7 +48,16 @@ export const Popup = ({ isOpen, toggle, price1, price2, plano }) => {
                   <h4><span>Por: </span>R${movel.revenda},00</h4>
                   <small>/mês</small>
                 </div>
-                <button type="button" className={style.btRemoverChip} onClick={() => {setQuantidadeChip(quantidadeChip - 1)}}>Remover</button>
+                <div className={style.btRemoverChip}>
+                  <Link type="button"
+                  onClick={() => {setQuantidadeChip(quantidadeChip - 1)}}
+                  href={
+                    `/planos?movel=${movel.plano + movel.portabilidade}GB&checkMovel=true&priceMovel=${movel.revenda}&quantidade=${quantidadeChip}`
+                  }
+                  
+                  >Remover
+                  </Link>
+                </div>
               </div>
               <article className={beneficios ? style.containerBeneficiosAberto : style.containerBeneficios}>
                 <div className={style.activeBeneficios} onClick={verBeneficios}>
@@ -170,18 +178,23 @@ export const Popup = ({ isOpen, toggle, price1, price2, plano }) => {
             </section>
 
             <section>
-              <div hidden={quantidadeChip >= 1 ? false : true}>
+              <div hidden={quantidadeChip >= 2 ? false : true}>
                 <PlanoChipAdicional />
               </div>
-              <div hidden={quantidadeChip === 2 ? false : true}>
+              <div hidden={quantidadeChip === 3 ? false : true}>
                 
                 <PlanoChipAdicional />
               </div>
             </section>
 
             <section className={style.adicionarChip}>
-              <button className={quantidadeChip === 2 ? style.adicionarChipHidden : style.btAdicionarChip} type="button" onClick={() => {
-                setAdicionarChip(!adicionarChip)
+              
+              <Link 
+              href={
+                `/planos?movel=${movel.plano + movel.portabilidade}GB&checkMovel=true&priceMovel=${movel.revenda}&quantidade=${quantidadeChip + 1}`
+              }
+              className={quantidadeChip === 3 ? style.adicionarChipHidden : style.btAdicionarChip} onClick={() => {
+                
                 setQuantidadeChip(quantidadeChip + 1)
               }}>
                 <img
@@ -189,21 +202,15 @@ export const Popup = ({ isOpen, toggle, price1, price2, plano }) => {
                   height={36.28}
                   src="/img/movel/adicionarMaisChip.svg"
                   alt="Plano de internet + Plano Móvel"
-                  className={adicionarChip ? style.chip : style.removerChip}
                 />
                 <h2>Adicionar mais um chip</h2>
-              </button>
+              </Link>
               
 
               <article className={style.containerButtons}>
-                <Link href={{
-                  pathname: '/planos',
-                  query: {
-                    movel: `${movel.plano + movel.portabilidade}GB`,
-                    checkMovel: true,
-                    priceMovel: `${movel.revenda}`,
-                  }
-                }}>
+                <Link href={
+                  `/planos?movel=${movel.plano + movel.portabilidade}GB&checkMovel=true&priceMovel=${movel.revenda}&quantidade=${quantidadeChip}`
+                }>
                   <button type="button" className={style.button} onClick={toggle}>
                     Confirmar
                   </button>

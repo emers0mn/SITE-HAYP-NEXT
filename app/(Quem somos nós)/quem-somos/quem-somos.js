@@ -1,7 +1,6 @@
 'use client'
 
 import styles from "./quemsomos.module.css"
-import { useState, useEffect } from "react"
 
 export function InfoText({ title, text }) {
     return (

@@ -14,8 +14,9 @@ export default function Planos() {
     // utitilização de parametros da URL
     const searchParams = useSearchParams()
     const check = searchParams.get('checkMovel');  
-    const priceMovel = parseInt(searchParams.get('priceMovel')) 
+    const priceMovel = parseInt(searchParams.get('priceMovel'))
     const [wifiPremium, setWifiPremium] = useState(0)
+    const quantidade = parseInt(searchParams.get('quantidade'))
 
     function CheckMovel() {
         if (check === 'true') {
@@ -90,25 +91,26 @@ export default function Planos() {
 
     useEffect(() => {
         toggle(false);
-        if (index < 0)
-            setIndex(0);
-
-        if (index >= 0) {
-            if (plans.length >= 0) {
-                if (index <= (plans.length - 1)) {
-                    setPlan(plans[index]);
-                    setVariants({
-                        downSpeed: plan.downSpeed,
-                        upSpeed: plan.upSpeed,
-                        price: plan.price
-                    });
-                } else {
-                    setIndex(plans.length - 1);
-                }
-            }
+        
+        const validIndex = Math.max(0, Math.min(index, plans.length - 1));
+    
+        if (plans.length > 0 && index !== validIndex) {
+            setIndex(validIndex);
         }
-
-    }, [index, plans, plan])
+    
+        // Definir 'plan' e 'variants' baseado em 'plans[index]'
+        if (plans.length > 0 && validIndex >= 0 && validIndex < plans.length) {
+            const selectedPlan = plans[validIndex];
+            setPlan(selectedPlan);
+            setVariants({
+                downSpeed: selectedPlan.downSpeed,
+                upSpeed: selectedPlan.upSpeed,
+                price: selectedPlan.price
+            });
+        }
+    }, [index, plans]); 
+    
+    
 
 
 
@@ -328,7 +330,7 @@ export default function Planos() {
                                             <ul className="listCompleta">
                                                 <li>
                                                     <div className="list-bt">
-                                                        <label for="checkBoxApenasInternet">
+                                                        <label htmlFor="checkBoxApenasInternet">
                                                             <input id="isWifiPremium" type="checkbox" name="interNetOnly"
                                                                 onChange={(event) => {
                                                                     const newWifiPremium = event.target.checked ? 20 : 0;
@@ -349,12 +351,12 @@ export default function Planos() {
 
                                                 <li>
                                                     <div className="list-bt">
-                                                        <label for="checkBoxApenasInternet">
-                                                            <input id="isInternetOnly" type="checkbox" name="interNetOnly"
+                                                        <label htmlFor="checkBoxApenasInternet">
+                                                            <input className={quantidade >= 2 ? "checkMovel" : ""} id="isInternetOnly" type="checkbox" name="interNetOnly"
 
                                                                 onChange={() => { toggleSignin() }}
                                                                 checked={CheckMovel()}
-                                                                defaultChecked={false}
+                                                                
                                                                 value="true">
                                                             </input>
                                                         </label>
@@ -373,6 +375,7 @@ export default function Planos() {
                                                                 width={50}
                                                                 height={50}
                                                                 alt="Plano móvel com tecnologia 5G"
+                                                                className={quantidade >= 2 ? "list-bt-movelImg" : "list-bt-movelImgO"}
                                                             />
                                                         </div>
                                                     </div>
@@ -383,7 +386,7 @@ export default function Planos() {
 
                                                         <li key={item.Id}>
                                                             <div className="list-bt">
-                                                                <label for="checkBoxPlanosAdicinais">
+                                                                <label htmlFor="checkBoxPlanosAdicinais">
                                                                     <input id={item.Id} type="checkbox" name={item.Id} value="false"
                                                                         onChange={handleChange}
                                                                     ></input>
@@ -422,7 +425,7 @@ export default function Planos() {
 
                                         <div className="price">
                                             <h2>
-                                                R${(variants.price - (variants.price > 0 ? plan.discount : 0) + wifiPremium + (priceMovel === NaN ? 0 : priceMovel) ).toFixed(2).replace('.', ',')}
+                                                R${(variants.price - (variants.price > 0 ? plan.discount : 0) + wifiPremium + priceMovel ).toFixed(2).replace('.', ',')}
                                             </h2>
                                             <small>/mês</small>
                                         </div>

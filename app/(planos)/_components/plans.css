@@ -78,9 +78,9 @@
 
 .listCompleta p {
     font-weight: 400;
-    font-size: 12px;
+    font-size: 11px;
     color: var(--cor-2);
-    margin: 0;
+    margin: 2px 0 0 0;
 }
 
 .list-bt {
@@ -98,9 +98,23 @@
     left: 20px;
 }
 
-.list-bt-movel img{
+.list-bt-movelImg{
     position: relative;
-    left :10px ;
+    left : -35px;
+    top: -10px;
+}
+
+.list-bt-movelImgO{
+    position: relative;
+    left : 5px;
+    top: -5px;
+}
+
+.checkMovel{
+    position: relative;
+    left: 65px;
+    top: 0px;
+    z-index: 2;
 }
 
 .package-list {
