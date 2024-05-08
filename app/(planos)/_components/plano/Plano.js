@@ -13,8 +13,9 @@ export default function Planos() {
 
     // utitilização de parametros da URL
     const searchParams = useSearchParams()
-    const check = searchParams.get('checkMovel');
+    const check = searchParams.get('checkMovel');  
     const priceMovel = parseInt(searchParams.get('priceMovel')) 
+    const [wifiPremium, setWifiPremium] = useState(0)
 
     function CheckMovel() {
         if (check === 'true') {
@@ -223,15 +224,7 @@ export default function Planos() {
     }
 
 
-    const [wifiPremium, setWifiPremium] = useState(0)
-    function handleChangeWiFi(){
-        
-        if (condition) {
-            setWifiPremium(20)
-        } else {
-            
-        }
-    }
+    
     
 
 
@@ -429,7 +422,7 @@ export default function Planos() {
 
                                         <div className="price">
                                             <h2>
-                                                R${(variants.price - (variants.price > 0 ? plan.discount : 0) + wifiPremium + priceMovel ).toFixed(2).replace('.', ',')}
+                                                R${(variants.price - (variants.price > 0 ? plan.discount : 0) + wifiPremium + (priceMovel === NaN ? 0 : priceMovel) ).toFixed(2).replace('.', ',')}
                                             </h2>
                                             <small>/mês</small>
                                         </div>
