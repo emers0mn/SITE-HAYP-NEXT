@@ -74,7 +74,7 @@ export default function Planos() {
         addPlanaddidiscount: ""
     });
     const [index, setIndex] = useState(0);
-    const [isInternetOnly, setIsInternetOnly] = useState(false);
+    const [isInternetOnly, setIsInternetOnly] = useState(true);
 
     const [variants, setVariants] = useState({
         downSpeed: 0,
@@ -118,11 +118,18 @@ export default function Planos() {
                 price: selectedPlan.price
             });
         }
+        
     }, [index, plans]);
 
-
-
-
+    const [wifiChecked, setWifiChecked] = useState(false)
+    function verifyChecked(){
+        let wifiChecked = document.getElementById("isWifiPremium")
+        
+        if (true === true) {
+            return true
+        } else return false
+    }
+    
 
     const handleChange = ({ target }) => {
         // if (document.getElementById("isInternetOnly").checked === true) {
@@ -149,11 +156,11 @@ export default function Planos() {
         // }
 
         if (target.checked) {
-            target.removeAttribute('checked');
+            // target.removeAttribute('checked');
             //    target.parentNode.style.textDecoration = "";
             ChangePlan(target.name, true);
         } else {
-            target.setAttribute('checked', true);
+            // target.setAttribute('checked', true);
             //    target.parentNode.style.textDecoration = "line-through";
             ChangePlan(target.name, false);
         }
@@ -200,12 +207,18 @@ export default function Planos() {
     //     setIsInternetOnly(!isInternetOnly);
     // }
 
+    
+
     function toggle(status) {
         if (plan.addPlanIsShow === 1) {
             plansAdd.forEach(x => {
                 document.getElementById(x.Id).checked = status;
             })
+            document.getElementById("isWifiPremium").checked = false
+            document.getElementById("isMovel").checked = false
         }
+
+
     }
 
     function ChangePlan(id, status) {
@@ -340,8 +353,8 @@ export default function Planos() {
                                                                 onChange={(event) => {
                                                                     const newWifiPremium = event.target.checked ? 20 : 0;
                                                                     setWifiPremium(newWifiPremium);
-                                                                    
-                                                                    const newWifiBonus = event.target.checked ? (plan.downSpeed >=400 ? 100 : 0) : 0;
+
+                                                                    const newWifiBonus = event.target.checked ? (plan.downSpeed >= 400 ? 100 : 0) : 0;
                                                                     setWifiBonus(newWifiBonus);
 
                                                                 }}
@@ -360,10 +373,10 @@ export default function Planos() {
                                                 <li>
                                                     <div className="list-bt">
                                                         <label htmlFor="checkBoxApenasInternet">
-                                                            <input className={quantidade >= 2 ? "checkMovel" : ""} type="checkbox" name="interNetOnly"
-                                                                onChange={(event) => { 
+                                                            <input id="isMovel" className={quantidade >= 2 ? "checkMovel" : ""} type="checkbox" name="interNetOnly"
+                                                                onChange={(event) => {
                                                                     toggleSignin();
-                                                                    const newMovelBonus = event.target.checked ? (plan.downSpeed >=400 ? 100 : 0) : 0;
+                                                                    const newMovelBonus = event.target.checked ? (plan.downSpeed >= 400 ? 100 : 0) : 0;
                                                                     setMovelBonus(newMovelBonus);
 
                                                                 }}
@@ -420,10 +433,10 @@ export default function Planos() {
                                     </div>
 
 
-                                    {isInternetOnly === false ?
+                                    {verifyChecked() === true ?
                                         <div className="bonusMega">
                                             <h3>Você irá receber</h3>
-                                            <span style={{ fontWeight: "900", color: "var(--cor-2)", fontSize: "20px" }} className="price">{variants.downSpeed + movelBonus + wifiBonus} Mega</span>
+                                            <span style={{ fontWeight: "900", color: "var(--cor-2)", fontSize: "20px" }} className="price">{variants.downSpeed + (plan.downSpeed >= 400 ? movelBonus : 0) + wifiBonus} Mega</span>
                                         </div>
                                         : <></>
                                     }

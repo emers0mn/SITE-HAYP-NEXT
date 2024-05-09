@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import Planos from "../_components/plano/Plano"
+import Planos from "../_components/plano-copy/Plano"
 import Links from "@/app/components/(links)/Links";
 
 

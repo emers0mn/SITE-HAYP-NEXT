@@ -7,7 +7,9 @@ import { useSearchParams } from "next/navigation";
 
 export const Popup = ({ isOpen, toggle }) => {
   const searchParams = useSearchParams()
-  const [quantidadeChip, setQuantidadeChip] = useState(parseInt(searchParams.get('quantidade'))+1)
+
+  const quantidades = parseInt(searchParams.get('quantidade'))
+  const quantidade = (isNaN(quantidades) ? 1 : quantidades  )
   
   
   function PlanoChipAdicional() {
@@ -50,10 +52,10 @@ export const Popup = ({ isOpen, toggle }) => {
                 </div>
                 <div className={style.btRemoverChip}>
                   <Link type="button"
-                  onClick={() => {setQuantidadeChip(quantidadeChip - 1)}}
+                  onClick={() => { return (quantidade - 1)}}
                   href={
-                    `/planos?movel=${movel.plano + movel.portabilidade}GB&checkMovel=true&priceMovel=${movel.revenda}&quantidade=${quantidadeChip}`
-                  }
+                    `/planos?movel=${movel.plano + movel.portabilidade}GB&checkMovel=true&priceMovel=${movel.revenda}&quantidade=${quantidade - 1}`
+                  } 
                   
                   >Remover
                   </Link>
@@ -178,10 +180,10 @@ export const Popup = ({ isOpen, toggle }) => {
             </section>
 
             <section>
-              <div hidden={quantidadeChip >= 2 ? false : true}>
+              <div hidden={quantidade >= 2 ? false : true}>
                 <PlanoChipAdicional />
               </div>
-              <div hidden={quantidadeChip === 3 ? false : true}>
+              <div hidden={quantidade === 3 ? false : true}>
                 
                 <PlanoChipAdicional />
               </div>
@@ -191,11 +193,11 @@ export const Popup = ({ isOpen, toggle }) => {
               
               <Link 
               href={
-                `/planos?movel=${movel.plano + movel.portabilidade}GB&checkMovel=true&priceMovel=${movel.revenda}&quantidade=${quantidadeChip + 1}`
+                `/planos?movel=${movel.plano + movel.portabilidade}GB&checkMovel=true&priceMovel=${movel.revenda}&quantidade=${quantidade + 1}`
               }
-              className={quantidadeChip === 3 ? style.adicionarChipHidden : style.btAdicionarChip} onClick={() => {
+              className={quantidade === 3 ? style.adicionarChipHidden : style.btAdicionarChip} onClick={() => {
                 
-                setQuantidadeChip(quantidadeChip + 1)
+                return (quantidade)
               }}>
                 <img
                   width={63.54}
@@ -209,22 +211,14 @@ export const Popup = ({ isOpen, toggle }) => {
 
               <article className={style.containerButtons}>
                 <Link href={
-                  `/planos?movel=${movel.plano + movel.portabilidade}GB&checkMovel=true&priceMovel=${movel.revenda}&quantidade=${quantidadeChip}`
+                  `/planos?movel=${movel.plano + movel.portabilidade}GB&checkMovel=true&priceMovel=${movel.revenda}&quantidade=${quantidade}`
                 }>
                   <button type="button" className={style.button} onClick={toggle}>
                     Confirmar
                   </button>
                 </Link>
 
-                <Link href={{
-                  pathname: '/planos',
-                  query: {
-
-                    checkMovel: false,
-                    priceMovel: `0`,
-
-                  }
-                }}>
+                <Link href={"/planos"}>
                   <button type="button" className={style.buttonRemove} onClick={toggle}>
                     Remover
                   </button>

@@ -13,7 +13,7 @@ const ComentPage = () => {
             if (reviews === null) {
                 await Api.get("/Web/GetGoogleComents")
                     .then((response) => {
-                        console.log(response)
+                        ///console.log(response)
                         setReviews(response.data.result.reviews)
                     }).catch((err) => {
                     })

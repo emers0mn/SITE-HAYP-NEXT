@@ -52,13 +52,7 @@ export default function PageHome() {
             </div>
           </Link>
 
-          <Link href={{
-                  pathname: '/planos',
-                  query: {
-                    priceMovel: 0,
-                    quantidade: 0
-                  }
-                }}>
+          <Link href={"/planos"}>
             <div className={styles.menu}> <img className={styles.img} src="https://hayp.imgix.net/assets/images/icons/assets_planos.svg" alt='Nossos planos' />
               Planos</div>
           </Link>
