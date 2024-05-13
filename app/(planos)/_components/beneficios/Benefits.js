@@ -97,7 +97,8 @@ function Benefits(props) {
               <Tv canal="SBT" />
             </div>
           </div> */}
-          <TvAberta />
+          {/* <TvAberta /> */}
+          
         </div>
 
         <a href="https://wa.me/551128762641?text=Fiquei+interessado+no+combo+com+Tv+e+gostaria+ver+a+lista+de+canais.">Veja todos os canais abertos</a>

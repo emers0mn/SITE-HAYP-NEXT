@@ -42,8 +42,10 @@ function SamplePrevArrow(props) {
 
 export default function BeneficiosPlanos({ plano }) {
     var settings = {
-
+        className: "center",
+        centerMode: true,
         infinite: true,
+        centerPadding: "80px",
         speed: 900,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -51,7 +53,33 @@ export default function BeneficiosPlanos({ plano }) {
         autoplaySpeed: 2000,
         pauseOnHover: true,
         nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />
+        prevArrow: <SamplePrevArrow />,
+        responsive: [
+            {
+                breakpoint: 360,
+                settings: {
+                    slidesToShow: 1,
+                    className: "center",
+                    centerMode: true,
+                    infinite: true,
+                    centerPadding: "55px",
+                    pauseOnHover: true,
+
+                }
+            },
+            {
+                breakpoint: 380,
+                settings: {
+                    slidesToShow: 1,
+                    className: "center",
+                    centerMode: true,
+                    infinite: true,
+                    centerPadding: "80px",
+                    pauseOnHover: true,
+
+                }
+            }
+        ]
     };
     return (
         <section>

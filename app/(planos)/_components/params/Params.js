@@ -1,6 +1,5 @@
 'use client'
 import { useSearchParams } from "next/navigation";
-
 export function PlanoMovel({ plano }) {
 
     const searchParams = useSearchParams()
@@ -11,9 +10,9 @@ export function PlanoMovel({ plano }) {
         <div>
         {movel ? (
             <>
-                <p>( {quantidade == 0 ? 1 : 1} Chip de {movel} {quantidade < 2 ? "" : `+ ${quantidade - 1} chip adicional`} {plano >= 400 ? (<><br /> + 100 Mega )</>) : ")"}</p>
+                <p>{quantidade == 0 ? 1 : 1} Chip de {movel} {quantidade < 2 ? "" : `+ ${quantidade - 1} Chip adicional`} {plano >= 400 ? (<><br /> + 100 Mega )</>) :""}</p>
             </>)
-        :"Selecionar plano"}
+        : <p style={{fontSize:"12px", color:"var(--cor-2)", cursor:"pointer"}}>Selecionar plano</p>}
     </div>
     );
 }

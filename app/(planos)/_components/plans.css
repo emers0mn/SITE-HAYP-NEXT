@@ -9,7 +9,7 @@
 
 /*Começo dos planos*/
 
-.container{
+.container {
     margin-top: 40px;
 }
 
@@ -77,8 +77,9 @@
 }
 
 .listCompleta p {
+    width: auto;
     font-weight: 400;
-    font-size: 11px;
+    font-size: 10px;
     color: var(--cor-2);
     margin: 2px 0 0 0;
 }
@@ -92,29 +93,50 @@
     gap: 10px;
 }
 
-.list-bt-movel{
+.list-bt-movel {
     display: flex;
     position: relative;
     left: 20px;
 }
 
-.list-bt-movelImg{
+.list-bt-movelImg {
     position: relative;
-    left : -35px;
+    left: -35px;
     top: -10px;
 }
 
-.list-bt-movelImgO{
+.list-bt-movelImgO {
     position: relative;
-    left : 5px;
+    left: 5px;
     top: -5px;
 }
 
-.checkMovel{
+.checkMovel {
     position: relative;
-    left: 65px;
+    left: 60px;
+    top: -8px;
+    z-index: 2;
+}
+
+.checkMovel4{
+    position: relative;
+    left: 20px;
     top: 0px;
     z-index: 2;
+}
+
+.checkMovelD{
+    position: relative;
+    left: 20px;
+    top: 0px;
+    z-index: 2;
+}
+
+
+.checkWifi {
+    margin: 0;
+    position: relative;
+    top: 9px;
 }
 
 .package-list {
@@ -154,18 +176,18 @@
 }
 
 /* destaque */
-.containerDestaque{
+.containerDestaque {
     display: none;
 }
 
-.containerDestaqueAtiva{
-    
+.containerDestaqueAtiva {
+
     position: absolute;
-    top: 155px; 
+    top: 155px;
     width: 82%;
     height: 75px;
     margin: 35px auto auto -9px;
-    
+
     background: linear-gradient(20deg, #008D1E 10%, #4AD62B 80%);
 
     border-radius: 20px;
@@ -175,7 +197,7 @@
 
 
 
-.destaque{
+.destaque {
     text-align: center;
     color: #000;
     font-size: 16px;
@@ -191,11 +213,11 @@
     font-family: gordita;
     line-height: 45px;
     margin: 10px;
-    
+
     z-index: 1;
 }
 
-.price-plan img{
+.price-plan img {
     position: relative;
     top: 5px;
 }
@@ -280,19 +302,19 @@
     margin: 5px auto;
 }
 
-.package-price .price{
+.package-price .price {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.package-price .price h2{
+.package-price .price h2 {
     font-size: 40px;
     color: var(--cor-2);
     margin: 0;
 }
 
-.package-price .price small{
+.package-price .price small {
     font-size: 16px;
     font-weight: 500;
     color: var(--cor-7);
@@ -399,9 +421,9 @@ input:checked[type="checkbox"]:before {
     font-size: 14px;
 }
 
-.button{
+.button {
     display: block;
-    
+
     width: 40%;
     text-align: center;
     margin: 8px auto 20px auto;
@@ -445,15 +467,19 @@ input:checked[type="checkbox"]:before {
 
     .heading-title h1 {
         font-size: 25px;
-        
-    
+    }
+
+    .checkMovel {
+
+        top: -8px;
+
     }
 
 }
 
 @media screen and (min-width: 810px) {
 
-    .containerDestaqueAtiva{
+    .containerDestaqueAtiva {
         width: 450px;
     }
 

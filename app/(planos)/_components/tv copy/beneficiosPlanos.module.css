@@ -1,0 +1,39 @@
+ .container{
+    width: 80%px;
+    margin: auto;
+
+} 
+
+.canva{
+    width: 300px;
+    height: auto;
+    background: linear-gradient(360deg, #0a0a0ad9 10%, #04cb3900 80%);
+
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    left: 65px;
+}
+
+.imagen{
+    z-index: -1;
+}
+
+.logo{
+    width: 25%;
+    position: absolute;
+    bottom: 20px;
+}
+
+.content{
+    width: auto;
+    margin: auto;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+
+

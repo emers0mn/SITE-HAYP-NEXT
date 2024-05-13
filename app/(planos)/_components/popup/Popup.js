@@ -193,7 +193,7 @@ export const Popup = ({ isOpen, toggle }) => {
               
               <Link 
               href={
-                `/planos?movel=${movel.plano + movel.portabilidade}GB&checkMovel=true&priceMovel=${movel.revenda}&quantidade=${quantidade + 1}`
+                `/planos?movel=${movel.plano + movel.portabilidade}GB&checkMovel=true&priceMovel=${movel.revenda}&quantidade=${quantidade + 1}&priceMovel=${movel.revenda}`
               }
               className={quantidade === 3 ? style.adicionarChipHidden : style.btAdicionarChip} onClick={() => {
                 

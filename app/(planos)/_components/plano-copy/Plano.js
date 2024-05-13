@@ -1,13 +1,14 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
 import Api from "../../../../service/Api";
+import dynamic from 'next/dynamic';
 import LoadingSpinner from "../../../../components/spinner/LoadingSpinner";
 import "../../_components/plans.css";
 import BeneficiosPlanos from "../beneficios/BeneficiosPlanos";
 import { Popup } from "../popup/Popup";
 import { useSearchParams } from "next/navigation";
 import { PlanoMovel } from "../params/Params";
+
 
 export default function Planos() {
 
@@ -25,12 +26,19 @@ export default function Planos() {
     const [wifiBonus, setWifiBonus] = useState(0)
     const [movelBonus, setMovelBonus] = useState(0)
 
+    const [limiteBonus, setLimiteBonus] = useState(400)
 
 
     function CheckMovel() {
         if (check === 'true') {
             return true
         } else return false
+    }
+
+    function addMovel(){
+        if (CheckMovel() === true && plan.downSpeed >= limiteBonus){
+            return (100)
+        } else return(0)
     }
 
     var settings = {
@@ -122,6 +130,13 @@ export default function Planos() {
 
     const [cont, setCont] = useState(0)
     //console.log(`Principal ${cont}`)
+
+    useEffect(() => {
+        if (CheckMovel() === true && plan.downSpeed >= limiteBonus) {
+            setCont(1);
+            console.log('Cont atualizado para 1 devido às condições');
+        }
+    }, [CheckMovel(), plan.downSpeed]);
     
     useEffect(() => {
         // Atualiza 'isInternetOnly' baseado em 'cont'
@@ -132,12 +147,14 @@ export default function Planos() {
         if (cont < 0) {
             setCont(0);
         }
+        
+
     }, [cont]);
 
     const handleChange = (event) => {
         const { checked, name } = event.target;
-        const isMovelCondition = name === "isMovel" && plan.downSpeed < 400;
-        const isWifiPremiumCondition = name === "isWifiPremium" && plan.downSpeed < 400;
+        const isMovelCondition = name === "isMovel" && plan.downSpeed < limiteBonus;
+        const isWifiPremiumCondition = name === "isWifiPremium" && plan.downSpeed < limiteBonus;
 
         if (checked) {
             ChangePlan(name, true);
@@ -153,6 +170,15 @@ export default function Planos() {
                 setCont(prevCont => prevCont - 1);
             }
         }
+
+        if (name === "isMovel") {
+            
+            if (checked && plan.downSpeed >= limiteBonus) {
+                setCont(1);
+                console.log('Cont atualizado para 1 devido às condições');
+            }
+        }
+        
     };
 
 
@@ -237,7 +263,7 @@ export default function Planos() {
                     </p>
                 </div>
 
-                <div className={plan.downSpeed == 400 ? "container" : ""}>
+                <div className={plan.downSpeed == limiteBonus ? "container" : ""}>
                     <div className="packages">
 
                         <div>
@@ -282,7 +308,7 @@ export default function Planos() {
 
                                         </div>
 
-                                        <div className={(plan.downSpeed == 400) ? `containerDestaqueAtiva` : `containerDestaque`}>
+                                        <div className={(plan.downSpeed == limiteBonus) ? `containerDestaqueAtiva` : `containerDestaque`}>
                                             <h5 className="destaque">Plano mais vendido</h5>
                                         </div>
 
@@ -297,12 +323,12 @@ export default function Planos() {
                                                 <li>
                                                     <div className="list-bt">
                                                         <label htmlFor="checkBoxApenasInternet">
-                                                            <input id="isWifiPremium" type="checkbox" name="isWifiPremium"
+                                                            <input id="isWifiPremium" type="checkbox" name="isWifiPremium" className="checkWifi"
                                                                 onChange={(event) => {
                                                                     const newWifiPremium = event.target.checked ? 20 : 0;
                                                                     setWifiPremium(newWifiPremium);
 
-                                                                    const newWifiBonus = event.target.checked ? (plan.downSpeed >= 400 ? 100 : 0) : 0;
+                                                                    const newWifiBonus = event.target.checked ? (plan.downSpeed >= limiteBonus ? 100 : 0) : 0;
                                                                     setWifiBonus(newWifiBonus);
                                                                     handleChange(event)
 
@@ -314,7 +340,7 @@ export default function Planos() {
                                                         </label>
                                                         <div>
                                                             <h2>Wi-Fi Premium</h2>
-                                                            {plan.downSpeed >= 400 ? <p>(Ganhe + 100 Mega)</p> : ""}
+                                                            {plan.downSpeed >= limiteBonus ? <p>(Ganhe + 100 Mega)</p> : ""}
                                                         </div>
                                                     </div>
                                                 </li>
@@ -322,10 +348,10 @@ export default function Planos() {
                                                 <li>
                                                     <div className="list-bt">
                                                         <label htmlFor="checkBoxApenasInternet">
-                                                            <input id="isMovel" className={quantidade >= 2 ? "checkMovel" : ""} type="checkbox" name="isMovel"
+                                                            <input id="isMovel" className={(plan.downSpeed >= limiteBonus ? "checkMovel4" : (quantidade >= 2 ? "checkMovel" : "checkMovelD"))} type="checkbox" name="isMovel"
                                                                 onChange={(event) => {
                                                                     toggleSignin();
-                                                                    let newMovelBonus = event.target.checked ? (plan.downSpeed >= 400 ? 100 : 0) : 0;
+                                                                    let newMovelBonus = event.target.checked ? (plan.downSpeed >= limiteBonus ? 100 : 0) : 0;
                                                                     setMovelBonus(newMovelBonus);
                                                                     handleChange(event)
 
@@ -335,6 +361,7 @@ export default function Planos() {
                                                             </input>
                                                         </label>
                                                         <div className="list-bt-movel" onClick={toggleSignin}>
+                                                            
                                                             <div>
                                                                 <h2>HAYP Móvel</h2>
 
@@ -386,7 +413,7 @@ export default function Planos() {
                                     {isInternetOnly === true ?
                                         <div className="bonusMega">
                                             <h3>Você irá receber</h3>
-                                            <span style={{ fontWeight: "900", color: "var(--cor-2)", fontSize: "20px" }} className="price">{variants.downSpeed + (plan.downSpeed >= 400 ? movelBonus : 0) + wifiBonus} Mega</span>
+                                            <span style={{ fontWeight: "900", color: "var(--cor-2)", fontSize: "20px" }} className="price">{variants.downSpeed + (plan.downSpeed >= limiteBonus ? movelBonus : 0) + wifiBonus + addMovel()} Mega</span>
                                         </div>
                                         : <></>
                                     }
@@ -416,6 +443,7 @@ export default function Planos() {
                         </div>
 
                     </div>
+                    
                 </div>
                 <div id="stars" />
                 <div id="stars2" />

@@ -4,7 +4,9 @@ import Links from "@/app/components/(links)/Links";
 
 
 // const Planos = dynamic(() => import("../_components/plano/Plano"));
-const Benefits = dynamic(() => import("../_components/beneficios/Benefits"));
+const Benefits = dynamic(() => import("../_components/beneficios/Benefits"), {
+    loading: () => <p>Carregando...</p>
+  });
 
 
 export const metadata = {
@@ -20,12 +22,13 @@ export const metadata = {
 export default function PagePlanos() {
     return (
         <div>
-            <Links
+            {/* <Links
                 pagina="planos"
-            />
+            /> */}
             <Planos />
             {/* <Links /> */}
             <Benefits />
+            
         </div>
     )
 };
