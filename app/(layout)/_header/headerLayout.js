@@ -1,13 +1,13 @@
 import Link from 'next/link';
-import styles from './header.module.css';
+import style from './headerMobile.module.css';
 
-export const HeaderLayout = () => {
+export const HeaderLayoutMobile = () => {
     return(
         <>
-        <header className={styles.container}>
+        <header className={style.container}>
             <div>
             <Link href="/">
-                    <div className={styles.iconHome} alt="Botão da Home"></div>
+                    <div className={style.iconHome} alt="Botão da Home"></div>
                 </Link>
             </div>
         </header>
@@ -15,4 +15,4 @@ export const HeaderLayout = () => {
     )
 }
 
-export default HeaderLayout;
+export default HeaderLayoutMobile;

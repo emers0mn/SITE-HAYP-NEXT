@@ -118,14 +118,14 @@
     z-index: 2;
 }
 
-.checkMovel4{
+.checkMovel4 {
     position: relative;
     left: 20px;
     top: 0px;
     z-index: 2;
 }
 
-.checkMovelD{
+.checkMovelD {
     position: relative;
     left: 20px;
     top: 0px;
@@ -209,7 +209,7 @@
 /* fim do destaque */
 
 .price-plan h2 {
-    font-size: 40px;
+    font-size: 35px;
     font-family: gordita;
     line-height: 45px;
     margin: 10px;
@@ -293,9 +293,45 @@
     display: block;
     text-align: center;
     color: hsla(0, 0%, 50%, .356);
-    font-family: Gordita;
+
     font-weight: 800;
-    font-size: 20px;
+    font-size: 14px;
+    transition: 500ms;
+    text-decoration: line-through var(--cor-2);
+
+    text-decoration-thickness: 0.1rem;
+}
+
+.package-price .sale:hover {
+    transition: 500ms;
+    text-decoration: none;
+    color: #ffffff67;
+    cursor: help;
+}
+
+.package-price p{
+    font-weight: 500;
+    font-size: 12px;
+    padding: 0;
+}
+
+[data-tooltip]:after {
+    display: none;
+    position: relative;
+    top: 0px;
+    padding: 15px auto;
+    margin: 5px auto;
+    width: 80%;
+    transition: 500ms ease;
+    color: white;
+    /* Cor do texto da caixa */
+    content: attr(data-tooltip);
+    text-decoration: none;
+}
+
+[data-tooltip]:hover:after {
+    display: block;
+    transition: 500ms ease;
 }
 
 .package-price p {

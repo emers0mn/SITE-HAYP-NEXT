@@ -121,8 +121,10 @@ export const Popup = ({ isOpen, toggle }) => {
             </div>
             
             <section className={style.combo}>
+              
               <div className={style.planos}>
                 <p>{movel.plano + movel.portabilidade === 12 ? "Plano mais vendido" : ""}</p>
+
                 <div className={style.contentGiga}>
                   <button className={(movel.plano == 5) ? style.buttonActionOpacity : style.buttonAction} onClick={() => { selectedId <= 1 ? setSelectedId(selectedId - 0) : setSelectedId(selectedId - 1) }}><img
                     src="/img/movel/buttonMinus.svg"
@@ -138,12 +140,16 @@ export const Popup = ({ isOpen, toggle }) => {
                     src="/img/movel/buttonPlus.svg" />
                   </button>
                 </div>
+                
                 {movel.plano == 5 ? `` : <h3 className={style.haypMovel}>{movel.plano}GB + {movel.portabilidade} GB de Portabilidade</h3>}
+
                 <div className={style.price}>
                   <h4><span>Por: </span>R${movel.revenda},00</h4>
                   <small>/mês</small>
                 </div>
+
               </div>
+
               <article className={beneficios ? style.containerBeneficiosAberto : style.containerBeneficios}>
                 <div className={style.activeBeneficios} onClick={verBeneficios}>
                   <h2>Benefícios</h2>
@@ -191,10 +197,10 @@ export const Popup = ({ isOpen, toggle }) => {
 
             <section className={style.adicionarChip}>
               
-              <Link 
+              {/* <Link 
               href={
                 `/planos?movel=${movel.plano + movel.portabilidade}GB&checkMovel=true&priceMovel=${movel.revenda}&quantidade=${quantidade + 1}&priceMovel=${movel.revenda}`
-              }
+              } scroll={false}
               className={quantidade === 3 ? style.adicionarChipHidden : style.btAdicionarChip} onClick={() => {
                 
                 return (quantidade)
@@ -206,7 +212,7 @@ export const Popup = ({ isOpen, toggle }) => {
                   alt="Plano de internet + Plano Móvel"
                 />
                 <h2>Adicionar mais um chip</h2>
-              </Link>
+              </Link> */}
               
 
               <article className={style.containerButtons}>

@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { HeaderLayout } from '../app/(layout)/_header/headerLayout'
+import { HeaderLayoutMobile } from '../app/(layout)/_header/headerLayout'
 import Footer from './(layout)/(footer)/Footer';
 import Links from '@/components/(links)/Links';
 import { Hotjar } from './(layout)/(SEO)/SEO';
@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="Pt-br">
       <body className={inter.className}>
-        <HeaderLayout />
+        <HeaderLayoutMobile />
         <Hotjar />
         {children}
 
