@@ -11,6 +11,12 @@
 
 .container {
     margin-top: 40px;
+    transition: 0.4s;
+}
+
+.containerF{
+    margin-top: -3px;
+    transition: 0.4s;
 }
 
 .content {
@@ -25,9 +31,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10px 30px 5px auto;
-    text-align: left;
-    scale: 0.9;
+    margin: 10px auto;
+    text-align: center;
 }
 
 .heading-title h1 {
@@ -38,7 +43,7 @@
 }
 
 .heading-title p {
-    margin: 5px 0px;
+    margin: 10px 0px;
     font-size: 17px;
 }
 
@@ -91,6 +96,14 @@
     position: relative;
     right: 25px;
     gap: 10px;
+}
+
+.list-bt h2 {
+    font-size: 14px;
+}
+
+.list-bt p{
+    font-size: 11px;
 }
 
 .list-bt-movel {
@@ -176,12 +189,9 @@
 }
 
 /* destaque */
-.containerDestaque {
-    display: none;
-}
 
 .containerDestaqueAtiva {
-
+    display: block;
     position: absolute;
     top: 155px;
     width: 82%;
@@ -193,6 +203,7 @@
     border-radius: 20px;
     box-shadow: 0px 0px 5px #333;
     z-index: -1;
+    transition: 2s;
 }
 
 
@@ -482,9 +493,17 @@ input:checked[type="checkbox"]:before {
 
 .bonusMega h3 {
     font-size: 20px;
-    font-weight: 800;
-    font-family: gordita;
+    font-weight: 600;
+    
     margin: 5px 0px 0px 0px;
+}
+
+.bonusMega p {
+    font-size: 20px;
+    font-weight: 800;
+    
+    margin: 0px 0px 0px 0px;
+    color: var(--cor-2);
 }
 
 .button .green-button {
@@ -499,7 +518,12 @@ input:checked[type="checkbox"]:before {
 
 /*Barra de contato*/
 
-@media screen and (max-width: 356px) {
+@media screen and (min-width: 320px) {
+
+    .content{
+        scale: 88%;
+        margin: -45px auto -75px auto;
+    }
 
     .heading-title h1 {
         font-size: 25px;
@@ -511,17 +535,36 @@ input:checked[type="checkbox"]:before {
 
     }
 
-}
-
-@media screen and (min-width: 810px) {
+    .price-plan h2 {
+        font-size: 10vw;
+        line-height: 35px;
+    }
 
     .containerDestaqueAtiva {
-        width: 450px;
+        top: 130px;
+
     }
+
+}
+
+@media screen and (min-width: 768px) {
+
+
 
     .package-list {
 
         width: 450px;
+
+    }
+
+    .price-plan h2 {
+        font-size: 40px;
+    }
+
+    .containerDestaqueAtiva {
+        width: 450px;
+        margin: 35px auto;
+        top: 68px;
 
     }
 }

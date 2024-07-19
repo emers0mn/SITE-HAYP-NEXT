@@ -2,10 +2,18 @@
 import { useRouter } from "next/navigation"
 import style from "./popup.module.css"
 import Link from "next/link"
+import { useEffect, useState } from "react"
 
 export const Popup = ({ isOpen, toggle, price1, price2, plano}) => {
 
   const router = useRouter()
+
+  const [mensagem, setMensagem] = useState()
+  useEffect(() => { 
+    if (plano != 0 ){
+      setMensagem(`https://api.whatsapp.com/send?phone=551128762641&text=Quero%20assinar%20o%20plano%3A%20 ${plano}GB do plano de celular!`)
+    }
+  },[setMensagem, plano])
 
   return (
     <>
@@ -58,9 +66,9 @@ export const Popup = ({ isOpen, toggle, price1, price2, plano}) => {
               <h4>R${price2},90</h4>
             </div>
 
-            <button type="button" className={style.buttonChip} onClick={() => router.push('/planos')}>
+            <a href={mensagem}type="button" className={style.buttonChip}>
               Assinar apenas o plano móvel
-            </button>
+            </a>
           </section>
 
           {/* <button

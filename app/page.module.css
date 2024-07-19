@@ -42,12 +42,12 @@
   margin: 20px auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
 
   gap: 30px;
   align-items: flex-start;
 
-  padding: 0px 25px 25px 25px;
+  padding: 0px 25px 0px 25px;
 }
 
 .menu{
@@ -85,6 +85,31 @@
   padding: 5px;
 }
 
+.contentPlanos{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.menuP{
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  width: auto;
+  background: linear-gradient(50deg, var(--cor-1) 0%, var(--cor-2) 59%);
+  padding: 0px 10px;
+  font-weight: 500;
+  margin: auto auto 20px auto;
+}
+
+.imgP{
+  width: 50px;
+  height: 50px;
+  
+  border-radius: 100%;
+  padding: 5px;
+}
+
 
 /*Footer*/
 .footer{
@@ -94,7 +119,7 @@
   
   text-align: center;
   bottom: 10px;
-  margin: -30px auto 30px auto;
+  margin: 0px auto 30px auto;
 }
 
 .redesSociais{
@@ -121,7 +146,7 @@
 @media screen and (max-width: 360px)
   {
     .footer{
-      margin: 0px 20px;
+      margin: 0px auto 5px auto;
     }
     .redesSociais{
       margin-bottom: 20px;

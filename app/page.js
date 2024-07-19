@@ -1,3 +1,5 @@
+import Banner from './(home)/(banner)/Banner';
+
 import PageHome from './(home)/_home/Home';
 import Links from './components/(links)/Links';
 
@@ -19,6 +21,8 @@ export default function Home() {
       <Links 
       pagina = ""/>
       <PageHome />
+      
+      
     </div>
   )
 }

@@ -6,6 +6,7 @@
     justify-content: space-between;
     overflow: hidden;
     z-index: 1;
+    margin-top: -55px;
 }
 
 .mainComentarios {
@@ -53,10 +54,11 @@
     justify-content: center;
     position: relative;
     left: 30px;
-    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.041);
-    border: 0.75px solid var(--cor-4);
+    box-shadow: 0 0 1px 1px rgb(226, 226, 226);
+    border: 0.75px solid var(--cor-1);
     border-radius: 5px;
-
+    box-shadow: 0 0 1px 1px var(--cor-1);
+    background: var(--cor-3);
 }
 
 .contentStars {
@@ -76,9 +78,6 @@
 }
 
 
-.comentarios:hover {
-    box-shadow: 0 0 1px 1px var(--cor-1);
-}
 
 .personas {
     width: 50px;

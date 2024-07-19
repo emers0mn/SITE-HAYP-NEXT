@@ -74,7 +74,7 @@ export function PricePlans({ price, discount, checkbox1, checkbox4, checkbox3, p
         }
     }, [plano, checkbox1, checkbox3, checkMovel(), checkbox4]);
 
-    
+
 
 
     function finalPrice() {
@@ -122,6 +122,63 @@ export function PricePlans({ price, discount, checkbox1, checkbox4, checkbox3, p
     );
 }
 
+export function MegaFinal({ checkbox1, checkbox4, checkbox3, plano }) {
+
+    const [apenasInternet, setApenasInternet] = useState(false)
+    const [limiteBonus2, setLimiteBonus2] = useState((plano != 900 && plano != 100 && plano != 700 && plano != 500));
+    const [limiteBonus, setLimiteBonus] = useState((plano != 900 && plano != 300 && plano != 100));
+    const [wifiBonus, setWifiBonus] = useState(0);
+    const [tvBonus, setTvBonus] = useState(0);
+    const [telBonus, setTelBonus] = useState(0);
+    const [movelBonus, setMovelBonus] = useState(0);
+    const searchParams = useSearchParams()
+
+    const check = searchParams.get('checkMovel');
+    function checkMovel() {
+        if (check === "true") {
+            return true
+        } else return false
+    }
+
+    useEffect(() => {
+        if (plano !== 0) {
+            const apenasInternetAtivo = checkbox1 || checkMovel() || checkbox3 || checkbox4;
+            setApenasInternet(apenasInternetAtivo);
+
+            if (apenasInternetAtivo) {
+                setWifiBonus(checkbox1 && (plano != 900 && plano != 100 && plano != 700 && plano != 500) ? 100 : 0);
+                setMovelBonus(checkMovel() && limiteBonus && plano != 900 ? 100 : 0);
+                setTelBonus(checkbox3 && plano != 900 ? 100 : 0);
+                setTvBonus(checkbox4 ? 100 : 0);
+            } else {
+                setWifiBonus(0);
+                setTelBonus(0);
+                setTvBonus(0);
+            }
+
+            const valorMegaFinal = plano + wifiBonus + telBonus + tvBonus + (plano <= 300 ? 0 : movelBonus);
+
+        }
+    }, [plano, checkbox1, checkMovel(), checkbox3, checkbox4, plano, limiteBonus2, limiteBonus]);
+
+
+
+
+    return (
+        <article>
+            {apenasInternet === true && (checkbox3 || checkbox4 || plano != 100) ?
+                <div className="bonusMega">
+                    <h3>Você irá receber</h3>
+                    <p className="price">
+                        {plano + wifiBonus + telBonus + tvBonus + (plano <= 300 ? 0 : movelBonus)} Mega
+                    </p>
+                </div>
+                : <></>
+            }
+        </article>
+    )
+}
+
 export default function Planos() {
 
     // utitilização de parametros da URL
@@ -139,6 +196,16 @@ export default function Planos() {
     const [movelBonus, setMovelBonus] = useState(0)
 
     const [limiteBonus, setLimiteBonus] = useState(400)
+
+    const [destaque, setDestaque] = useState('')
+    useEffect(() => {
+        if (plan.downSpeed === limiteBonus) {
+            setDestaque('containerDestaque')
+        } else {
+            setDestaque('containerDestaqueAtiva')
+        }
+
+    }, [limiteBonus, setDestaque])
 
 
     function CheckMovel() {
@@ -219,7 +286,7 @@ export default function Planos() {
     }, [])
 
     useEffect(() => {
-        
+
 
         const validIndex = Math.max(0, Math.min(index, plans.length - 1));
 
@@ -262,78 +329,6 @@ export default function Planos() {
 
 
     }, [cont]);
-
-    // const handleChange = (event) => {
-    //     const { checked, name } = event.target;
-    //     const isMovelCondition = name === "isMovel" && plan.downSpeed < limiteBonus;
-    //     const isWifiPremiumCondition = name === "isWifiPremium" && plan.downSpeed < limiteBonus;
-
-    //     if (checked) {
-    //         ChangePlan(name, true);
-
-    //         // Verifica condições antes de incrementar
-    //         if (!(isMovelCondition || isWifiPremiumCondition)) {
-    //             setCont(prevCont => prevCont + 1);
-    //         }
-    //     } else {
-    //         ChangePlan(name, false);
-
-    //         if (!(isMovelCondition || isWifiPremiumCondition)) {
-    //             setCont(prevCont => prevCont - 1);
-    //         }
-    //     }
-
-    //     if (name === "isMovel") {
-
-    //         if (checked && plan.downSpeed >= limiteBonus) {
-    //             setCont(1);
-    //             console.log('Cont atualizado para 1 devido às condições');
-    //         }
-    //     }
-
-    // };
-
-
-    // function toggle(status) {
-    //     if (plan.addPlanIsShow === 1) {
-    //         plansAdd.forEach(x => {
-    //             document.getElementById(x.Id).checked = status;
-    //         })
-    //         document.getElementById("isWifiPremium").checked = false
-    //         setCont(0)
-    //         //document.getElementById("isMovel").checked = false
-    //     }
-
-
-    // }
-
-    // function ChangePlan(id, status) {
-
-    //     let downSpeed = variants.downSpeed;
-    //     let upSpeed = variants.upSpeed;
-    //     let price = variants.price;
-
-
-    //     plansAdd.forEach(x => {
-    //         if (x.Id === parseInt(id)) {
-    //             if (status === true) {
-    //                 downSpeed += plan.addPlanAddPackage === 1 ? x.downSpeedBonus : 0;
-    //                 upSpeed += plan.addPlanAddPackage === 1 ? x.upSpeedBonus : 0;
-    //                 price += x.price + plan.addPlanaddidiscount;
-    //             } else {
-    //                 downSpeed -= plan.addPlanAddPackage === 1 ? x.downSpeedBonus : 0;
-    //                 upSpeed -= plan.addPlanAddPackage === 1 ? x.upSpeedBonus : 0;
-    //                 price -= x.price + plan.addPlanaddidiscount;
-    //             }
-    //         }
-    //     })
-
-    //     setVariants({
-    //         downSpeed: downSpeed,
-    //         upSpeed: upSpeed,
-    //         price: price
-    //     });
-    // }
 
 
     function contact() {
@@ -395,7 +390,7 @@ export default function Planos() {
                     </p>
                 </div>
 
-                <div className={plan.downSpeed == limiteBonus ? "container" : ""}>
+                <div className={plan.downSpeed == limiteBonus ? "container" : "containerF"}>
                     <div className="packages">
 
                         <div>
@@ -440,7 +435,7 @@ export default function Planos() {
 
                                         </div>
 
-                                        <div className={(plan.downSpeed == limiteBonus) ? `containerDestaqueAtiva` : `containerDestaque`}>
+                                        <div className={`${destaque}`}>
                                             <h5 className="destaque">Plano mais vendido</h5>
                                         </div>
 
@@ -466,7 +461,7 @@ export default function Planos() {
                                                         </label>
                                                         <div>
                                                             <h2>Wi-Fi Premium</h2>
-                                                            {plan.downSpeed >= limiteBonus ? <p>(Ganhe + 100 Mega)</p> : ""}
+                                                            {plan.downSpeed > limiteBonus ? <p>Já Incluso</p> : (plan.downSpeed == 300 || plan.downSpeed == limiteBonus ? <p>(Ganhe + 100 Mega)</p> : "")}
                                                         </div>
                                                     </div>
                                                 </li>
@@ -479,10 +474,10 @@ export default function Planos() {
                                                                     toggleSignin();
                                                                     let newMovelBonus = event.target.checked ? (plan.downSpeed >= limiteBonus ? 100 : 0) : 0;
                                                                     setMovelBonus(newMovelBonus);
-                                                                    handleChange(event)
+
 
                                                                 }}
-                                                                checked={CheckMovel()}
+                                                                checked={CheckMovel() || plan.downSpeed == 900}
                                                                 value="true">
                                                             </input>
                                                         </label>
@@ -542,7 +537,7 @@ export default function Planos() {
                                                         </label>
                                                         <div>
                                                             <h2>HAYP Fixo</h2>
-                                                            <p>(Ganhe + 100 Mega)</p>
+                                                            {plan.downSpeed == 900 ? <p>Já incluso</p> : <p>(Ganhe + 100 Mega)</p>}
                                                         </div>
                                                     </div>
                                                 </li>
@@ -569,26 +564,30 @@ export default function Planos() {
                                     </div>
 
 
-                                    {isInternetOnly === true ?
-                                        <div className="bonusMega">
-                                            <h3>Você irá receber</h3>
-                                            <span style={{ fontWeight: "900", color: "var(--cor-2)", fontSize: "20px" }} className="price">{variants.downSpeed + (plan.downSpeed >= limiteBonus ? movelBonus : 0) + wifiBonus + addMovel()} Mega</span>
-                                        </div>
-                                        : <></>
-                                    }
+                                    <MegaFinal
+                                        checkbox1={check1}
+                                        checkbox2={CheckMovel}
+                                        checkbox3={check3}
+                                        checkbox4={check4}
+
+                                        plano={plan.downSpeed}
+                                        adicional={isInternetOnly}
+                                        CheckMovel={CheckMovel()}
+
+                                    />
 
                                     <div className="package-price">
-                                        <span  className="sale">
-                                        <PricePlans
-                                            price={plan.price}
-                                            discount={0}
-                                            checkbox1={check1}
-                                            checkbox3={check3}
-                                            checkbox4={check4}
-                                            plano={plan.downSpeed}
-                                            info={"*"}
+                                        <span className="sale">
+                                            <PricePlans
+                                                price={plan.price}
+                                                discount={0}
+                                                checkbox1={check1}
+                                                checkbox3={check3}
+                                                checkbox4={check4}
+                                                plano={plan.downSpeed}
+                                                info={"*"}
 
-                                        />
+                                            />
                                         </span>
 
                                         <p>*Pagando até o vencimento <br />  você ganha R$10 de desconto
@@ -623,10 +622,11 @@ export default function Planos() {
                     </div>
 
                 </div>
-                <div id="stars" />
-                <div id="stars2" />
-                <div id="stars3" />
+
             </main>
+            <div id="stars" />
+            <div id="stars2" />
+            <div id="stars3" />
         </>
     )
 }
